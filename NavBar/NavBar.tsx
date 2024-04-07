@@ -1,7 +1,7 @@
 import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./Navbar.module.css";
+import styles from "../NavBar/NavBar.module.css";
 
 
 export function Navbar() {
