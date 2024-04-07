@@ -70,15 +70,38 @@ SquidInk Reborn:Minting Now
       
     </Center>
   </WrapItem>
+
   <WrapItem>
-    <Center>
-    <Image opacity={"100%"} src="/rarities.png" objectFit={"contain"} alt=""/>
+  <Center className={styles.heroCta}>
+      <Text paddingBlock={56} fontSize={30}>
+        Re:Focused and Reborn 
+        <br/><br/>
+        <br/><br/>
+        Project Description 
+        <br/><br/>
+        - Short
+        - Sweet
+        <br/><br/>
+        <br/><br/>
+        - Just enough info
+      </Text>
+      
     </Center>
   </WrapItem>
+  <WrapItem>
+   
+  </WrapItem>
 </Wrap>
-
+<Center className={styles.heroCta}>
+    <Image opacity={"100%"} src="/rarities.png" w={550} h={400} alt=""/>
+    </Center>
  </Box>
-      
+      <footer>
+        <Center>       <div className={styles.heroCta}>
+©SQUIDINK:REBORN 2024
+        </div></Center>
+ 
+      </footer>
        </div>
       
   
