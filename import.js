@@ -1,0 +1,3 @@
+const THIRDWEB_CLIENT_ID = "97b1beee770decf0725d9f565f3d4b76";
+
+export default THIRDWEB_CLIENT_ID;
