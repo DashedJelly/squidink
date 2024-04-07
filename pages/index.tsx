@@ -88,12 +88,10 @@ SquidInk Reborn:Minting Now
       
     </Center>
   </WrapItem>
-  <WrapItem>
-   
-  </WrapItem>
+ 
 </Wrap>
 <Center className={styles.heroCta}>
-    <Image opacity={"100%"} src="/rarities.png" w={550} h={400} alt=""/>
+    <Image opacity={"100%"} src="/rarities.png" objectFit={"scale-down"} alt=""/>
     </Center>
  </Box>
       <footer>
