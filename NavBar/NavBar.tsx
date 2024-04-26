@@ -21,10 +21,10 @@ export function Navbar() {
           </Link>
 
           <div className={styles.navMiddle}>
-            <Link href="/mint" className={styles.link}>
+            <Link href="/SquidMint" className={styles.link}>
               Mint
             </Link>
-            <Link href="/stake" className={styles.link}>
+            <Link href="/SquidStake" className={styles.link}>
               Stake
             </Link>
             <Link href="/viewer" className={styles.link}>

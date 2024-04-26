@@ -9,7 +9,7 @@ const Home: NextPage = () => {
    
       
        
-      <div className={styles.container1}>
+      <div className={styles.container}>
 
 <Box>
   <Image src="/squid-hero2.jpg" objectFit='cover' alt=""/>
@@ -29,7 +29,7 @@ SquidInk Reborn:Minting Now
 
       
       <Box>
-      <Wrap spacing='40px' justify='center'>
+      <Wrap spacing='75px' justify='center'>
   <WrapItem>
   <Center>
   <Image opacity={"67%"} src="/options.png" objectFit={"cover"} alt=""/>
@@ -38,7 +38,7 @@ SquidInk Reborn:Minting Now
  
   <WrapItem>
     <Center className={styles.heroCta}>
-      <Text align={"center"} paddingBlock={56} fontSize={30}>
+      <Text align={"center"} paddingBlock={"auto"} fontSize={30}>
         Re:Focused and Reborn 
         <br/><br/>
         <br/><br/>
@@ -55,7 +55,7 @@ SquidInk Reborn:Minting Now
   </WrapItem>
   <WrapItem>
   <Center className={styles.heroCta}>
-      <Text paddingBlock={56} fontSize={30}>
+      <Text paddingBlock={"auto"} fontSize={30}>
         Re:Focused and Reborn 
         <br/><br/>
         <br/><br/>
@@ -69,11 +69,12 @@ SquidInk Reborn:Minting Now
       </Text>
       
     </Center>
+
   </WrapItem>
 
   <WrapItem>
   <Center className={styles.heroCta}>
-      <Text paddingBlock={56} fontSize={30}>
+      <Text paddingBlock={"auto"} fontSize={30}>
         Re:Focused and Reborn 
         <br/><br/>
         <br/><br/>
@@ -87,8 +88,14 @@ SquidInk Reborn:Minting Now
       </Text>
       
     </Center>
+   
   </WrapItem>
  
+</Wrap>
+<Wrap>
+  <WrapItem>
+  <Image opacity={"100%"} src="/rarities.png" objectFit={"scale-down"} alt=""/>
+  </WrapItem>
 </Wrap>
 <Center className={styles.heroCta}>
     <Image opacity={"100%"} src="/rarities.png" objectFit={"scale-down"} alt=""/>
