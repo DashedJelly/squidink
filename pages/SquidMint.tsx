@@ -87,7 +87,7 @@ const Home: NextPage = () => {
 
   const handleJDOHApproval = async (contract: any, amount: number) => {
     try {
-      await contract.call("approve", ["0x1526c6055C4bc8C8df2CFEB37f29A53dAe6D79bB", amount]);
+      await contract.call("approve", ["0xCAaEe9f60A3749Ed26b3385c92bBeD11d61eD854", amount]);
       setAlertMessage("Approval successful!");
       setAlertStatus("success");
     } catch (error) {
@@ -109,22 +109,20 @@ const Home: NextPage = () => {
   
 
   return (
+    <Box>
     <div className={styles.container}>
-      <div className={styles.card4}>
+     
       
       <Box>
-        
-          <Heading fontFamily={"Reenie Beanie"} className={styles.Title}>
-            SquidInk:
-
-            REBORN
-            <br/>
-            <span style={{ fontSize: "3rem"}}>EVO:MINT</span>
-          </Heading>
+        <Text>SQUIDINK:REBORN</Text>
+      <Box pt={107}>
+  <Image src="/squidhero2.png" objectFit='cover' alt=""/>
+  
+</Box>
         
       </Box>
       
-      </div>
+  
       
       <div className={styles.heroCta4}>
         <NFTTotalSupply /> 
@@ -132,8 +130,8 @@ const Home: NextPage = () => {
        
       </div>
      
-      <div className={styles.heroCta4}>
-      <div className={styles.heroCta13}>
+      
+      <div className={styles.heroCta12}>
         <div className={styles.nftBoxGrid}>
           
           <Image
@@ -148,16 +146,16 @@ const Home: NextPage = () => {
               aria-label="Number of Tokens"
               value={numberOfTokensSlider1}
               onChange={handleSliderChangeSlider1}
-              colorScheme='pink'
+              colorScheme='blue'
               min={1}
-              max={8}
+              max={11}
               size="lg" // Make the slider larger
               defaultValue={1} // Default value
             >
-              <SliderTrack bg="blue.200">
-                <SliderFilledTrack bg="pink.500" />
+              <SliderTrack bg="blue.300">
+                <SliderFilledTrack bg="white" />
               </SliderTrack>
-              <SliderThumb boxSize={12}>
+              <SliderThumb boxSize={20}>
                 <Text>{numberOfTokensSlider1}</Text>
               </SliderThumb>
             </Slider>
@@ -312,9 +310,7 @@ Please be aware of the risks associated with investing in digital assets and mak
             
          <br/>
          <Box className={styles.card2}>
-         <div className={styles.heroCta4}>
-              Mint Price = <br /> 2500$JDOH
-            </div>
+        
             <Popover
               initialFocusRef={initialFocusRef}
               placement="top"
@@ -379,7 +375,7 @@ Please be aware of the risks associated with investing in digital assets and mak
               
           </div>
         </div>
-      </div>
+    
       
       <div style={{ position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)", zIndex: 9999 }}>
         {alertMessage && (
@@ -437,7 +433,7 @@ Please be aware of the risks associated with investing in digital assets and mak
       
      </footer>
     </div>
-    
+    </Box>
   );
 };
 

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
 
 .container {
-  margin-top: 105px;
+  margin-top: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +12,7 @@
   background-image: url("/undersea.png");
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: "Nerko One", "Nerko One";
+  font-family: "reenie beanie";
   text-rendering: optimizeLegibility;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.568);
 }
@@ -39,14 +39,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: fill; 
-  width: 100lvw;
+  width: 99lvw;
   position: absolute;
   padding: 10px;
   padding-left: 75px;
-  background-image: url("/jellyplains.png");
-  background-size: cover;
+
   background-repeat: no-repeat;
-  font-family: "DynaPuff", "Nerko One";
+  font-family: "reenie beanie", "Nerko One";
   color: #000000;
 }
 
@@ -566,17 +565,16 @@
   align-items: center;
   justify-content: center;
   padding: 8px 8px;
-  border: 3px solid hsla(113, 100%, 67%, 0.486);
+  border: 3px solid hsla(249, 95%, 48%, 0.486);
   margin: 16px 0;
   background-clip: padding-box;
-  background-color: hsla(41, 82%, 39%, 0.548);
+  background-color: hsla(177, 65%, 58%, 0.548);
   border-radius: 10px;
   color: #78d4d0;
   font-size: 19px;
   font-weight: 500;
   letter-spacing: 0.2px;
   line-height: 20px;
-  transition: opacity 0.7s;
   width: 280px;
 }
 
@@ -590,46 +588,16 @@
   justify-content: center;
   padding: 0px 0px;
   border: 3px solid hsla(202, 100%, 67%, 0.705);
-  margin: 16px 0;
+ 
   background-clip: padding-box;
   background-color: hsla(189, 100%, 60%, 0.473);
   border-radius: 10px;
   color: #ffffff;
-  font-size: 19px;
-  font-weight: 500;
-  letter-spacing: 0.2px;
+  font-size: 35px;
+  font-weight: 800;
+  letter-spacing: 1px;
   line-height: 20px;
-  transition: opacity 0.7s;
-  width: 170px;
-  height: 170px;
 }
-
-.heroCta2::before {
-  position: absolute;
-  z-index: -1;
-  top: 5px;
-  right: 5px;
-  bottom: 0;
-  left: 5px;
-  background: conic-gradient(
-    from 147.14deg at 50% 50%,
-    var(--color-primary) -55.68deg,
-    var(--color-secondary) 113.23deg,
-    var(--color-tertiary) 195deg,
-    var(--color-quaternary) 304.32deg,
-    var(--color-primary) 473.23deg
-  );
-  border-radius: 6px;
-  content: "";
-  filter: blur(20px);
-  opacity: 0.6;
-}
-
-.heroCta:hover {
- 
-  opacity: 0.7;
-}
-
 
 .heroCta3 {
   position: relative;
@@ -719,7 +687,7 @@
 .heroCta6 {
   position: relative;
   display: row;
-  width: 50%;
+  width: auto;
   align-items: center;
   justify-content: center;
   padding: 6px 6px;
@@ -924,7 +892,7 @@
   width: auto;
   text-shadow: 2px 2px 3px rgb(185, 169, 230);
   opacity: var(--color-primary);
-  background-image: url('/jellymarket2.png');
+  background-image: url('/bubbles.png');
   
   background-size: cover; /* You can use 'cover', 'contain', or specific dimensions */
   background-position: center;
@@ -988,24 +956,21 @@
 .heroCta20 {
   position: relative;
   display: row;
-  width: auto;
+  width: 200px;
   align-items: center;
   justify-content: center;
-  padding: 2px 15px;
-  border: 3px solid hsla(229, 100%, 49%, 0.548);
-  margin: 8px 0;
+  
+  
+  
   background-clip: padding-box;
   background-color: hsla(225, 77%, 59%, 0.781);
   border-radius: 10px;
   color: #fffffff3;
-  font-size: 16px;
+  font-size: 30px;
   font-weight: 500;
-  letter-spacing: 0.2px;
-  line-height: 20px;
-  transition: opacity 100s;
-  width: auto;
-  background-image: url('/jellybubble2.png');
-  opacity: var(--color-primary);
+  letter-spacing: 1px;
+  background-image: url("/bubbles.png");
+
   text-shadow: 1px 1px 1px rgba(63, 63, 63, 0.705);
 }
 
@@ -1486,7 +1451,7 @@ perspective-origin: 5%;
 }
 
 
-@media (max-width: 630px) {
+@media (max-width: 420px) {
   .phasesContainer {
     flex-direction: column;
     align-items: center;
@@ -1497,19 +1462,20 @@ perspective-origin: 5%;
   }
 
   .container {
-    margin-top: 169px;
-    width: 100vw;
-    box-sizing: border-box;
+    margin-top: 105px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: auto;
+    justify-content: left;
+    width: 100%;
     position: absolute;
-    padding: 0 48px;
     
-    font-family: 'Nerko One', monospace;
-    text-shadow: 0px 2px 2px rgba(190, 190, 190, 0.568);
+    background-image: url("/undersea.png");
+    background-size: fill;
+    background-repeat: no-repeat;
+    font-family: "monospace";
+    text-rendering: optimizeLegibility;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.568);
   }
   
   .container1 {
@@ -1607,7 +1573,7 @@ perspective-origin: 5%;
   .heroCta {
     position: relative;
     display: flex;
-    width: 90%;
+    width: auto;
     align-items: center;
     justify-content: center;
     padding: 8px 8px;
@@ -1699,17 +1665,18 @@ perspective-origin: 5%;
     
     align-items: center;
     justify-content: center;
-    padding: 2px 15px;
-    border: 3px solid hsla(229, 100%, 49%, 0.548);
+  
+    border: 1px solid  hsla(54, 100%, 49%, 0.445);
     margin: 8px 0;
     background-clip: padding-box;
     background-color: hsla(225, 77%, 59%, 0.781);
-    border-radius: 10px;
+   
+    border-radius: 16px;
     color: #fffffff3;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 0.2px;
-    line-height: 20px;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 25px;
    
     opacity: var(--color-primary);
 

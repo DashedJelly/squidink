@@ -66,17 +66,7 @@ export function Navbar() {
         showThirdwebBranding={false}
       />
           </div>
-          {address && (
-           
-              <Image
-                className={styles.profileImage}
-                src="/button.png"
-                width={42}
-                height={42}
-                alt="Profile"
-              />
-            
-          )}
+       
         </div>
       </nav>
     </div>

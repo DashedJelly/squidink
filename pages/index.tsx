@@ -11,17 +11,13 @@ const Home: NextPage = () => {
        
       <div className={styles.container}>
 
-<Box>
-  <Image src="/squid-hero2.jpg" objectFit='cover' alt=""/>
+<Box pt={107}>
+  <Image src="/squidhero2.png" objectFit='cover' alt=""/>
   
 </Box>
 <Heading className={styles.heroCta}>
 <Center>
-<Text fontFamily={"Reenie Beanie"} fontSize={"44"}>
 
-SquidInk Reborn:Minting Now 
-
-</Text>
 </Center>
 </Heading>
 

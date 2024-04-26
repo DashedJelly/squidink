@@ -41,14 +41,13 @@ import {
   Tab,
   TabList,
   Heading,
+  Wrap,
+  WrapItem,
 } from "@chakra-ui/react";
 import { formatUnits } from "ethers/lib/utils";
 import { Squidz } from "../const/contractAddresses";
 import styles from "../styles/Home.module.css";
-import {
-  CircularProgress,
-  CircularProgressLabel,
-} from "@chakra-ui/progress";
+
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import theme from "../theme";
 
@@ -104,170 +103,45 @@ const YourComponent: React.FC = () => {
 
   return (
     <ChakraProvider theme={theme}>
-<div className={styles.container5}>
-  <Box pt={20}></Box>
-<Heading pt={17} className={styles.secondaryCta} color={"green.200"} size={"lg"} fontFamily={"Nerko One"}>EVO:STAKING REGISTRY</Heading>
-      <Flex
-        direction={{ base: "column", md: "row" }}
-        align="wide"
-        p={-20}
-        pt={32}
-        w="100vw"
-        h="69vh"
-        
-      >
-<div>
-  
-</div>
-        
-        
-        <div className={styles.progressBarContainer}>
-          <ProgressBar multiplier={multiplier} />
-        </div>
-
-        {/* Rewards */}
-        <div className={styles.heroCta20}>
+<div className={styles.container2}>
+<Wrap spacing='10px' justify='center'>
+  <WrapItem>
+    <Center>
+    <div className={styles.card4}>
           {isLoading ? (
             <Spinner />
           ) : data ? (
-            <div className={styles.heroCta6}>
-              <Text>Rewards: {parseFloat(formatUnits(data, 18)).toFixed(2)} $JDOH</Text>
+            <div className={styles.heroCta2}>
+              <Text>Claimable Rewards: </Text><br/> <Text fontFamily={"monospace"}>{parseFloat(formatUnits(data, 18)).toFixed(2)}$JDOH</Text>
             </div>
           ) : (
             <Text>No rewards data available</Text>
           )}
-
-<Box className={styles.heroCta6}>
-            
-            <Popover
-              initialFocusRef={initialFocusRef}
-              placement="bottom"
-              closeOnBlur={false}
-            >
-              <PopoverTrigger>
-                <Center>
-                <Button 
-                fontFamily={"monospace"}
-                className={styles.heroCta6}
-                bg={"blue.200"} color={"purple"}>
-                  Top 5 Leaderboard
-                </Button>
-                </Center>
-              </PopoverTrigger>
-              <PopoverContent 
-              color="white" bg="blue.600" borderColor="blue.800">
-                <PopoverHeader  pb={5} fontWeight="bold" border="0">
-                <Heading
-                fontFamily={"DynaPuff"}>⭐Top 5⭐ Leaderboard</Heading>
-                </PopoverHeader>
-                <PopoverArrow bg="blue.200" />
-                <PopoverCloseButton bg={"green.200"}/>
-                <PopoverBody>
-                <div>
-  <Leaderboard /> 
-  </div>
-                </PopoverBody>
-                <PopoverFooter border="1" display="flex" alignItems="center" justifyContent="over" pb={6}>
-                <Center>
-                  
-                  </Center>
-                </PopoverFooter>
-              </PopoverContent>
-            </Popover>
-          </Box>
-
- <div className={styles.heroCta6}>
-<div>REWARD REGISTRIES</div>
- <Tabs
- align="center" padding={1} margin={2} color={"antiquewhite"} shadow={"black"} colorScheme="purple" position="relative" variant="styled">
-    <TabList>
-     
-      <Link href="/labjellyregistry">
-      <Tab 
-     
-      fontSize={20} className={styles.codeButton2}>Lab Jellies
-      </Tab>
-      </Link>
-
-      <Link  href="/genesisrewards">
-      <Tab fontSize={20} className={styles.codeButton2}>Genesis Jellies</Tab>
-      </Link>
-
-
-<Link href="/EVORewards">
-<Tab fontSize={20} className={styles.codeButton2}>Jelly EvolutionZ</Tab>
-      </Link>
-
-    </TabList>
-  
-  </Tabs>
-  </div>
- <Center 
- className={styles.heroCta6}
- > {/* Boost Popover */}
-          <Box className={styles.card4}>
-            
-            <Popover
-              initialFocusRef={initialFocusRef}
-              placement="bottom"
-              closeOnBlur={false}
-            >
-              <PopoverTrigger>
-                <Button bg={"purple.400"} color={"blue"}>
-                  BOOST
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent color="white" bg="blue.800" borderColor="blue.800">
-                <PopoverHeader  pb={5} fontWeight="bold" border="0">
-                  Collectibles Percentage Boost %
-                </PopoverHeader>
-                <PopoverArrow bg="blue.800" />
-                <PopoverCloseButton />
-                <PopoverBody>
-                  Boosts Are Automatically added When a Jelly Collectible is owned and held in the same wallet as Your EVO Jelly/Incubators
-                </PopoverBody>
-                <PopoverFooter border="1" display="flex" alignItems="center" justifyContent="over" pb={6}>
-                <Center>
-                  <ButtonGroup size="md">
-                    <Link href="https://opensea.io/collection/jelly-collectibles">
-                      <Button colorScheme="green"
-                      className={styles.heroCta1}>Purchase a <br/> Collectible</Button>
-                    </Link>
-                    <Link href="https://opensea.io/collection/jellyevolutionz">
-                      <Button colorScheme="purple"
-                      className={styles.heroCta1}>Purchase an <br/>Evo on Opensea</Button>
-                    </Link>
-                  </ButtonGroup>
-                  </Center>
-                </PopoverFooter>
-              </PopoverContent>
-            </Popover>
-          </Box></Center>
-          <div className={styles.heroCta6}>
-             
-
-            <CircularProgress fontFamily={"Nerko One"} color="purple.500" size={135} value={multiplier}>
-              <CircularProgressLabel>+{multiplier}%</CircularProgressLabel>
-            </CircularProgress>
           </div>
-          <Center className={styles.GridItem}>
-          <Flex mt={77} gap={9}>
-            <Web3Button
+    </Center>
+  </WrapItem>
+  <WrapItem>
+    <Center >
+    <Web3Button
             theme={"light"}
             className={styles.codeButton2}
               contractAddress="0x931E82341BDE35E3e3AAa1f2E025801BF360c190"
               action={async (contract) => {
                 try {
                   await contract.call("stake");
-                  openDialog("🎉Success🎉", "✨ Your J-EVO are registered for Rewards ✨ !");
+                  openDialog("🎉Success🎉", "Your SquidInk:Reborn are registered for Rewards!");
                 } catch (error) {
                   openDialog("🚫Error🚫", "Something went Wrong :( Please try again, or Yell really loud.");
                 }
               }}
             >
-              <div className={styles.codeButton2}>Stake All</div>
+              <div className={styles.codeButton}>Stake All</div>
             </Web3Button>
-            <Web3Button
+    </Center>
+  </WrapItem>
+  <WrapItem>
+    <Center>
+    <Web3Button
             theme={"light"}
             className={styles.codeButton2}
               contractAddress="0x931E82341BDE35E3e3AAa1f2E025801BF360c190"
@@ -280,18 +154,30 @@ const YourComponent: React.FC = () => {
                 }
               }}
             >
-              <div className={styles.codeButton2}>Claim Rewards</div>
+              <div className={styles.codeButton}>Claim Rewards</div>
             </Web3Button>
-          </Flex>
-          </Center>
+    </Center>
+  </WrapItem>
+
+</Wrap>
+
+      <Flex
+        direction={{ base: "row", md: "column" }}
+        
+     pt={100}
+        w="50vw"
+        h="50vh"
+        
+      >
+
+        
         
        
-        
-        </div>
+       
 
         {/* NFT Table */}
         <Box flex={{ base: "10px", md: "10px" }} pr={6} pl={6}>
-          <Table variant="simple">
+          <Table>
             <Tbody>
               {Array.from({ length: Math.ceil(paginatedNFTs.length / 2) }, (_, rowIndex) => (
                 <Tr key={rowIndex}>
@@ -301,19 +187,15 @@ const YourComponent: React.FC = () => {
                       <Td key={nft.metadata.id.toString()}>
                         <div className={styles.heroCta20} style={{  display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
                           <Box
-                            sx={{
-                              "@media (max-width: 420px)": {
-                                width: "50px", // Adjust the width for mobile
-                              },
-                            }}
+                          
                           >
                             <Center>
                               <ThirdwebNftMedia
-                              className={styles.card3}
+                              className={styles.card4}
                                 metadata={nft.metadata}
                                 
                                 style={{
-                                  width: "150px", // Default size
+                                  width: "180px", // Default size
                                   height: "relative",
                                 }}
                               />
@@ -321,7 +203,7 @@ const YourComponent: React.FC = () => {
                           </Box>
                           
                             <div>{nft.metadata.name}</div>
-                            <Center className={styles.heroCta6}>
+                            <Center className={styles.card}>
                             
                             
                                 {isNFTStaked(nft.metadata.id.toString()) ? <Text color={"aqua"} >STAKED</Text> : <Text color={"orange"}>UNSTAKED</Text>}
@@ -375,7 +257,7 @@ const YourComponent: React.FC = () => {
               {dialogContent.message}
             </AlertDialogBody>
             <AlertDialogFooter>
-              <Button ref={cancelRef} colorScheme="pink" onClick={() => setIsDialogOpen(false)}>
+              <Button ref={cancelRef} colorScheme="blue" onClick={() => setIsDialogOpen(false)}>
                 Close
               </Button>
             </AlertDialogFooter>
