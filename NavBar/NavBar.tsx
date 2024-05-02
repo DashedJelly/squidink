@@ -270,7 +270,7 @@ colorScheme="purple" variant={"outline"}
                               width={340}
                               bg={"blue.300"}
                               className={styles.codeButton}
-                              onClick={() => router.push(`https://discord.gg/`)}
+                              onClick={() => router.push(`https://discord.gg/VRmJTGWHHh`)}
                             >
                                Join the Discord  
                             </Button>
