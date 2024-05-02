@@ -8,7 +8,7 @@
   justify-content: left;
   width: 100%;
   position: absolute;
-  padding: 0 48px;
+  padding: 0 0px;
   background-image: url("/undersea.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -842,7 +842,10 @@
   font-weight: 500;
   letter-spacing: 0.2px;
   line-height: 20px;
- 
+  background-image: url('/undersea2.png');
+  
+  background-size: 100%; /* You can use 'cover', 'contain', or specific dimensions */
+  background-position: center;
   width: 470px;
   text-shadow: 1px 1px 1px rgba(72, 60, 240, 0.705);
   
@@ -1462,7 +1465,7 @@ perspective-origin: 5%;
   }
 
   .container {
-    margin-top: 105px;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;

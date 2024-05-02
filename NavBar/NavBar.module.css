@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wdth,wght@75,500&family=Nerko+One&display=swap');
+
+
 .navContainer {
   width: 100%;
   display: flex;
@@ -6,14 +9,14 @@
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 3;
-  background-image: "/squid-hero.jpg";
-  background-size: cover;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  
- 
+  z-index: 3;;
+  background-color: transparent !important;
+  backdrop-filter: blur(6px);
+  border-radius: 9px;
+  overflow: hidden;
+  font-family: 'DynaPuff', monospace;
+  text-rendering: optimizeLegibility;
+  text-shadow: 0px 2px 2px rgba(233, 17, 204, 0.568);
 }
 
 .nav {
@@ -25,21 +28,58 @@
   align-items: center;
   justify-content: space-between;
   width: 98%;
-  max-width: 1260px;
+  max-width: 1080px;
   background-color: transparent !important;
 }
+
+.nav::before {
+  content: "";
+  background-image: url("/undersea2.png");
+  background-size: cover;  /* Adjusted - to make sure the image always covers the container */
+  background-position: center;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.secondaryCta {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  transition: background-color 0.2s;
+  width: 174px;
+  border: 1px solid hsla(273, 100%, 85%, 0.555);
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+  background-color: hsla(194, 74%, 44%, 0.356);
+}
+
+.secondaryCta:hover {
+  background-color: hsla(288, 74%, 44%, 0.356);
+}
+
 
 .navLeft {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  gap: 12px;
+  align-items: flex;
+  gap: 13px;
   transition: all 0.15s ease-in-out;
 }
 
 .navMiddle {
   display: flex;
-  margin-left: 12px;
+  margin-left: 1-6px;
   flex-direction: row;
   align-items: center;
   gap: 24px;
@@ -60,7 +100,8 @@
 
 .homeLink:hover {
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 0.7;
+  
 }
 
 .navRight {
@@ -84,15 +125,93 @@
 .homeLink {
   font-size: 24px;
   font-weight: 500;
+  justify-content: left;
+  margin-left: 10px; 
 }
 
 .buttonLink:hover {
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
 }
 
-/* Sreens less than 720px */
-@media (max-width: 500px) {
-  .navConnect {
-    display: none !important;
-  }
+
+@media (max-width: 718px) { 
+ 
+
+
+.navRight {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+  justify-content: right;
+  margin-right: -5px;
+}
+.navMiddle {
+  display: flex;
+  margin-left: 6px;
+  flex-direction: row;
+  align-items: flex;
+  gap: 16px;
+}
+
+.navLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: -8px;
+  transition: all 0.15s ease-in-out;
+}
+
+.homeLink {
+  margin-left: -33px; /* Adjust the margin-left value for mobile view */
+}
+.profileImage {
+  margin-right: -5px;
+}
+
+.navContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 4;;
+  background-color: transparent !important;
+  backdrop-filter: blur(6px);
+  border-radius: 9px;
+  overflow: hidden;
+  font: optional;
+  font-family: 'DynaPuff', monospace;
+  text-rendering: optimizeLegibility;
+  text-shadow: 0px 2px 2px rgba(233, 17, 204, 0.568);
+}
+
+.nav {
+  padding-left: 2em;
+  padding-right: 2em;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+  justify-content: space-between;
+  width: 98%;
+  max-width: 1080px;
+  background-color: transparent !important;
+}
+
+.nav::before {
+  content: "";
+  background-image: url("/undersea.png");
+  background-size: cover;  /* Adjusted - to make sure the image always covers the container */
+  background-position: center;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
 }

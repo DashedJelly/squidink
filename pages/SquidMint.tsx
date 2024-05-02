@@ -131,7 +131,7 @@ const Home: NextPage = () => {
       </div>
      
       
-      <div className={styles.heroCta12}>
+      <div className={styles.heroCta11}>
         <div className={styles.nftBoxGrid}>
           
           <Image
@@ -155,8 +155,8 @@ const Home: NextPage = () => {
               <SliderTrack bg="blue.300">
                 <SliderFilledTrack bg="white" />
               </SliderTrack>
-              <SliderThumb boxSize={20}>
-                <Text>{numberOfTokensSlider1}</Text>
+              <SliderThumb boxSize={16}>
+                <Text fontFamily={"monospace"}>{numberOfTokensSlider1}</Text>
               </SliderThumb>
             </Slider>
 
@@ -189,7 +189,7 @@ const Home: NextPage = () => {
                   <Popover  initialFocusRef={initialFocusRef}
               placement="top"
               closeOnBlur={false}>
-                  <Box className={styles.card3}>
+                  <Box className={styles.card2}>
             <Popover
               initialFocusRef={initialFocusRef}
               placement="bottom"
@@ -278,7 +278,7 @@ Please be aware of the risks associated with investing in digital assets and mak
           </div>
           </div>
           <Box borderColor={"purple"} borderWidth='1px' borderRadius='lg' overflow='hidden'></Box>
-          <div className={styles.heroCta13}>
+          <div className={styles.heroCta11}>
           <div className={styles.nftBoxGrid}>
             <Image src="/evotoken.png" alt="drop" width={320} height={320} />
           
@@ -300,10 +300,10 @@ Please be aware of the risks associated with investing in digital assets and mak
               defaultValue={1} // Default value
             >
               <SliderTrack bg="blue.200">
-                <SliderFilledTrack bg="pink.500" />
+                <SliderFilledTrack bg="green.500" />
               </SliderTrack>
-              <SliderThumb boxSize={12}>
-                <Text>{numberOfTokensSlider2}</Text>
+              <SliderThumb boxSize={16}>
+                <Text fontFamily={"monospace"}>{numberOfTokensSlider2}</Text>
               </SliderThumb>
             </Slider>
 
@@ -317,11 +317,11 @@ Please be aware of the risks associated with investing in digital assets and mak
               closeOnBlur={false}
             >
               <PopoverTrigger>
-                <Button bg={"black"} color={"White"}>
+                <Button bg={"black"} color={"blue.200"}>
                   MINT WITH $JDOH
                 </Button>
               </PopoverTrigger>
-              <PopoverContent color="white" bg="blue.800" borderColor="blue.800">
+              <PopoverContent color="blue.300" bg="blue.800" borderColor="blue.800">
                 <PopoverHeader  pb={5} fontWeight="bold" border="0">
                   🚨Before Your MINT 🚨
                 </PopoverHeader>
@@ -429,7 +429,7 @@ Please be aware of the risks associated with investing in digital assets and mak
       
       </Tab>
       </Tabs>
-      <Center><Text className={styles.heroCta11}>Jelly-Tech StudioZ® </Text></Center>
+      <Center><Text fontFamily={"monospace"} className={styles.heroCta11}>Jelly-Tech StudioZ® </Text></Center>
       
      </footer>
     </div>

@@ -51,9 +51,7 @@ import styles from "../styles/Home.module.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import theme from "../theme";
 
-import Leaderboard from "../components/SquidzLeaderboard";
-
-const itemsPerPage = 8;
+const itemsPerPage = 6;
 
 const ProgressBar: React.FC<{ multiplier: number }> = ({ multiplier }) => {
   const progressPercentage = Math.min(multiplier, 300); // Limit to 300%
@@ -74,13 +72,9 @@ const YourComponent: React.FC = () => {
     "getStakedTokenIdsOfOwner",
     [address]
   );
-  const { data: multiplierData, isLoading: multiplierLoading } = useContractRead(
-    contract,
-    "getMultiplier",
-    [address]
-  );
 
-  const multiplier: number = multiplierData ? multiplierData.toNumber() : 0;
+
+ 
 
   const isNFTStaked = (nftId: string): boolean => {
     return stakedTokenIds?.map((id: { toString: () => any }) => id.toString()).includes(nftId) ?? false;
@@ -170,12 +164,6 @@ const YourComponent: React.FC = () => {
         
       >
 
-        
-        
-       
-       
-
-        {/* NFT Table */}
         <Box flex={{ base: "10px", md: "10px" }} pr={6} pl={6}>
           <Table>
             <Tbody>
