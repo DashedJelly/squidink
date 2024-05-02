@@ -8,7 +8,7 @@ import THIRDWEB_CLIENT_ID from "../import";
 import { SetStateAction, useState } from "react";
 import router from "next/router";
 import { HamburgerIcon } from "@chakra-ui/icons";
-
+import fonts from "../styles/fonts.module.css";
 import React from "react";
 
 
@@ -116,9 +116,9 @@ export function Navbar() {
               <Center pt={0}>
                 <DrawerOverlay />
                 <DrawerContent borderColor={"blue"}
-                backgroundImage={"/fluid.png"}
+                backgroundImage={"/bubbles.png"}
                 backdropBlur={434}
-                fontFamily={'DynaPuff'}
+                fontFamily={'Franklin_notes'}
                 backgroundColor={"blue.100"}>
                   <DrawerCloseButton backgroundColor={"teal.300"} />
                   
@@ -194,7 +194,7 @@ export function Navbar() {
 </Box>
 
 <Box pt={4}>
-<Heading fontFamily={"Nerko One"} color={"teal.300"}>Staking</Heading>
+<Heading fontFamily={"DynaPuff"} color={"teal.300"}>Staking</Heading>
 <Button
 colorScheme="purple" variant={"outline"}
                               width={340}
@@ -210,7 +210,7 @@ colorScheme="purple" variant={"outline"}
 
 </Box>
 
-<Box pt={3}></Box>
+
 
 <Box pt={3}>
 <Heading fontFamily={"DynaPuff"} color={"teal.300"}>Info & Socials</Heading>
@@ -251,7 +251,7 @@ colorScheme="purple" variant={"outline"}
                                Squid-Info
                             </Button>
 </Box>
-<Box pb={2}></Box> 
+
                           
     <Box pb={6}></Box>         
                     <Button

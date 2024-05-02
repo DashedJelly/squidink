@@ -97,8 +97,8 @@ const YourComponent: React.FC = () => {
 
   return (
     <ChakraProvider theme={theme}>
-      <Center>
-<div className={styles.container2}>
+      <Center pt={105}>
+<div className={styles.container6}>
 <Wrap spacing='10px' justify='center'>
   <WrapItem>
     <Center>
@@ -107,7 +107,7 @@ const YourComponent: React.FC = () => {
             <Spinner />
           ) : data ? (
             <div className={styles.heroCta2}>
-              <Text>Claimable Rewards: </Text><br/> <Text fontFamily={"monospace"}>{parseFloat(formatUnits(data, 18)).toFixed(2)}$JDOH</Text>
+              <Text fontFamily={"monospace"}>Claimable Rewards: </Text><br/> <Text fontFamily={"monospace"}>{parseFloat(formatUnits(data, 18)).toFixed(2)}$JDOH</Text>
             </div>
           ) : (
             <Text>No rewards data available</Text>
@@ -119,7 +119,7 @@ const YourComponent: React.FC = () => {
     <Center >
     <Web3Button
             theme={"light"}
-            className={styles.codeButton2}
+            
               contractAddress="0x931E82341BDE35E3e3AAa1f2E025801BF360c190"
               action={async (contract) => {
                 try {
@@ -138,7 +138,7 @@ const YourComponent: React.FC = () => {
     <Center>
     <Web3Button
             theme={"light"}
-            className={styles.codeButton2}
+            
               contractAddress="0x931E82341BDE35E3e3AAa1f2E025801BF360c190"
               action={async (contract) => {
                 try {

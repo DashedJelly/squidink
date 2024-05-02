@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Franklin_notes';
-    src: url('/fonts/Franklin_notes.otf') format('opentype');
+    src: url('../public/Franklin_notes.otf') format('opentype');
     /* Adjust the path to match the location of your Franklin_notes.otf file */
     font-weight: normal;
     font-style: normal;

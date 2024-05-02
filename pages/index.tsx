@@ -16,10 +16,11 @@ const Home: NextPage = () => {
   
 </Box>
 <Box pb={535}>
-
+<Text fontFamily={"Franklin_notes"} className={styles.card3}>
+SquidInk - Reborn: <br/>Reviving, rebuilding, and adding value.<br/><br/> Join us on Polygon for a fresh NFT collecting experience</Text>
 </Box>
       <footer>
-        <Center>       <div className={styles.heroCta}>
+        <Center>       <div className={styles.card3}>
 ©SQUIDINK:REBORN 2024
         </div></Center>
  

@@ -1,4 +1,10 @@
-
+@font-face {
+  font-family: 'Franklin_notes';
+  src: url('../public/Franklin_notes.otf') format('opentype');
+  /* Adjust the path to match the location of your Franklin_notes.otf file */
+  font-weight: normal;
+  font-style: normal;
+}
 
 .container {
   margin-top: 0px;
@@ -8,13 +14,13 @@
   justify-content: left;
   width: 100%;
   position: absolute;
-  padding: 0 0px;
+  padding: 0 1px;
   background-image: url("/undersea.png");
   background-size: cover;
   background-repeat: no-repeat;
   font-family: 'Franklin_notes, monospace';
   text-rendering: optimizeLegibility;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.568);
+  
 }
 
 .container1 {
@@ -59,7 +65,7 @@
   width: 100%;
   position: absolute;
   padding: 0 4px;
-  background-image: url("/jellyplains.png");
+  background-image: url("/bubbles.png");
   background-size: cover;
   background-repeat: no-repeat;
   font-family: 'Franklin_notes, monospace';
@@ -435,21 +441,14 @@
       padding-top: 22px;
       text-align: center;
       color: white;
-      border: 3px solid #fcda1a9f;
+      border: 3px solid #fca21a9f;
       border-radius: 20px;
       max-height: 260px;
       max-width: 350px;
      padding-bottom: 27px;
      
     }
-    
-    .card3:hover,
-      .card:focus,
-      .card:active {
-        background-color: #665febe0;
-        color: #6305dd6e;
-        border-color: #a812ff;
-      }
+   
 
       .card4 {
         background-color: hsla(234, 58%, 64%, 0.575);
@@ -1465,7 +1464,7 @@ perspective-origin: 5%;
   }
 
   .container {
-    margin-top: 0px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;

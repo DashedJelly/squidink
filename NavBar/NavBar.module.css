@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Franklin_notes';
+  src: url('../public/Franklin_notes.otf') format('opentype');
+  
+  font-weight: normal;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wdth,wght@75,500&family=Nerko+One&display=swap');
+
 
 .navContainer {
   width: 100%;
@@ -12,7 +21,7 @@
   backdrop-filter: blur(6px);
   border-radius: 9px;
   overflow: hidden;
-  font-family: 'Franklin_notes, monospace';
+  font-family: 'Franklin_notes';
   text-rendering: optimizeLegibility;
   text-shadow: 0px 2px 2px rgba(233, 17, 204, 0.568);
 }
@@ -181,7 +190,7 @@
   border-radius: 9px;
   overflow: hidden;
   font: optional;
-  font-family: 'Franklin_notes, monospace';
+ 
   text-rendering: optimizeLegibility;
   text-shadow: 0px 2px 2px rgba(233, 17, 204, 0.568);
 }
@@ -202,7 +211,7 @@
 .nav::before {
   content: "";
   background-image: url("/undersea.png");
-  background-size: cover;  /* Adjusted - to make sure the image always covers the container */
+  background-size: cover; 
   background-position: center;
   opacity: 0.4;
   position: absolute;
