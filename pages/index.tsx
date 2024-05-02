@@ -11,92 +11,13 @@ const Home: NextPage = () => {
        
       <div className={styles.container}>
 
-<Box pt={107}>
-  <Image src="/squidhero2.png" objectFit='cover' alt=""/>
+<Box pt={67}>
+  <Image src="/logo.png" objectFit='cover' alt=""/>
   
 </Box>
-<Heading className={styles.heroCta}>
-<Center>
+<Box pb={535}>
 
-</Center>
-</Heading>
-
-
-
-      
-      <Box>
-      <Wrap spacing='75px' justify='center'>
-  <WrapItem>
-  <Center>
-  <Image opacity={"67%"} src="/options.png" objectFit={"cover"} alt=""/>
-  </Center>
-  </WrapItem>
- 
-  <WrapItem>
-    <Center className={styles.heroCta}>
-      <Text align={"center"} paddingBlock={"auto"} fontSize={30}>
-        Re:Focused and Reborn 
-        <br/><br/>
-        <br/><br/>
-        Project Description 
-        <br/><br/>
-        - Short
-        - Sweet
-        <br/><br/>
-        <br/><br/>
-        - Just enough info
-      </Text>
-      
-    </Center>
-  </WrapItem>
-  <WrapItem>
-  <Center className={styles.heroCta}>
-      <Text paddingBlock={"auto"} fontSize={30}>
-        Re:Focused and Reborn 
-        <br/><br/>
-        <br/><br/>
-        Project Description 
-        <br/><br/>
-        - Short
-        - Sweet
-        <br/><br/>
-        <br/><br/>
-        - Just enough info
-      </Text>
-      
-    </Center>
-
-  </WrapItem>
-
-  <WrapItem>
-  <Center className={styles.heroCta}>
-      <Text paddingBlock={"auto"} fontSize={30}>
-        Re:Focused and Reborn 
-        <br/><br/>
-        <br/><br/>
-        Project Description 
-        <br/><br/>
-        - Short
-        - Sweet
-        <br/><br/>
-        <br/><br/>
-        - Just enough info
-      </Text>
-      
-    </Center>
-   
-  </WrapItem>
- 
-</Wrap>
-<Wrap>
-  <WrapItem>
-  <Image opacity={"100%"} src="/rarities.png" objectFit={"scale-down"} alt=""/>
-  </WrapItem>
-</Wrap>
-<Center className={styles.heroCta}>
-    <Image opacity={"100%"} src="/rarities.png" objectFit={"scale-down"} alt=""/>
-    </Center>
- </Box>
+</Box>
       <footer>
         <Center>       <div className={styles.heroCta}>
 ©SQUIDINK:REBORN 2024
