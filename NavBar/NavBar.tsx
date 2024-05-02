@@ -259,7 +259,7 @@ colorScheme="purple" variant={"outline"}
                               width={340}
                               bg={"blue.200"}
                               className={styles.codeButton}
-                              onClick={() => router.push(`https://twitter.com/jellycollective`)}
+                              onClick={() => router.push(`https://twitter.com/`)}
                             >
                                Follow on 𝕏 
                             </Button>
@@ -270,7 +270,7 @@ colorScheme="purple" variant={"outline"}
                               width={340}
                               bg={"blue.300"}
                               className={styles.codeButton}
-                              onClick={() => router.push(`https://discord.gg/thejellycollective`)}
+                              onClick={() => router.push(`https://discord.gg/`)}
                             >
                                Join the Discord  
                             </Button>
