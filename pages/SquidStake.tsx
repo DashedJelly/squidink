@@ -97,6 +97,7 @@ const YourComponent: React.FC = () => {
 
   return (
     <ChakraProvider theme={theme}>
+      <Center>
 <div className={styles.container2}>
 <Wrap spacing='10px' justify='center'>
   <WrapItem>
@@ -253,6 +254,7 @@ const YourComponent: React.FC = () => {
         </AlertDialogOverlay>
       </AlertDialog>
       </div>
+      </Center>
     </ChakraProvider>
   );
 };

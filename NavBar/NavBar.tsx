@@ -83,16 +83,16 @@ export function Navbar() {
         modalSize={"wide"}
         welcomeScreen={{
           title:
-            "Welcome to the Jelly Collective",
+            "Welcome to SquidInk-Reborn",
           subtitle: "Your Adventure Awaits",
           img: {
-            src: "/pinkjelly.gif",
-            width: 250,
+            src: "/options.png",
+            width: 200,
             height: 250,
           },
         }}
         modalTitleIconUrl={
-          "/JClogo.png"
+          "/button.png"
         
         }
       />
