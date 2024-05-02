@@ -117,7 +117,7 @@ const Home: NextPage = () => {
         <Text>SQUIDINK:REBORN</Text>
       <Box pt={107}>
       
-  <Image src="/squidhero2.png" objectFit='cover' alt=""/>
+  <Image src="/logo.png" objectFit='cover' alt=""/>
   
 </Box>
         
@@ -407,7 +407,7 @@ Please be aware of the risks associated with investing in digital assets and mak
                               bg={"blue.200"}
                               className={styles.codeButton}
                               role="button"
-                              onClick={() => {router.push(`https://opensea.io/collection/jellyevolutionz`)
+                              onClick={() => {router.push(`https://opensea.io/`)
                              ;
                             }}
                             ><Image src="OpenSea.png" alt="OS" height={50}/>
@@ -421,7 +421,7 @@ Please be aware of the risks associated with investing in digital assets and mak
                               bg={"teal.200"}
                               className={styles.codeButton}
                               role="button"
-                              onClick={() => {router.push(`/EVORewards`)
+                              onClick={() => {router.push(`/SquidStake`)
                              ;
                             }}
                             >
