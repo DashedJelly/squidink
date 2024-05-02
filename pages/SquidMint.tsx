@@ -87,7 +87,7 @@ const Home: NextPage = () => {
 
   const handleJDOHApproval = async (contract: any, amount: number) => {
     try {
-      await contract.call("approve", ["0xCAaEe9f60A3749Ed26b3385c92bBeD11d61eD854", amount]);
+      await contract.call("approve", ["0x8F3375a9e7607182f4651049248037fB6a7E9a97", amount]);
       setAlertMessage("Approval successful!");
       setAlertStatus("success");
     } catch (error) {
@@ -116,6 +116,7 @@ const Home: NextPage = () => {
       <Box>
         <Text>SQUIDINK:REBORN</Text>
       <Box pt={107}>
+      
   <Image src="/squidhero2.png" objectFit='cover' alt=""/>
   
 </Box>
@@ -342,7 +343,7 @@ Please be aware of the risks associated with investing in digital assets and mak
               <Web3Button
               className={styles.mainButton}
               theme={"light"}
-                contractAddress="0x13eE13d70cdBd336156b9aeBBbC89432C154110e"
+                contractAddress="0xCAaEe9f60A3749Ed26b3385c92bBeD11d61eD854"
                 action={(contract1) => {
                   handleJDOHApproval(contract1, amount);
                 }}
@@ -355,7 +356,7 @@ Please be aware of the risks associated with investing in digital assets and mak
               <Web3Button
          className={styles.mainButton}
                 theme={"light"}
-                contractAddress="0x1526c6055C4bc8C8df2CFEB37f29A53dAe6D79bB"
+                contractAddress="0x8F3375a9e7607182f4651049248037fB6a7E9a97"
                 action={(contract: any) => handleMintWithJDOH(contract, numberOfTokensSlider2)}
               >
                 Mint with $JDOH
