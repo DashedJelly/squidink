@@ -117,6 +117,7 @@ export function Navbar() {
                 <DrawerOverlay />
                 <DrawerContent borderColor={"blue"}
                 backgroundImage={"/bubbles.png"}
+                backgroundSize={"4200px"}
                 backdropBlur={434}
                 fontFamily={'Franklin_notes'}
                 backgroundColor={"blue.100"}>
