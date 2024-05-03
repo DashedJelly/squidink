@@ -109,13 +109,13 @@ const Home: NextPage = () => {
   
 
   return (
-    <Box>
-    <div className={styles.container}>
+    <Box fontFamily={"Franklin_notes"}>
+    <div className={styles.container1}>
      
       
       <Box>
-        <Text>SQUIDINK:REBORN</Text>
-      <Box pt={107}>
+       
+      <Box fontFamily={"Franklin_notes"} pt={42}>
       
   <Image src="/logo.png" objectFit='cover' alt=""/>
   
@@ -137,14 +137,16 @@ const Home: NextPage = () => {
           
           <Image
             className={styles.heroCta2}
-            src="/ink.png" alt="InKubator" width={320} height={320} />
+            src="/INKubator2.gif" alt="InKubator" width={320} height={320} />
          
         
           
           <h2 className={styles.heroCta11}>
           <div className={styles.heroCta1}>
             <Slider
+            fontFamily={"monospace"}
               aria-label="Number of Tokens"
+             
               value={numberOfTokensSlider1}
               onChange={handleSliderChangeSlider1}
               colorScheme='blue'
@@ -154,19 +156,21 @@ const Home: NextPage = () => {
               defaultValue={1} // Default value
             >
               <SliderTrack bg="blue.300">
-                <SliderFilledTrack bg="white" />
+                <SliderFilledTrack bg="yellow" />
               </SliderTrack>
               <SliderThumb boxSize={16}>
-                <Text fontFamily={"monospace"}>{numberOfTokensSlider1}</Text>
+                <Text fontFamily={"Franklin_notes"}>{numberOfTokensSlider1}</Text>
               </SliderThumb>
             </Slider>
 
        
          <br/>
 
-         <Box className={styles.card2}>
+         <Box
+         fontFamily={"Franklin_notes"}
+         className={styles.card4}>
          <div className={styles.heroCta4}>
-            Mint Price = <br /> 0.0001 Matic <br /><br /> Mint 3 or More = 25% Discount 
+            Mint Price =  0.0001 Matic
           
           
           </div>
@@ -177,20 +181,20 @@ const Home: NextPage = () => {
             >
               <PopoverTrigger>
                 <Button bg={"black"} color={"White"}>
-                  MINT WITH Matic
+                  MINT With MATIC
                 </Button>
               </PopoverTrigger>
               <PopoverContent color="white" bg="blue.800" borderColor="blue.800">
                
                 <PopoverArrow bg="blue.800" />
                 <PopoverCloseButton 
-                bgColor={"green.200"}
+                bgColor={"orange.200"}
                 />
-                <PopoverBody>
+                <PopoverBody  backgroundImage={"/navbarOcean.png"}>
                   <Popover  initialFocusRef={initialFocusRef}
               placement="top"
               closeOnBlur={false}>
-                  <Box className={styles.card2}>
+                  <Box className={styles.code}>
             <Popover
               initialFocusRef={initialFocusRef}
               placement="bottom"
@@ -201,14 +205,16 @@ const Home: NextPage = () => {
                 Disclaimer:
                 </Button>
               </PopoverTrigger>
-              <PopoverContent color="white" bg="blue.400" borderColor="green.200">
+              <PopoverContent  color="white" bg="blue.400" borderColor="green.200">
                
                 <PopoverArrow bg="blue.800" />
                 <PopoverCloseButton 
-                bgColor={"green.200"}
+                bgColor={"orange.200"}
                 />
                 <PopoverBody pt={26}>
-                  <Popover  initialFocusRef={initialFocusRef}
+                  <Popover 
+                  
+                  initialFocusRef={initialFocusRef}
               placement="top"
               closeOnBlur={false}>
                   
@@ -222,20 +228,20 @@ Please be aware of the risks associated with investing in digital assets and mak
                   </Popover>
                
                 </PopoverBody>
-                <PopoverFooter border="0" display="auto" alignItems="center" justifyContent="auto" pb={10}>
+                <PopoverFooter fontFamily={"Franklin_notes"} border="0" display="auto" alignItems="center" justifyContent="auto" pb={10}>
                 <Center>
                   <ButtonGroup size="lg">
                     
                    
                       
-                      <Box>
+                      <Box  fontFamily={"Franklin_notes"}>
                       <Web3Button
             className={styles.mainButton}
-              theme={"light"}
+              
               contractAddress="0x8F3375a9e7607182f4651049248037fB6a7E9a97"
               action={(contract: any) => handleMintToken(contract, numberOfTokensSlider1)}
             >
-              MINT:INKubatior
+              MINT:INKubator
             </Web3Button>
             </Box>
                    
@@ -254,10 +260,11 @@ Please be aware of the risks associated with investing in digital assets and mak
                     
                    
                       
-                      <Box>
+                      <Box fontFamily={"Franklin_notes"}>
                       <Web3Button
             className={styles.mainButton}
               theme={"light"}
+              
               contractAddress="0x8F3375a9e7607182f4651049248037fB6a7E9a97"
               action={(contract: any) => handleMintToken(contract, numberOfTokensSlider1)}
             >
@@ -328,7 +335,7 @@ Please be aware of the risks associated with investing in digital assets and mak
                 </PopoverHeader>
                 <PopoverArrow bg="blue.800" />
                 <PopoverCloseButton 
-                bgColor={"green.200"}
+                bgColor={"orange.200"}
                 />
                 <PopoverBody>
                  You Will Need to Approve the amount you wish to spend 

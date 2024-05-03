@@ -5,7 +5,7 @@ const theme = extendTheme({
     global: {
       body: {
         bg: "blue.900", // Set background color to black
-        color: "teal.700", // Set text color to white for better visibility on black background
+        color: "teal.300", // Set text color to white for better visibility on black background
       },
     },
   },

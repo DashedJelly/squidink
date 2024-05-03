@@ -43,6 +43,7 @@ import {
   Heading,
   Wrap,
   WrapItem,
+  Tag,
 } from "@chakra-ui/react";
 import { formatUnits } from "ethers/lib/utils";
 import { Squidz } from "../const/contractAddresses";
@@ -51,7 +52,7 @@ import styles from "../styles/Home.module.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import theme from "../theme";
 
-const itemsPerPage = 6;
+const itemsPerPage = 2;
 
 const ProgressBar: React.FC<{ multiplier: number }> = ({ multiplier }) => {
   const progressPercentage = Math.min(multiplier, 300); // Limit to 300%
@@ -98,7 +99,7 @@ const YourComponent: React.FC = () => {
   return (
     <ChakraProvider theme={theme}>
       <Center pt={105}>
-<div className={styles.container6}>
+<div className={styles.code4}>
 <Wrap spacing='10px' justify='center'>
   <WrapItem>
     <Center>
@@ -167,11 +168,12 @@ const YourComponent: React.FC = () => {
 
         <Box flex={{ base: "10px", md: "10px" }} pr={6} pl={6}>
           <Table>
+            <Center>
             <Tbody>
               {Array.from({ length: Math.ceil(paginatedNFTs.length / 2) }, (_, rowIndex) => (
                 <Tr key={rowIndex}>
                   {paginatedNFTs
-                    .slice(rowIndex * 2, (rowIndex + 1) * 2)
+                    .slice(rowIndex * 2, (rowIndex + 2) * 2)
                     .map((nft) => (
                       <Td key={nft.metadata.id.toString()}>
                         <div className={styles.heroCta20} style={{  display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
@@ -192,10 +194,10 @@ const YourComponent: React.FC = () => {
                           </Box>
                           
                             <div>{nft.metadata.name}</div>
-                            <Center className={styles.card}>
+                            <Center className={styles.code}>
                             
                             
-                                {isNFTStaked(nft.metadata.id.toString()) ? <Text color={"aqua"} >STAKED</Text> : <Text color={"orange"}>UNSTAKED</Text>}
+                                {isNFTStaked(nft.metadata.id.toString()) ? <Tag backgroundColor={"green.200"} color={"purple"}>STAKED</Tag> : <Tag backgroundColor={"orange.200"} color={"orangered"}>UNSTAKED</Tag>}
                                
                               
                             
@@ -207,6 +209,7 @@ const YourComponent: React.FC = () => {
                 </Tr>
               ))}
             </Tbody>
+            </Center>
           </Table>
           <Flex mt={4} justify="center">
             {currentPage > 1 && (

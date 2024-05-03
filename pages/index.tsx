@@ -20,7 +20,7 @@ const Home: NextPage = () => {
 SquidInk - Reborn: <br/>Reviving, rebuilding, and adding value.<br/><br/> Join us on Polygon for a fresh NFT collecting experience</Text>
 </Box>
       <footer>
-        <Center>       <div className={styles.card3}>
+        <Center>       <div className={styles.code}>
 ©SQUIDINK:REBORN 2024
         </div></Center>
  

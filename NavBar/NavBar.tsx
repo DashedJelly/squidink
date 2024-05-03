@@ -1,6 +1,6 @@
-import { ConnectWallet, ThirdwebProvider, coinbaseWallet, darkTheme, metamaskWallet, phantomWallet, useAddress, useContract, useContractRead, useDisconnect, walletConnect } from "@thirdweb-dev/react";
+import { ConnectWallet, ThirdwebProvider, coinbaseWallet, darkTheme, metamaskWallet, phantomWallet, trustWallet, useAddress, useContract, useContractRead, useDisconnect, walletConnect } from "@thirdweb-dev/react";
 
-import styles from "../NavBar/NavBar.module.css";
+import styles from "../Navbar/Navbar.module.css";
 import { Box, Button, Center, ChakraProvider, Image, Text, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Grid, Icon, TabList, Tabs, useDisclosure, Heading, ModalContextProvider, Tag, TagLabel, TagCloseButton } from "@chakra-ui/react";
 import theme from "../theme";
 import TokenBalanceComponent from "../components/Tokenbal";
@@ -8,22 +8,18 @@ import THIRDWEB_CLIENT_ID from "../import";
 import { SetStateAction, useState } from "react";
 import router from "next/router";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import fonts from "../styles/fonts.module.css";
+
 import React from "react";
 
 
 export function Navbar() {
-  const address = useAddress();
- 
-
-
-
+  
+  
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [drawerSize, setDrawerSize] = useState('md'); // Default drawer size
+  const [drawerSize, setDrawerSize] = useState('md'); 
  
  
 
- 
 
   const handleClick = (newSize: SetStateAction<string>) => {
     setDrawerSize(newSize);
@@ -33,7 +29,6 @@ export function Navbar() {
   const sizes = ['md'];
 
   return (
-    
     <ThirdwebProvider 
       activeChain="sepolia"
       clientId={THIRDWEB_CLIENT_ID}
@@ -42,6 +37,7 @@ export function Navbar() {
         walletConnect(),
         phantomWallet(),
         coinbaseWallet(),
+        trustWallet(),
       ]}
     >
       <ChakraProvider theme={theme}>
@@ -51,51 +47,51 @@ export function Navbar() {
               <div className={styles.navMiddle}>
                 <div className={styles.navConnect}>
                 <ConnectWallet
-        theme={darkTheme({
-          colors: {
-            accentText: "#5e02cf",
-            accentButtonBg: "#ab66ff",
-            modalBg: "#130d30",
-           
-            borderColor: "#0dbf6c",
-            separatorLine: "#164126",
-            success: "#c31cd9",
-            danger: "#cc0000",
-            primaryText: "#19aea4",
-            secondaryText: "#ee9ff4",
-            accentButtonText: "#116478",
-            primaryButtonBg: "#35a498",
-            primaryButtonText: "#0a0a0b",
-            secondaryButtonBg: "#373e62",
-            secondaryIconColor: "#79fd0d",
-            secondaryIconHoverColor: "#a60ced",
-            secondaryIconHoverBg: "#d7d9ea",
-            
-            
-          },
+       
+       theme={darkTheme({
+         colors: {
+           accentText: "#0851bf",
+           accentButtonBg: "#18e90",
+           modalBg: "#06023",
           
-        })}
-        btnTitle={"Connect"}
-        modalTitle={"Connect"}
-        
-        auth={{ loginOptional: false }}
-        switchToActiveChain={true}
-        modalSize={"wide"}
-        welcomeScreen={{
-          title:
-            "Welcome to SquidInk-Reborn",
-          subtitle: "Your Adventure Awaits",
-          img: {
-            src: "/options.png",
-            width: 200,
-            height: 250,
-          },
-        }}
-        modalTitleIconUrl={
-          "/button.png"
-        
-        }
-      />
+           borderColor: "#0c7a88",
+           separatorLine: "#3e1a93",
+           secondaryText: "#71ccb5",
+           secondaryButtonBg: "#0e154e",
+           secondaryButtonHoverBg: "#33074b",
+           connectedButtonBgHover: "#206c92",
+           walletSelectorButtonHoverBg:
+             "#1c455f",
+           skeletonBg: "#0d1b30",
+           selectedTextColor: "#0c1227",
+           selectedTextBg: "#c5f7e6",
+         },
+         
+       })
+     
+     }
+       btnTitle={"Connect"}
+       modalTitle={"Connect"}
+       
+       auth={{ loginOptional: false }}
+       switchToActiveChain={true}
+       modalSize={"wide"}
+       welcomeScreen={{
+         title:
+           "Welcome to SquidInk-Reborn",
+         subtitle: "Your Adventure Awaits",
+         img: {
+           src: "/options.png",
+           width: 250,
+           height: 280,
+         },
+       }}
+       modalTitleIconUrl={
+         "/comlogo.png"
+       
+       }
+       showThirdwebBranding={false}
+     />
               </div> 
               </div>
             </div>
@@ -113,7 +109,6 @@ export function Navbar() {
                 ))}
               </div>
               <Drawer onClose={onClose} isOpen={isOpen} size={drawerSize}>
-              <Center pt={0}>
                 <DrawerOverlay />
                 <DrawerContent borderColor={"blue"}
                 backgroundImage={"/bubbles.png"}
@@ -121,11 +116,11 @@ export function Navbar() {
                 backdropBlur={434}
                 fontFamily={'Franklin_notes'}
                 backgroundColor={"blue.100"}>
-                  <DrawerCloseButton backgroundColor={"teal.300"} />
+                  <DrawerCloseButton backgroundColor={"blue.600"} />
                   
                   <DrawerHeader> 
                   
-                    
+                    <Center pt={0}>
                    
                       
                         <Box pr={1}>
@@ -134,12 +129,12 @@ export function Navbar() {
                   <TokenBalanceComponent />
                 </div>
                 </Box>
-                    
+                    </Center>
                   </DrawerHeader>
                   <DrawerBody>
 <Box pb={6}>
                   <Button
-                  colorScheme="blue" variant={"outline"}
+                  colorScheme="pink" variant={"outline"}
                       width={300}
                       h={12}
                       bg={"teal.100"}
@@ -157,11 +152,11 @@ export function Navbar() {
                     <Box pt={2}/>
                   
                     <Button
-                    colorScheme="teal" variant={"outline"}
+                    colorScheme="blue" variant={"outline"}
                     loadingText
                       width={340}
-                      h={100}
-                      bg={" blue.100"}
+                      h={140}
+                      bg={" purple.100"}
                       className={styles.codeButton}
                       onClick={() => {router.push(`/SquidMint`)
                       onClose();
@@ -177,27 +172,33 @@ export function Navbar() {
                   </Center>
               
                   <Button
-                    colorScheme="teal" variant={"outline"}
+                    colorScheme="pink" variant={"outline"}
                       width={340}
                       h={100}
-                      bg={"blue.200"}
+                      bg={"purple.200"}
                       className={styles.codeButton}
                       onClick={() => {router.push(`/JellyDoughMarketplace`)
                       onClose();
                       }}
                     >
-                      Jelly Dough Market
+                      JellyDough Market
                     </Button>
                   
 
-<Box pt={2}>
-    
-</Box>
 
+<Center pl={0} pb={3}  pt={3}>
+
+           </Center>
+<Box color={"purple.700"}>
+  <Center>
+ 
+  </Center>
 <Box pt={4}>
-<Heading fontFamily={"DynaPuff"} color={"teal.300"}>Staking</Heading>
-<Button
-colorScheme="purple" variant={"outline"}
+<Heading fontFamily={"Franklin_notes"} color={"orange.300"}>Staking</Heading>
+
+    <Box pt={3}></Box>
+                            <Button
+                            colorScheme="purple" variant={"outline"}
                               width={340}
                               bg={"teal.300"}
                               className={styles.codeButton}
@@ -205,16 +206,17 @@ colorScheme="purple" variant={"outline"}
                               onClose();
                             }}
                             >
-                              Squid Stake
+                              Squid Reward Registry
                             </Button>
-                           
+
 
 </Box>
+</Box>
 
-
+<Box pt={3}></Box>
 
 <Box pt={3}>
-<Heading fontFamily={"DynaPuff"} color={"teal.300"}>Info & Socials</Heading>
+<Heading fontFamily={"Franklin_notes"} color={"orange.300"}>Info & Socials</Heading>
 
 <Box pt={3}></Box>     
                          
@@ -228,13 +230,13 @@ colorScheme="purple" variant={"outline"}
                               onClose();
                             }}
                             >
-                               Collections
+                              Jelly Collections
                             </Button>
                             <Box pb={2}></Box>
                             <Button
                             colorScheme="blue" variant={"outline"}
                               width={340}
-                              bg={"teal.300"}
+                              bg={"orange.300"}
                               className={styles.codeButton}
                               onClick={() => router.push(`https://thejellygitbook.gitbook.io/the-jelly-collective/guides/community-token`)}
                             >
@@ -245,18 +247,18 @@ colorScheme="purple" variant={"outline"}
                             <Button
                             colorScheme="blue" variant={"outline"}
                               width={340}
-                              bg={"orange.200"}
+                              bg={"purple.200"}
                               className={styles.codeButton}
                               onClick={() => router.push(`https://gitbook.io`)}
                             >
-                               Squid-Info
+                               Squid-Info 
                             </Button>
 </Box>
-
-                          
+<Box pb={2}></Box> 
+                 
     <Box pb={6}></Box>         
                     <Button
-                    colorScheme="blue" variant={"outline"}
+                    colorScheme="teal" variant={"outline"}
                               width={340}
                               bg={"blue.200"}
                               className={styles.codeButton}
@@ -265,35 +267,33 @@ colorScheme="purple" variant={"outline"}
                                Follow on 𝕏 
                             </Button>
                             <Box pb={3}></Box> 
-                            
                             <Button
-                            colorScheme="blue" variant={"outline"}
+                            colorScheme="teal" variant={"outline"}
                               width={340}
-                              bg={"blue.300"}
+                              bg={"blue.400"}
                               className={styles.codeButton}
-                              onClick={() => router.push(`https://discord.gg/VRmJTGWHHh`)}
+                              onClick={() => router.push(`https://discord.gg/`)}
                             >
                                Join the Discord  
                             </Button>
     <Box pb={6}></Box>  
     <Button
-                            colorScheme="blue" variant={"outline"}
+                            colorScheme="pink" variant={"outline"}
                               width={240}
                               bg={"red.200"}
                               className={styles.codeButton}
                               role="button"
-                              onClick={() => {router.push(`/JellyOverlay`)
+                              onClick={() => {router.push(`/StickerOverlay`)
                               onClose();
                             }}
                             >
-                             Sticker Overlays
+                             Sticker:Overlays
                             </Button>
 
                   </DrawerBody>
                   
-                  <footer>© SquidInk/REBORN 2024</footer>
+                  <footer>© SquidInk-Reborn 2024</footer>
                 </DrawerContent>
-                </Center>
               </Drawer>
             </div>
           </nav>
