@@ -1,6 +1,6 @@
 import { ConnectWallet, ThirdwebProvider, coinbaseWallet, darkTheme, metamaskWallet, phantomWallet, trustWallet, useAddress, useContract, useContractRead, useDisconnect, walletConnect } from "@thirdweb-dev/react";
 
-import styles from "../Navbar/Navbar.module.css";
+import styles from "../NavBar/NavBar.module.css";
 import { Box, Button, Center, ChakraProvider, Image, Text, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Grid, Icon, TabList, Tabs, useDisclosure, Heading, ModalContextProvider, Tag, TagLabel, TagCloseButton } from "@chakra-ui/react";
 import theme from "../theme";
 import TokenBalanceComponent from "../components/Tokenbal";
