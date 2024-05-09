@@ -3,7 +3,7 @@ export const NETWORK = Sepolia;
   
   //Squid Reborn
   export const Squidz =
-  "0x8F3375a9e7607182f4651049248037fB6a7E9a97";
+  "0xa6A0CB253a34CB5A4a2e7BeC69087F1502f19F09";
 
   //SquidStake
   export const SquidStake =

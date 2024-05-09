@@ -24,19 +24,19 @@
 }
 
 .container1 {
-  margin-top: 120px;
+  margin-top: 106px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: left; /* Updated */
   width: 100%;
   position: absolute;
-  padding: 0px;
+  padding: 1px;
   background-image: url("/undersea.png");
   background-size: cover;
   background-repeat: no-repeat;
   font-family: 'Franklin_notes, monospace';
-  text-shadow: 2px 2px 4px rgba(32, 3, 51, 0.644);
+  height: 2200px;
 }
 
 .container2 {
@@ -1499,14 +1499,14 @@ perspective-origin: 5%;
   }
   
   .container1 {
-    margin-top: 105px;
+    margin-top: 98px;
     width: auto;
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: auto;
+    height: 1600px;
     position: center;
     padding: 0 0px;
     

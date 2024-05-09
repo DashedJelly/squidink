@@ -53,7 +53,6 @@ export function Navbar() {
            accentText: "#0851bf",
            accentButtonBg: "#18e90",
            modalBg: "#06023",
-          
            borderColor: "#0c7a88",
            separatorLine: "#3e1a93",
            secondaryText: "#71ccb5",
@@ -134,17 +133,17 @@ export function Navbar() {
                   <DrawerBody>
 <Box pb={6}>
                   <Button
-                  colorScheme="pink" variant={"outline"}
+                  colorScheme="purple" variant={"outline"}
                       width={300}
                       h={12}
-                      bg={"teal.100"}
+                      bg={"blue.100"}
                       className={styles.codeButton}
                       onClick={() => {router.push(`/`)
                       onClose();
                     }}
                     >
                      
-                      <Box pr={0}> Main</Box>
+                      <Box fontSize={26} pr={0}> Main</Box>
                      
                     </Button>
                     </Box>
@@ -152,18 +151,19 @@ export function Navbar() {
                     <Box pt={2}/>
                   
                     <Button
+                   fontSize={24}
                     colorScheme="blue" variant={"outline"}
                     loadingText
                       width={340}
                       h={140}
-                      bg={" purple.100"}
+                      bg={" blue.100"}
                       className={styles.codeButton}
                       onClick={() => {router.push(`/SquidMint`)
                       onClose();
                       }}
                     >
                        
-                      SquidInk-Reborn MINT
+                      SquidInk-Reborn<br/> MINT
                     </Button>
 
 <Center pl={3} pb={3}>
@@ -172,10 +172,11 @@ export function Navbar() {
                   </Center>
               
                   <Button
+                  fontSize={20}
                     colorScheme="pink" variant={"outline"}
                       width={340}
                       h={100}
-                      bg={"purple.200"}
+                      bg={"blue.200"}
                       className={styles.codeButton}
                       onClick={() => {router.push(`/JellyDoughMarketplace`)
                       onClose();
@@ -198,7 +199,8 @@ export function Navbar() {
 
     <Box pt={3}></Box>
                             <Button
-                            colorScheme="purple" variant={"outline"}
+                            fontSize={20}
+                            colorScheme="teal" variant={"outline"}
                               width={340}
                               bg={"teal.300"}
                               className={styles.codeButton}
@@ -221,22 +223,22 @@ export function Navbar() {
 <Box pt={3}></Box>     
                          
                             <Button
-                            colorScheme="blue" variant={"outline"}
+                            colorScheme="purple" variant={"outline"}
                               width={340}
-                              bg={"purple.200"}
+                              bg={"blue.300"}
                               className={styles.codeButton}
                               role="button"
                               onClick={() => {router.push(`/collections`)
                               onClose();
                             }}
                             >
-                              Jelly Collections
+                              Collections
                             </Button>
                             <Box pb={2}></Box>
                             <Button
                             colorScheme="blue" variant={"outline"}
                               width={340}
-                              bg={"orange.300"}
+                              bg={"yellow.200"}
                               className={styles.codeButton}
                               onClick={() => router.push(`https://thejellygitbook.gitbook.io/the-jelly-collective/guides/community-token`)}
                             >
@@ -245,9 +247,9 @@ export function Navbar() {
         <Box pb={2}></Box> 
 
                             <Button
-                            colorScheme="blue" variant={"outline"}
+                            colorScheme="purple" variant={"outline"}
                               width={340}
-                              bg={"purple.200"}
+                              bg={"blue.200"}
                               className={styles.codeButton}
                               onClick={() => router.push(`https://gitbook.io`)}
                             >
@@ -268,9 +270,9 @@ export function Navbar() {
                             </Button>
                             <Box pb={3}></Box> 
                             <Button
-                            colorScheme="teal" variant={"outline"}
+                            colorScheme="purple" variant={"outline"}
                               width={340}
-                              bg={"blue.400"}
+                              bg={"blue.300"}
                               className={styles.codeButton}
                               onClick={() => router.push(`https://discord.gg/`)}
                             >

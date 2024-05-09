@@ -26,6 +26,7 @@ import {
   Heading,
   Tab,
   Tabs,
+  Divider,
 } from "@chakra-ui/react";
 import { Web3Button} from "@thirdweb-dev/react";
 import { ethers } from "ethers"; // Import ethers for Wei conversion
@@ -56,10 +57,7 @@ const Home: NextPage = () => {
   const handleMintToken = async (contract: any, numberOfTokens: number) => {
     try {
       let totalEtherAmount = 0.0001 * numberOfTokens; // Set the base mint price
-      // Apply discount for three or more mints
-      if (numberOfTokens >= 3) {
-        totalEtherAmount *= 0.75; // Apply 25% discount
-      }
+      
       totalEtherAmount = parseFloat(totalEtherAmount.toFixed(18));
       await contract.call("mintToken", [numberOfTokens], {
         value: ethers.utils.parseEther(totalEtherAmount.toString()), // Convert the total Ether amount to Wei
@@ -87,7 +85,7 @@ const Home: NextPage = () => {
 
   const handleJDOHApproval = async (contract: any, amount: number) => {
     try {
-      await contract.call("approve", ["0x8F3375a9e7607182f4651049248037fB6a7E9a97", amount]);
+      await contract.call("approve", ["0x6D1aeA4C20bE70B2d4B5500802628CaD2Dc6d221", amount]);
       setAlertMessage("Approval successful!");
       setAlertStatus("success");
     } catch (error) {
@@ -125,7 +123,7 @@ const Home: NextPage = () => {
       
   
       
-      <div className={styles.heroCta4}>
+      <div className={styles.heroCta12}>
         <NFTTotalSupply /> 
         
        
@@ -142,9 +140,9 @@ const Home: NextPage = () => {
         
           
           <h2 className={styles.heroCta11}>
-          <div className={styles.heroCta1}>
+          <div className={styles.heroCt6}>
             <Slider
-            fontFamily={"monospace"}
+            fontFamily={"Franklin_notes"}
               aria-label="Number of Tokens"
              
               value={numberOfTokensSlider1}
@@ -168,8 +166,8 @@ const Home: NextPage = () => {
 
          <Box
          fontFamily={"Franklin_notes"}
-         className={styles.card4}>
-         <div className={styles.heroCta4}>
+         className={styles.heroCta6}>
+         <div className={styles.heroCta6}>
             Mint Price =  0.0001 Matic
           
           
@@ -178,10 +176,11 @@ const Home: NextPage = () => {
               initialFocusRef={initialFocusRef}
               placement="top"
               closeOnBlur={false}
+              
             >
               <PopoverTrigger>
-                <Button bg={"black"} color={"White"}>
-                  MINT With MATIC
+              <Button className={styles.heroCta6} fontFamily={"Franklin_notes"} bg={"blue.500"} color={"White"} _hover={"purple"}>
+                MINT:INKubator
                 </Button>
               </PopoverTrigger>
               <PopoverContent color="white" bg="blue.800" borderColor="blue.800">
@@ -238,7 +237,7 @@ Please be aware of the risks associated with investing in digital assets and mak
                       <Web3Button
             className={styles.mainButton}
               
-              contractAddress="0x8F3375a9e7607182f4651049248037fB6a7E9a97"
+              contractAddress="0x6D1aeA4C20bE70B2d4B5500802628CaD2Dc6d221"
               action={(contract: any) => handleMintToken(contract, numberOfTokensSlider1)}
             >
               MINT:INKubator
@@ -265,7 +264,7 @@ Please be aware of the risks associated with investing in digital assets and mak
             className={styles.mainButton}
               theme={"light"}
               
-              contractAddress="0x8F3375a9e7607182f4651049248037fB6a7E9a97"
+              contractAddress="0x6D1aeA4C20bE70B2d4B5500802628CaD2Dc6d221"
               action={(contract: any) => handleMintToken(contract, numberOfTokensSlider1)}
             >
               MINT:INKubator
@@ -285,6 +284,8 @@ Please be aware of the risks associated with investing in digital assets and mak
         
           </div>
           </div>
+<Divider></Divider>
+
           <Box borderColor={"purple"} borderWidth='1px' borderRadius='lg' overflow='hidden'></Box>
           <div className={styles.heroCta11}>
           <div className={styles.nftBoxGrid}>
@@ -303,7 +304,7 @@ Please be aware of the risks associated with investing in digital assets and mak
               onChange={handleSliderChangeSlider2}
               colorScheme='pink'
               min={1}
-              max={8}
+              max={11}
               size="lg" // Make the slider larger
               defaultValue={1} // Default value
             >
@@ -311,13 +312,13 @@ Please be aware of the risks associated with investing in digital assets and mak
                 <SliderFilledTrack bg="green.500" />
               </SliderTrack>
               <SliderThumb boxSize={16}>
-                <Text fontFamily={"monospace"}>{numberOfTokensSlider2}</Text>
+                <Text fontFamily={"Franklin_notes"}>{numberOfTokensSlider2}</Text>
               </SliderThumb>
             </Slider>
 
             
          <br/>
-         <Box className={styles.card2}>
+         <Box className={styles.heroCta2}>
         
             <Popover
               initialFocusRef={initialFocusRef}
@@ -325,19 +326,19 @@ Please be aware of the risks associated with investing in digital assets and mak
               closeOnBlur={false}
             >
               <PopoverTrigger>
-                <Button bg={"black"} color={"blue.200"}>
+                <Button className={styles.heroCta6} fontFamily={"Franklin_notes"} bg={"blue.500"} color={"yellow.200"} _hover={"purple"}>
                   MINT WITH $JDOH
                 </Button>
               </PopoverTrigger>
               <PopoverContent color="blue.300" bg="blue.800" borderColor="blue.800">
-                <PopoverHeader  pb={5} fontWeight="bold" border="0">
+                <PopoverHeader textColor={"yellow.200"} fontSize={18} fontFamily={"Franklin_notes"}  pb={5} fontWeight="bold" border="0">
                   🚨Before Your MINT 🚨
                 </PopoverHeader>
                 <PopoverArrow bg="blue.800" />
                 <PopoverCloseButton 
-                bgColor={"orange.200"}
+                bgColor={"orange.300"}
                 />
-                <PopoverBody>
+                <PopoverBody fontSize={20} fontFamily={"Franklin_notes"}>
                  You Will Need to Approve the amount you wish to spend 
                 </PopoverBody>
                 <PopoverFooter border="0" display="auto" alignItems="center" justifyContent="auto" pb={10}>
@@ -346,7 +347,7 @@ Please be aware of the risks associated with investing in digital assets and mak
                     
                    
                       
-                      <Box>
+                      <Box fontFamily={"Franklin_notes"}>
               <Web3Button
               className={styles.mainButton}
               theme={"light"}
@@ -355,20 +356,20 @@ Please be aware of the risks associated with investing in digital assets and mak
                   handleJDOHApproval(contract1, amount);
                 }}
               >
-                APPROVE $JDOH to Mint
+                APPROVE $JDOH
               </Web3Button>
-              </Box>
-                      
+             
+                      <Box pb={23}/>
                      
               <Web3Button
          className={styles.mainButton}
                 theme={"light"}
-                contractAddress="0x8F3375a9e7607182f4651049248037fB6a7E9a97"
+                contractAddress="0x6D1aeA4C20bE70B2d4B5500802628CaD2Dc6d221"
                 action={(contract: any) => handleMintWithJDOH(contract, numberOfTokensSlider2)}
               >
                 Mint with $JDOH
               </Web3Button>
-                   
+              </Box>
                    
                   </ButtonGroup>
                   </Center>
@@ -394,11 +395,12 @@ Please be aware of the risks associated with investing in digital assets and mak
             alignItems="center"
             justifyContent="center"
             textAlign="center"
-            mb={4}
-            borderRadius="23" // Adjust the border radius as needed
-            border="12px solid teal" // Add a teal border
+            mb={6}
+            borderRadius="22" // Adjust the border radius as needed
+           textColor={"purple.600"}
+           fontSize={26}
           >
-            <AlertIcon />
+            <AlertIcon bgSize={20} />
             {alertMessage}
           </Alert>
         )}
@@ -437,7 +439,7 @@ Please be aware of the risks associated with investing in digital assets and mak
       
       </Tab>
       </Tabs>
-      <Center><Text fontFamily={"monospace"} className={styles.heroCta11}>Jelly-Tech StudioZ® </Text></Center>
+      <Center><Text fontFamily={"Franklin_notes"} className={styles.code}>Jelly-Tech StudioZ® </Text></Center>
       
      </footer>
     </div>
