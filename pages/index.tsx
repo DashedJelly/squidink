@@ -17,15 +17,14 @@ const Home: NextPage = () => {
         <Image src="/logo.png" objectFit="cover" alt="SquidInk Logo" />
       </Box>
       <Box pb={535}>
-        <Text fontFamily="Franklin_notes" className={styles.card3}>
-          SquidInk - Reborn: <br />
-          Reviving, rebuilding, and adding value. <br />
-          <br /> Join us on Polygon for a fresh NFT collecting experience
+        <Text fontFamily="Franklin_notes" className={styles.card6}>
+        There were 3,000 eggs saved from the corruption and horror of humans.<br/> With the help of  the Mermaid Queen and the Jelly Collective, Squid Ink is ready to be <Text fontSize={17}>REBORN</Text>
         </Text>
-        <Box mt={4}>
-          <Button className={styles.mainButton} onClick={handleMintClick} colorScheme="blue">
-            MINT NOW
-          </Button>
+        <Box>
+          <Image src="../minting-now.png" width={"200"} height={"188"} alt="Minting Now"></Image>
+        </Box>
+        <Box fontFamily={"Franklin_notes"} className={styles.mainButton} mt={4}  onClick={handleMintClick}>
+         ENTER
         </Box>
       </Box>
 

@@ -24,7 +24,7 @@
 }
 
 .container1 {
-  margin-top: 106px;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,12 +46,14 @@
   align-items: center;
   justify-content: fill; 
   width: 99lvw;
+ height: 1290px;
   position: absolute;
+  background-repeat: no-repeat;
   padding: 10px;
   padding-left: 75px;
-
-  background-repeat: no-repeat;
-  font-family: 'Franklin_notes, monospace';
+  background-image: url("/undersea.png");
+ 
+ background-size: cover;
   color: #000000;
 }
 
@@ -102,7 +104,7 @@
   background-image: url("/navbarOcean.png");
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: 'Franklin_notes, monospace';
+  font-family: 'Franklin_notes';
   text-rendering: optimizeLegibility;
   text-shadow: 2px 2px 6px rgba(0, 225, 255, 0.589);
 }
@@ -479,6 +481,21 @@
         max-height: 260px;
         max-width: 4200px;
        width: 420px;
+       
+      }
+
+      .card6 {
+        background-color: hsla(234, 58%, 64%, 0.575);
+        margin: .2rem;
+        padding: 0.5rem;
+        padding-top: 22px;
+        text-align: center;
+        color: white;
+        border: 1px solid #00b4cc8e;
+        border-radius: 10px;
+        max-height: 260px;
+        max-width: 420px;
+       padding-bottom: 0px;
        
       }
     
@@ -1499,7 +1516,7 @@ perspective-origin: 5%;
   }
   
   .container1 {
-    margin-top: 98px;
+    margin-top: 82px;
     width: auto;
     display: flex;
     box-sizing: border-box;
@@ -1518,19 +1535,22 @@ perspective-origin: 5%;
 }
 
 .container2 {
-  margin-top: 108px;
-  height: 1800px;
+  margin-top: 105px;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: left; 
-  width: auto;
-  position: relative;
-  padding: 10px;
- 
+  justify-content: fill;
+  width: 550px;
+  height: 1600px;
+  position: absolute;
+  padding: 0 4px;
+ height: 1920px;
   background-size: cover;
   background-repeat: no-repeat;
-  
+  font-family: 'Franklin_notes';
+  text-rendering: optimizeLegibility;
+  text-shadow: 2px 2px 6px rgba(0, 225, 255, 0.589);
 }
 
   .iframeContainer {

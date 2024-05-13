@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         clientId={THIRDWEB_CLIENT_ID}
         supportedWallets={[metamaskWallet(), walletConnect(), phantomWallet(), coinbaseWallet()]}
       >
-        {/* Apply font to the entire app by setting font-family globally */}
+      
         <div style={{ fontFamily: 'Franklin_notes, monospace' }}>
           <Navbar />
           <Component {...pageProps} />

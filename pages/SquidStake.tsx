@@ -19,17 +19,6 @@ import {
   Tr,
   Td,
   Button,
-  Divider,
-  PopoverTrigger,
-  ButtonGroup,
-  Link,
-  Popover,
-  PopoverArrow,
-  PopoverBody,
-  PopoverCloseButton,
-  PopoverContent,
-  PopoverFooter,
-  PopoverHeader,
   AlertDialog,
   AlertDialogBody,
   AlertDialogContent,
@@ -37,31 +26,25 @@ import {
   AlertDialogHeader,
   AlertDialogOverlay,
   Center,
-  Tabs,
-  Tab,
-  TabList,
-  Heading,
+Image,
   Wrap,
   WrapItem,
   Tag,
 } from "@chakra-ui/react";
 import { formatUnits } from "ethers/lib/utils";
-import { Squidz } from "../const/contractAddresses";
+import { Squidz2 } from "../const/contractAddresses";
 import styles from "../styles/Home.module.css";
 
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import theme from "../theme";
 
-const itemsPerPage = 2;
 
-const ProgressBar: React.FC<{ multiplier: number }> = ({ multiplier }) => {
-  const progressPercentage = Math.min(multiplier, 300); // Limit to 300%
-  return <div className={styles.progressBar} style={{ width: `${(progressPercentage / 300) * 300}%` }}></div>;
-};
+const itemsPerPage = 4;
+
 
 const YourComponent: React.FC = () => {
   const address = useAddress();
-  const { contract: nftDropContract } = useContract(Squidz, "nft-drop");
+  const { contract: nftDropContract } = useContract(Squidz2, "nft-drop");
   const { contract } = useContract("0x931E82341BDE35E3e3AAa1f2E025801BF360c190");
   const { data: rawOwnedNfts } = useOwnedNFTs(nftDropContract, address);
 
@@ -98,27 +81,33 @@ const YourComponent: React.FC = () => {
 
   return (
     <ChakraProvider theme={theme}>
-      <Center pt={105}>
-<div className={styles.code4}>
-<Wrap spacing='10px' justify='center'>
+      <Box className={styles.container2}>
+        <Image src="/logo.png" w={"relative"} h={"fill"} alt="logo"/>
+      <Center>
+        
+<Box>
+  <Box fontFamily={"Franklin_notes"} className={styles.description}>
+<Wrap spacing='12px' justify='center'>
   <WrapItem>
     <Center>
-    <div className={styles.card4}>
+      
+    <Box  className={styles.description}>
           {isLoading ? (
             <Spinner />
           ) : data ? (
-            <div className={styles.heroCta2}>
-              <Text fontFamily={"monospace"}>Claimable Rewards: </Text><br/> <Text fontFamily={"monospace"}>{parseFloat(formatUnits(data, 18)).toFixed(2)}$JDOH</Text>
-            </div>
+            <Box textColor={"black"} fontFamily={"Franklin_notes"} className={styles.heroCta2}>
+              <Text fontSize={15} >Claimable Rewards: </Text> <Text textColor={"orange.200"} fontFamily={"monospace"} >{parseFloat(formatUnits(data, 18)).toFixed(2)}</Text><Text fontWeight={666} fontSize={23}>$JDOH</Text>
+            </Box>
           ) : (
             <Text>No rewards data available</Text>
           )}
-          </div>
+          </Box>
     </Center>
   </WrapItem>
-  <WrapItem>
-    <Center >
-    <Web3Button
+  
+  <WrapItem >
+    <Center  >
+    <Web3Button 
             theme={"light"}
             
               contractAddress="0x931E82341BDE35E3e3AAa1f2E025801BF360c190"
@@ -131,10 +120,11 @@ const YourComponent: React.FC = () => {
                 }
               }}
             >
-              <div className={styles.codeButton}>Stake All</div>
+              <Box >Stake All</Box>
             </Web3Button>
     </Center>
   </WrapItem>
+ 
   <WrapItem>
     <Center>
     <Web3Button
@@ -150,19 +140,22 @@ const YourComponent: React.FC = () => {
                 }
               }}
             >
-              <div className={styles.codeButton}>Claim Rewards</div>
+              <Box >Claim Rewards</Box>
             </Web3Button>
     </Center>
   </WrapItem>
 
 </Wrap>
-
+</Box>
+<Wrap>
+<WrapItem>
+  
       <Flex
         direction={{ base: "row", md: "column" }}
         
-     pt={100}
-        w="50vw"
-        h="50vh"
+     pt={0}
+        w="40vw"
+        h="40vh"
         
       >
 
@@ -173,11 +166,11 @@ const YourComponent: React.FC = () => {
               {Array.from({ length: Math.ceil(paginatedNFTs.length / 2) }, (_, rowIndex) => (
                 <Tr key={rowIndex}>
                   {paginatedNFTs
-                    .slice(rowIndex * 2, (rowIndex + 2) * 2)
+                    .slice(rowIndex * 2, (rowIndex + 1) * 2)
                     .map((nft) => (
                       <Td key={nft.metadata.id.toString()}>
-                        <div className={styles.heroCta20} style={{  display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-                          <Box
+                        <Box bgColor={"white"} borderRadius={17} p={2} style={{  display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+                          <Box bgColor={"Black"} borderRadius={23}
                           
                           >
                             <Center>
@@ -193,7 +186,7 @@ const YourComponent: React.FC = () => {
                             </Center>
                           </Box>
                           
-                            <div>{nft.metadata.name}</div>
+                            <Box fontFamily={"Franklin_notes"} className={styles.heroCta6}>{nft.metadata.name}</Box>
                             <Center className={styles.code}>
                             
                             
@@ -203,7 +196,7 @@ const YourComponent: React.FC = () => {
                             
                             </Center>
                           
-                        </div>
+                        </Box>
                       </Td>
                     ))}
                 </Tr>
@@ -215,7 +208,7 @@ const YourComponent: React.FC = () => {
             {currentPage > 1 && (
               <Button
                 variant="outline"
-                colorScheme="pink"
+                colorScheme="teal"
                 backgroundColor={"blue.200"}
               
                 onClick={() => setCurrentPage(currentPage - 1)}
@@ -227,7 +220,7 @@ const YourComponent: React.FC = () => {
             {currentPage < totalPages && (
               <Button
                 variant="outline"
-                colorScheme="pink"
+                colorScheme="teal"
                 backgroundColor={"blue.200"}
                 onClick={() => setCurrentPage(currentPage + 1)}
                 mx={1}
@@ -236,9 +229,11 @@ const YourComponent: React.FC = () => {
               </Button>
             )}
           </Flex>
+          
         </Box>
       </Flex>
-
+      </WrapItem>
+</Wrap>
       <AlertDialog isOpen={isDialogOpen} leastDestructiveRef={cancelRef} onClose={() => setIsDialogOpen(false)}>
         <AlertDialogOverlay>
           <AlertDialogContent>
@@ -256,9 +251,13 @@ const YourComponent: React.FC = () => {
           </AlertDialogContent>
         </AlertDialogOverlay>
       </AlertDialog>
-      </div>
+      </Box>
       </Center>
+      </Box>
+    <Box>
+      </Box> 
     </ChakraProvider>
+    
   );
 };
 

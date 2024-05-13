@@ -5,6 +5,10 @@ export const NETWORK = Sepolia;
   export const Squidz =
   "0xa6A0CB253a34CB5A4a2e7BeC69087F1502f19F09";
 
+ //Squid Reborn
+ export const Squidz2 =
+ "0x8F3375a9e7607182f4651049248037fB6a7E9a97";
+
   //SquidStake
   export const SquidStake =
   "0x931E82341BDE35E3e3AAa1f2E025801BF360c190";

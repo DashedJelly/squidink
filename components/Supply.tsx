@@ -16,26 +16,26 @@ function NFTTotalSupply() {
   }, [isLoading, data]);
 
   return (
-    <div>
+    <Box>
       {isLoading ? (
+       <Box fontFamily={"Franklin_notes"}>
        <Box>
-       <div>
          Loading.....
-       </div>
+       </Box>
        <Spinner
          rounded={"200"}
          thickness="6.5px"
          speed="0.75s"
          emptyColor="gray.200"
-         color="purple.500"
+         color="blue.500"
          size="xl"
-         textShadow={23}
+         textShadow={10}
        />
      </Box>
       ) : (
-        <p>Total Minted: {totalSupply}/9999</p>
+        <Box fontFamily={"Franklin_notes"}>Total Minted: {totalSupply}/9999</Box>
       )}
-    </div>
+    </Box>
   );
 }
 
