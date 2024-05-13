@@ -178,7 +178,7 @@ export function Navbar() {
                       h={100}
                       bg={"black"}
                       className={styles.codeButton}
-                      onClick={() => {router.push(`/JellyDoughMarketplace`)
+                      onClick={() => {router.push(`https://www.thejellycollective.club/JellyDoughMarketplace`)
                       onClose();
                       }}
                     >
