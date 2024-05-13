@@ -133,10 +133,10 @@ export function Navbar() {
                   <DrawerBody>
 <Box pb={6}>
                   <Button
-                  colorScheme="purple" variant={"outline"}
+                  colorScheme="blue" variant={"outline"}
                       width={300}
                       h={12}
-                      bg={"blue.100"}
+                      bg={"black"}
                       className={styles.codeButton}
                       onClick={() => {router.push(`/`)
                       onClose();
@@ -156,7 +156,7 @@ export function Navbar() {
                     loadingText
                       width={340}
                       h={140}
-                      bg={" blue.100"}
+                      bg={" black"}
                       className={styles.codeButton}
                       onClick={() => {router.push(`/SquidMint`)
                       onClose();
@@ -173,10 +173,10 @@ export function Navbar() {
               
                   <Button
                   fontSize={20}
-                    colorScheme="pink" variant={"outline"}
+                    colorScheme="blue" variant={"outline"}
                       width={340}
                       h={100}
-                      bg={"blue.200"}
+                      bg={"black"}
                       className={styles.codeButton}
                       onClick={() => {router.push(`/JellyDoughMarketplace`)
                       onClose();
@@ -200,9 +200,9 @@ export function Navbar() {
     <Box pt={3}></Box>
                             <Button
                             fontSize={20}
-                            colorScheme="teal" variant={"outline"}
+                            colorScheme="blue" variant={"outline"}
                               width={340}
-                              bg={"teal.300"}
+                              bg={"black"}
                               className={styles.codeButton}
                               onClick={() => {router.push(`/SquidStake`)
                               onClose();
@@ -223,9 +223,9 @@ export function Navbar() {
 <Box pt={3}></Box>     
                          
                             <Button
-                            colorScheme="purple" variant={"outline"}
+                            colorScheme="blue" variant={"outline"}
                               width={340}
-                              bg={"blue.300"}
+                              bg={"black"}
                               className={styles.codeButton}
                               role="button"
                               onClick={() => {router.push(`/collections`)
@@ -238,18 +238,21 @@ export function Navbar() {
                             <Button
                             colorScheme="blue" variant={"outline"}
                               width={340}
-                              bg={"yellow.200"}
+                              bg={"black"}
                               className={styles.codeButton}
-                              onClick={() => router.push(`https://thejellygitbook.gitbook.io/the-jelly-collective/guides/community-token`)}
+                              role="button"
+                              onClick={() => {router.push(`/collections`)
+                              onClose();
+                            }}
                             >
-                             <Text size={"244px"}>JELLY DOUGH / $JDOH</Text> 
+                              Jelly Dough/$JDOH
                             </Button>
         <Box pb={2}></Box> 
 
                             <Button
-                            colorScheme="purple" variant={"outline"}
+                            colorScheme="blue" variant={"outline"}
                               width={340}
-                              bg={"blue.200"}
+                              bg={"black"}
                               className={styles.codeButton}
                               onClick={() => router.push(`https://gitbook.io`)}
                             >
@@ -260,9 +263,9 @@ export function Navbar() {
                  
     <Box pb={6}></Box>         
                     <Button
-                    colorScheme="teal" variant={"outline"}
+                    colorScheme="white" variant={"outline"}
                               width={340}
-                              bg={"blue.200"}
+                              bg={"black"}
                               className={styles.codeButton}
                               onClick={() => router.push(`https://twitter.com/`)}
                             >
@@ -272,25 +275,13 @@ export function Navbar() {
                             <Button
                             colorScheme="purple" variant={"outline"}
                               width={340}
-                              bg={"blue.300"}
+                              bg={"Black"}
                               className={styles.codeButton}
                               onClick={() => router.push(`https://discord.gg/`)}
                             >
                                Join the Discord  
                             </Button>
-    <Box pb={6}></Box>  
-    <Button
-                            colorScheme="pink" variant={"outline"}
-                              width={240}
-                              bg={"red.200"}
-                              className={styles.codeButton}
-                              role="button"
-                              onClick={() => {router.push(`/StickerOverlay`)
-                              onClose();
-                            }}
-                            >
-                             Sticker:Overlays
-                            </Button>
+  
 
                   </DrawerBody>
                   

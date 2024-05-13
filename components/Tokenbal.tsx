@@ -13,11 +13,11 @@ const TokenBalanceComponent = () => {
   return (
     <Box className={styles.ConnectWallet}>
       {balance && (
-        <p className={styles.token2}>
+        <Box className={styles.token2}>
           <span className={styles.secondaryCta2}>
             {parseFloat(balance.displayValue).toFixed(1)} {balance.symbol}
           </span>
-        </p>
+        </Box>
       )}
     </Box>
   );

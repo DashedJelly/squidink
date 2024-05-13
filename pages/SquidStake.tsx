@@ -88,8 +88,9 @@ const YourComponent: React.FC = () => {
 <Box>
   <Box fontFamily={"Franklin_notes"} className={styles.description}>
 <Wrap spacing='12px' justify='center'>
+<Center>
   <WrapItem>
-    <Center>
+    
       
     <Box  className={styles.description}>
           {isLoading ? (
@@ -102,9 +103,9 @@ const YourComponent: React.FC = () => {
             <Text>No rewards data available</Text>
           )}
           </Box>
-    </Center>
+   
   </WrapItem>
-  
+  </Center>
   <WrapItem >
     <Center  >
     <Web3Button 
