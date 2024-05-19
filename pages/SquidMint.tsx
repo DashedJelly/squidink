@@ -224,7 +224,7 @@ const Home: NextPage = () => {
           </GridItem>
 
           <GridItem>
-            <Box borderColor="purple" borderWidth="1px" borderRadius="lg" overflow="hidden"></Box>
+           
             <Box className={styles.heroCta11}>
               <Box >
                 <Image src="/evotoken.png" alt="drop" width={320} height={320} />
