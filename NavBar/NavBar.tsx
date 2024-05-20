@@ -109,13 +109,13 @@ export function Navbar() {
               </div>
               <Drawer onClose={onClose} isOpen={isOpen} size={drawerSize}>
                 <DrawerOverlay />
-                <DrawerContent borderColor={"blue"}
+                <DrawerContent borderColor={"white"}
                 backgroundImage={"/bubbles.png"}
                 backgroundSize={"4200px"}
-                backdropBlur={434}
+                backdropBlur={420}
                 fontFamily={'Franklin_notes'}
-                backgroundColor={"blue.100"}>
-                  <DrawerCloseButton backgroundColor={"blue.600"} />
+                backgroundColor={"blue.200"}>
+                  <DrawerCloseButton backgroundColor={"green.200"} />
                   
                   <DrawerHeader> 
                   
@@ -136,7 +136,7 @@ export function Navbar() {
                   colorScheme="blue" variant={"outline"}
                       width={300}
                       h={12}
-                      bg={"black"}
+                      bg={"blue.200"}
                       className={styles.codeButton}
                       onClick={() => {router.push(`/`)
                       onClose();
@@ -155,15 +155,15 @@ export function Navbar() {
                     colorScheme="blue" variant={"outline"}
                     loadingText
                       width={340}
-                      h={140}
-                      bg={" black"}
+                     
+                      bg={"blue.200"}
                       className={styles.codeButton}
                       onClick={() => {router.push(`/SquidMint`)
                       onClose();
                       }}
                     >
                        
-                      SquidInk-Reborn<br/> MINT
+                      SquidInk-Reborn MINT
                     </Button>
 
 <Center pl={3} pb={3}>
@@ -175,8 +175,8 @@ export function Navbar() {
                   fontSize={20}
                     colorScheme="blue" variant={"outline"}
                       width={340}
-                      h={100}
-                      bg={"black"}
+                    
+                      bg={"blue.200"}
                       className={styles.codeButton}
                       onClick={() => {router.push(`https://www.thejellycollective.club/JellyDoughMarketplace`)
                       onClose();
@@ -202,7 +202,7 @@ export function Navbar() {
                             fontSize={20}
                             colorScheme="blue" variant={"outline"}
                               width={340}
-                              bg={"black"}
+                              bg={"blue.200"}
                               className={styles.codeButton}
                               onClick={() => {router.push(`/SquidStake`)
                               onClose();
@@ -225,7 +225,7 @@ export function Navbar() {
                             <Button
                             colorScheme="blue" variant={"outline"}
                               width={340}
-                              bg={"black"}
+                              bg={"blue.200"}
                               className={styles.codeButton}
                               role="button"
                               onClick={() => {router.push(`/collections`)
@@ -238,7 +238,7 @@ export function Navbar() {
                             <Button
                             colorScheme="blue" variant={"outline"}
                               width={340}
-                              bg={"black"}
+                              bg={"blue.200"}
                               className={styles.codeButton}
                               role="button"
                               onClick={() => {router.push(`/collections`)
@@ -252,7 +252,7 @@ export function Navbar() {
                             <Button
                             colorScheme="blue" variant={"outline"}
                               width={340}
-                              bg={"black"}
+                              bg={"blue.200"}
                               className={styles.codeButton}
                               onClick={() => router.push(`https://gitbook.io`)}
                             >
@@ -263,19 +263,19 @@ export function Navbar() {
                  
     <Box pb={6}></Box>         
                     <Button
-                    colorScheme="white" variant={"outline"}
+                    colorScheme="blue" variant={"outline"}
                               width={340}
-                              bg={"black"}
+                              bg={"blue.200"}
                               className={styles.codeButton}
                               onClick={() => router.push(`https://twitter.com/`)}
                             >
-                               Follow on 𝕏 
+                               Follow on     <Text pl={2} fontSize={22}> 𝕏</Text>
                             </Button>
                             <Box pb={3}></Box> 
                             <Button
-                            colorScheme="purple" variant={"outline"}
+                            colorScheme="blue" variant={"outline"}
                               width={340}
-                              bg={"Black"}
+                              bg={"blue.200"}
                               className={styles.codeButton}
                               onClick={() => router.push(`https://discord.gg/`)}
                             >

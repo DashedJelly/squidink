@@ -1,0 +1,1233 @@
+
+
+
+
+.container {
+    margin-top: 133px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    position: absolute;
+    padding: 0 48px;
+    background-image: url("/jellyball.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'DynaPuff', monospace;
+    text-rendering: optimizeLegibility;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.568);
+  }
+  
+  .container1 {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    background-image: url("/jellyball.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'DynaPuff', monospace;
+    text-shadow: 2px 2px 4px rgba(32, 3, 51, 0.644);
+  }
+  
+  .container2 {
+    margin-top: 0px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: cover;
+    width: 100%;
+    position: absolute;
+    padding: 0 4px;
+    background-image: url("/jellyball.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'DynaPuff', monospace;
+    text-rendering: optimizeLegibility;
+    font-family: 'Fredoka One', monospace;
+    text-rendering: optimizeLegibility;
+    text-shadow: 2px 2px 6px rgba(0, 225, 255, 0.589);
+  }
+  
+  .container3 {
+    margin-top: 109px;
+    height: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: fill;
+    width: 100%;
+    position: absolute;
+    padding: 0 4px;
+    background-image: url("/jellyball.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'DynaPuff', monospace;
+    text-rendering: optimizeLegibility;
+   
+  }
+  
+  .container4 {
+    margin-top: 75px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: fill;
+    width: 100%;
+    position: absolute;
+    padding: 0 222px;
+    font-family: 'Fredoka One', monospace;
+    text-rendering: optimizeLegibility;
+    text-shadow: 2px 2px 6px rgba(35, 168, 185, 0.555);
+  }
+  
+  .iframeContainer {
+    display: auto;
+    gap: auto;
+  }
+  
+  .roundedIframe {
+    border-radius: 10px; /* Adjust the radius as needed */
+    max-width: 55%;
+  }
+  
+  
+  .h1 {
+    margin-bottom: 12px;
+    margin-top: 8px;
+  }
+  
+  .explain {
+    font-size: 1.125rem;
+    max-width: 1200px;
+  }
+  
+  .divider {
+    width: 50%;
+    border-color: rgba(133, 17, 187, 0.582);
+    opacity: 0.25;
+  }
+  
+  .smallDivider {
+    width: 25%;
+    border-color: rgb(14, 133, 230);
+    margin-top: 36px;
+    opacity: 0.25;
+  }
+  
+  .nftBoxGrid {
+    width: 1200px;
+    max-width: 95vw;
+    display: flex;
+    flex-direction: row;
+    align-items: normal;
+    justify-content: center;
+    gap: 3%;
+    margin-top: 42px;
+    flex-wrap: wrap;
+  }
+  
+  .nftBox {
+    border-radius: 20px;
+    border: 3px solid #47c5c5;
+    width: 40%;
+    min-height: 150px;
+    padding: 18px;
+    background-color: #67959765;
+    
+  }
+  
+  .optionSelectBox {
+    border-radius: 16px;
+    border: 1px solid #12e7eed7;
+    width: 15%;
+    min-height: 200px;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 12px;
+    padding-right: 12px;
+    cursor: pointer;
+    background-color: #31032d75;
+  }
+  
+  .selectBoxTitle {
+    font-size: 1.45rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: rgba(10, 192, 50, 0.925);
+  }
+  
+  .selectBoxDescription {
+    color: rgba(108, 220, 224, 0.76);
+    margin-top: 1px;
+    text-transform: uppercase;
+    
+  }
+  
+  .content {
+    max-width: 1500px;
+    width: 100%;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  
+  .hero {
+    padding-bottom: 128px;
+  }
+  
+  .heroBackground {
+    position: absolute;
+    z-index: 0;
+    top: 4;
+    left: 0;
+    overflow: hidden;
+    min-width: 100vw;
+    max-width: 200vw;
+    height: clamp(2000px, calc(59.6vw + 512px), 1200px);
+    pointer-events: none;
+  }
+  
+  .heroBackgroundInner {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: clamp(1500px, calc(60vw + 780px), 720px);
+    aspect-ratio: 1/1;
+    transform: translateX(-50%);
+  }
+  
+  .gradient {
+    height: 50%;
+    width: 100%;
+    opacity: 0.7;
+    
+  }
+  
+  .heroAssetFrame {
+    display: flex;
+    justify-content: center;
+    margin: 150px auto 180;
+    padding:6em;
+    overflow: hidden;
+  }
+  
+  .heroAssetFrame2 {
+    display: flex;
+    justify-content: normal;
+    margin: 0px auto 0;
+    padding:1em;
+    overflow: auto;
+  }
+  
+  .heroAsset {
+    max-width: 200vw;
+    margin-bottom: 16px;
+    margin-top: 32px;
+  }
+  
+  .heroAsset2 {
+    max-width: 1500vw;
+    margin-bottom: 8px;
+    margin-top: 128px;
+  }
+  
+  .heroBodyContainer {
+    width: 100%;
+    padding: 0 13px;
+    margin: 0 auto;
+  }
+  
+  .heroBody {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .heroTitle {
+    position: relative;
+    display: inline-block;
+    margin-top: clamp(1px, calc(-7vw + 57px), 3px);
+    margin-bottom: 15px;
+    opacity: 76%;
+    font-size: min(46vw, 146px);
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    text-align: center;
+    overflow: visible;
+    
+   
+  }
+  
+  
+  .phasesContainer {
+  
+    display: flex;
+    justify-content: space-around;
+    justify-content: space-around;
+    margin-top: -55px;
+  }
+  
+  .optionSelectBox {
+    flex: 1 0 200px; /* Adjust "200px" to the minimum width you want your boxes to have before they stack vertically */
+  }
+  
+  .heroTitleGradient {
+    padding-right: 0px;
+    padding-bottom: 5px;
+    font-weight: 900;
+    
+  }
+  
+  .heroSubtitle {
+    max-width: 640px;
+    margin: 0 0 40px;
+    color: hsl(113, 79%, 33%);
+    font-size: Min(3.8vw, 30px);
+    letter-spacing: 0.3px;
+    line-height: 140%;
+    text-align: center;
+    transform: translateY(5px);
+    text-shadow: 1px 3px 4px rgba(180, 100, 50, 0.541); /* Add underline shadow */
+  }
+  
+  .heroSubtitle2 {
+    max-width: 1200px;
+    margin: 0 0 40px;
+    color: hsla(0, 0%, 100%, 0.719);
+    font-size: Min(3.8vw, 30px);
+    letter-spacing: 0.3px;
+    line-height: 140%;
+    text-align: center;
+    transform: translateY(5px);
+    text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.541); /* Add underline shadow */
+  }
+  
+  
+  .heroCtaContainer {
+    display: flex;
+    flex-direction: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .card {
+    background-color: #1e063dcc;
+    margin: 0rem;
+    padding: 2rem;
+    text-align: center;
+    text-decoration-color: #035214;
+    color: inherit;
+    text-decoration: center;
+    border: 12px solid #12dde4;
+    border-radius: 15px;
+    transition: color 0.15s ease, border-color 0.95s ease;
+    max-width: auto;
+    
+  }
+  
+  
+  .codeButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 560px;
+    max-width: 100%;
+    height: 48px;
+    font-family: "Fira Code", monospace;
+    font-size: 16px;
+    background-color: transparent;
+    border: 4px solid hsla(123, 60%, 66%, 0.411);
+    border-radius: 8px;
+    transition: background-color 0.2s;
+  }
+  
+  /* Place a $  before the code button text */
+  .codeButton::before {
+    content: "BUY NOW";
+    color: hsla(283, 89%, 44%, 0.795);
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+    margin-right: 8px;
+  }
+  
+  .codeButton:hover {
+    cursor: pointer;
+    background-color: hsla(108, 88%, 36%, 0.795);
+  }
+  
+  .codeButtonCopy {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 100%;
+    font-family: "Fira Code", monospace;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    opacity: 0.9;
+  }
+  
+  .heroCta {
+    position: relative;
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 8px;
+    border: 3px solid hsla(113, 100%, 67%, 0.486);
+    margin: 16px 0;
+    background-clip: padding-box;
+    background-color: hsla(279, 71%, 15%, 0.452);
+    border-radius: 10px;
+    color: #78d4d0;
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+    transition: opacity 0.7s;
+    width: 280px;
+  }
+  
+  
+  .heroCta2 {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 0px;
+    border: 3px solid hsla(202, 100%, 67%, 0.705);
+    margin: 16px 0;
+    background-clip: padding-box;
+    background-color: hsla(323, 47%, 48%, 0.404);
+    border-radius: 10px;
+    color: #37d6ce;
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+    transition: opacity 0.7s;
+    width: 170px;
+  }
+  
+  .heroCta2::before {
+    position: absolute;
+    z-index: -1;
+    top: 5px;
+    right: 5px;
+    bottom: 0;
+    left: 5px;
+    background: conic-gradient(
+      from 147.14deg at 50% 50%,
+      var(--color-primary) -55.68deg,
+      var(--color-secondary) 113.23deg,
+      var(--color-tertiary) 195deg,
+      var(--color-quaternary) 304.32deg,
+      var(--color-primary) 473.23deg
+    );
+    border-radius: 6px;
+    content: "";
+    filter: blur(20px);
+    opacity: 0.6;
+  }
+  
+  .heroCta:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  
+  
+  .heroCta3 {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 6px;
+    border: 3px solid hsla(167, 100%, 64%, 0.486);
+    margin: 16px 0;
+    background-clip: padding-box;
+    background-color: hsla(226, 100%, 68%, 0.658);
+    border-radius: 10px;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+    transition: opacity 5s;
+    width: 470px;
+    
+    
+  }
+  
+  
+  
+  .heroCta4 {
+    position: relative;
+    display: row;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 6px;
+    border: 3px solid hsla(167, 46%, 56%, 0.486);
+    margin: 8px 0;
+    background-clip: padding-box;
+    background-color: hsla(226, 47%, 48%, 0.404);
+    border-radius: 10px;
+    color: #fffffff3;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+    transition: opacity 100s;
+    width: auto;
+    
+    opacity: var(--color-primary);
+  }
+  
+  
+  
+  .heroCta5 {
+    position: relative;
+    display: row;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 6px;
+    border: 3px solid hsla(167, 50%, 39%, 0.86);
+    margin: 8px 0;
+    background-clip: padding-box;
+    background-color: hsla(226, 33%, 33%, 0.404);
+    border-radius: 10px;
+    color: #fffffff3;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+    transition: opacity 100s;
+    width: auto;
+    opacity: var(--color-primary);
+    
+   
+    background-image: url('https://cdn.discordapp.com/attachments/1026322550415966220/1086520880714223728/Dashed_Jelly_flat_purple_gradient_a3396729-0372-4611-95a1-0103c9337dcf.png');
+    
+    background-size: cover; /* You can use 'cover', 'contain', or specific dimensions */
+    background-position: center;
+  }
+  
+  .heroCta6 {
+    position: relative;
+    display: row;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 6px;
+    border: 3px solid hsla(167, 53%, 43%, 0.586);
+    margin: 8px 0;
+    background-clip: padding-box;
+    background-color: hsla(225, 37%, 37%, 0.719);
+    border-radius: 10px;
+    color: #653afff3;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+    transition: opacity 100s;
+    width: auto;
+    opacity: var(--color-primary);
+    
+  }
+  
+  .heroCta7 {
+    position: relative;
+    display: row;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 6px;
+    border: 3px solid hsla(167, 53%, 43%, 0.586);
+    margin: 8px 0;
+    background-clip: padding-box;
+    background-color: hsla(226, 37%, 37%, 0.404);
+    border-radius: 10px;
+    color: #fffffff3;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+    transition: opacity 100s;
+    width: auto;
+    opacity: var(--color-primary);
+    
+   
+    background-image: url('https://cdn.discordapp.com/attachments/1026322550415966220/1174182335768449095/dashedjelly_drippy_2d_jelly_clouds__illustrated_and_floofy__in__b3bdf51d-b6c0-435f-aea4-05a705def6f2.png?ex=6566a984&is=65543484&hm=f152bb4920aff73553d69c7d9e36c4ccdb75ba723cce76614399b66190503c27&');
+    
+    background-size: 175%; /* You can use 'cover', 'contain', or specific dimensions */
+    background-position: center;
+  }
+  
+  .heroCta8 {
+    position: relative;
+    display: row;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 6px;
+    border: 3px solid hsla(167, 53%, 43%, 0.586);
+    margin: 8px 0;
+    background-clip: padding-box;
+    background-color: hsla(226, 37%, 37%, 0.404);
+    border-radius: 10px;
+    color: #fffffff3;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+    transition: opacity 100s;
+    width: auto;
+    opacity: var(--color-primary);
+    
+   
+    background-image: url('https://cdn.discordapp.com/attachments/1026322550415966220/1174183667019567145/dashedjelly_drippy_2d_jelly_clouds__illustrated_and_floofy__in__81606c7d-db00-4829-a91e-99ea4066b9b4.png?ex=6566aac1&is=655435c1&hm=59ab608871993003d07c3bcfc6b8532f26622c2ef501584f9a27e024db8def79&');
+    
+    background-size: 175%; /* You can use 'cover', 'contain', or specific dimensions */
+    background-position: center;
+  }
+  
+  .heroCta9 {
+    position: relative;
+    display: row;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 6px;
+    border: 3px solid hsla(167, 53%, 43%, 0.586);
+    margin: 8px 0;
+    background-clip: padding-box;
+    background-color: hsla(226, 37%, 37%, 0.404);
+    border-radius: 10px;
+    color: #fffffff3;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+    transition: opacity 100s;
+    width: auto;
+    opacity: var(--color-primary);
+    
+   
+    background-image: url('https://cdn.discordapp.com/attachments/1026322550415966220/1180429597800681472/dashedjelly_soft_metal_plate__floating_purple__out_of_focus__hi_57a996e7-0dae-47c0-92d7-6f8a0af69f70.png?ex=657d63bb&is=656aeebb&hm=662c15a045a1da86bf131a4462268ad06b81f98080eddf53243f327f6a5386c7&');
+    
+    background-size: 100%; /* You can use 'cover', 'contain', or specific dimensions */
+    background-position: center;
+  }
+  
+  .heroCta10 {
+    position: relative;
+    display: row;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 6px;
+    border: 3px solid hsla(167, 53%, 43%, 0.586);
+    margin: 8px 0;
+    background-clip: padding-box;
+    background-color: hsla(226, 37%, 37%, 0.404);
+    border-radius: 10px;
+    color: #fffffff3;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+    transition: opacity 100s;
+    width: auto;
+    opacity: var(--color-primary);
+    
+   
+    background-image: url('https://cdn.discordapp.com/attachments/1026322550415966220/1180429828420276265/dashedjelly_soft_metal_plate__floating_purple__out_of_focus__hi_52e81673-9ae5-4b9f-a67d-e01fb6cb4ee4.png?ex=657d63f2&is=656aeef2&hm=95dc7642969daf2a9100830b9467b5a82548087cfac55e409c52f071b9209e39&');
+    
+    background-size: 100%; /* You can use 'cover', 'contain', or specific dimensions */
+    background-position: center;
+  }
+  
+  .secondaryCta {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+    transition: background-color 0.2s;
+    width: 280px;
+    border: 1px solid hsla(0, 0%, 100%, 0.25);
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: all 0.15s ease-in-out;
+  }
+  
+  .secondaryCta:hover {
+    background-color: hsla(194, 79%, 53%, 0.877);
+  }
+  
+  .secondaryCta2 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #000000;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+    transition: background-color 0.2s;
+    width: auto;
+    border: 2px solid hsla(303, 100%, 51%, 0.699);
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: all 0.15s ease-in-out;
+  }
+  
+  .tabs {
+    margin-top: 2em;
+    margin-bottom: 3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+  
+  .tab {
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.5em 0.75em;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    background-color: transparent;
+    transition: all 0.15s ease-in-out;
+    width: 20%;
+    height: 100%;
+    min-height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .activeTab {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .tab:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .tabContent {
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .transition {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  
+  .link {
+    text-decoration: none;
+    transition: all 0.15s ease-in-out;
+    font-weight: 600;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  .code {
+    background-color: #0d0d14;
+    color: white;
+    padding: 8px 4px;
+    border-radius: 8px;
+  }
+  
+  .list {
+    margin-top: 1em;
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  
+  .list li {
+    margin-bottom: 1em;
+  }
+  
+  .main {
+    min-height: 100vh;
+    padding: 2rem 0;
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .title a {
+    color: #f213a4a4;
+    text-decoration:underline,
+    ;
+  }
+  
+  .title a:hover ,
+  .title a:focus,
+  .title a:active {
+    text-decoration: center;
+  }
+  
+  .title {
+    margin: 2;
+    line-height: 2.75;
+    font-size: 24rem;
+  }
+  
+  .title,
+  .description {
+    background: rgba(103, 17, 173, 0.308);
+    border-radius: 33px;
+    padding: .03rem;
+    font-size: 0.5rem;
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+      Bitstream Vera Sans Mono, Courier New, monospace;
+    text-align: center;
+  }
+  
+  
+  .connect {
+    margin-bottom: 2rem;
+    width: 34px;
+  }
+  
+  .link {
+    color: rgba(159, 235, 209, 0.6);
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    line-height: 33px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .description {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    line-height: 1.5;
+    font-size: 1rem;
+    align-items: center;
+  }
+  
+  .main2 {
+    min-height: 100vh;
+    padding: 2rem 0;
+    flex: 6;
+    display: flex;
+    flex-direction: grid;
+    justify-content: center;
+    align-items: flex;
+    
+  }
+  
+  .posright {
+  perspective-origin: 5%;
+  
+  
+  }
+  
+  .tokenContainer {
+    
+    padding: 20px;
+    
+    
+   
+    text-align: center;
+  }
+  
+  .token2 {
+    font-size: 13px;
+    
+  }
+  
+  .title {
+    font-size: 13px;
+    font-weight: bold;
+    color: #c5ccd3fd; /* Change the color to your preferred text color */
+  }
+  
+  
+  .mainButton {
+    cursor: pointer;
+    display: inline-flex;
+    appearance: none;
+    align-items: center;
+    -webkit-box-align: center;
+    justify-content: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    line-height: 1.2;
+    font-weight: 600;
+    transition-property: color, fill, stroke,;
+    transition-duration: 400ms;
+    height: 3rem;
+    min-width: auto;
+    font-size: 1rem;
+    background: #c5c5fdda;
+    background-image: linear-gradient(to left, #cc25b3 0%, #418dff 101.52%);
+    color: #b2d2e7;
+    width: 180px;
+    text-align: center;
+    border-radius: 9999px;
+    border-style: none;
+    opacity: 0.8;
+  }
+  
+  .mainButton:hover {
+    opacity: 1.2;
+    color: #4ee99c;
+  }
+  
+  .cardImg {
+    object-fit: contain;
+    margin-bottom: 8px;
+  }
+  
+  @keyframes rainbow {
+    15% {
+      color: violet;
+    }
+    85% {
+      color: rgb(129, 33, 105);
+    }
+    15% {
+      color: rgb(75, 142, 196);
+    }
+    85% {
+      color: rgb(96, 48, 129);
+    }
+    15% {
+      color: rgb(128, 31, 128);
+    }
+    85% {
+      color: rgb(78, 212, 123);
+    }
+  }
+  .Title {
+    animation: rainbow 5s linear infinite, fontSizeChange 5s ease-in-out infinite;
+    transition: transform 0.3s ease-in-out;
+    margin-top: -25px;
+    margin-bottom: -76px;
+  }
+  
+  .Title:hover {
+    transform: scale(1.1); /* Increase the size on hover */
+  }
+  /* Between 1200 and 800 */
+  @media only screen and (min-width: 800px) and (max-width: 1200px) {
+    .nftBox {
+      width: 100%;
+      margin-top: 16px;
+    }
+  }
+  
+  /* Screens smaller than 750px */
+  @media (max-width: 650px) {
+    .tabs {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+  
+    .tab {
+      width: 50%;
+    }
+  
+  }
+  
+  /* Less than 640 px */
+  @media (max-width: 640px) {
+    .gradient {
+      margin-top: 42px;
+    }
+  
+    .heroTitle {
+      margin-top: 55px;
+      font-size: 88px;
+    }
+  
+    .heroCtaContainer {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .heroAsset {
+      max-height: 260px;
+    }
+  
+    .iframeContainer {
+      display: auto;
+      gap: auto;
+      size: 50%;
+    }
+  
+  }
+  
+  /* Above 640 and less than 960 */
+  @media (min-width: 640px) and (max-width: 790px) {
+    .gradient {
+      margin-top: 42px;
+    }
+  
+    .heroTitle {
+      margin-top: 55px;
+      font-size: 60px;
+    }
+  
+    .heroAsset {
+      max-height: 220px;
+    }
+  }
+  
+  
+  
+  
+  /* beneath 800
+  */
+  @media only screen and (max-width: 800px) {
+    .nftBoxGrid {
+      justify-content: center;
+    }
+    .nftBox {
+      width: 100%;
+      margin-top: 16px;
+    }
+    .optionSelectBox {
+      width: 90%;
+      margin-top: 16px;
+    }
+  
+  
+  .tokenGrid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1%;
+    width: 1600px;
+    max-width: 95vw;
+    flex-wrap: wrap;
+    margin: 16px 0;
+  }
+  
+  .tokenItem {
+    width:30%;
+    height: 120px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    gap: 16px;
+  }
+  
+  .tokenLabel {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Second tokenLabel item */
+  
+  
+  
+  .tokenValue {
+    font-size: 1.3rem;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    font-weight: 500;
+  }
+  
+  
+  
+  /* On Mobile, make tokenGrid 100% width */
+  @media only screen and (max-width: 850px) {
+    .tokenItem {
+      width: 90%;
+      margin-top: 12px;
+    }
+  
+  
+  /* Screen less than 630, then hide .center */
+  @media only screen and (max-width: 630px) {
+    .center {
+      display: none;
+    }
+  }
+  
+  .spacerTop {
+    margin-top: 16px;
+  }
+  
+  .bigSpacerTop {
+    margin-top: 16px;
+  }
+  
+  .spacerBottom {
+    margin-bottom: 16px;
+  }
+  
+  .detailPageHr {
+    margin-top: 0px;
+    margin-bottom: 32px;
+  }
+  
+  .nftMedia {
+    width: 30%;
+    max-height: 300px;
+    border-radius: 8px;
+  }
+  
+  
+  @media (max-width: 350px) {
+    .phasesContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .optionSelectBox {
+      margin-bottom: 10px; /* Add some vertical space between the boxes when they're stacked */
+    }
+  
+    .container {
+      margin-top: 105px;
+      width: 100vw;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      position: absolute;
+      padding: 0 48px;
+      background-image: url("");
+      background-size: cover;
+      background-repeat: no-repeat;
+      font-family: 'DynaPuff', monospace;
+      text-shadow: 0px 2px 2px rgba(190, 190, 190, 0.568);
+    }
+    
+    .container2 {
+      margin-top: 0px;
+      width: auto;
+      display: flex;
+      box-sizing: border-box;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      position: absolute;
+      padding: 0 24px;
+      background-image: url("/jellyball.png");
+      background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'DynaPuff', monospace;
+    text-rendering: optimizeLegibility;
+    
+  }
+
+  .container3 {
+    margin-top: 109px;
+    height: 1250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: fill;
+    width: 100%;
+    position: absolute;
+    padding: 1 4px;
+    background-image: url("/jellyball.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'DynaPuff', monospace;
+    text-rendering: optimizeLegibility;
+   
+  }
+  
+    .iframeContainer {
+      display: auto;
+      gap: auto;
+      size: 50%;
+    }
+  
+    .Title {
+      animation: rainbow 5s linear infinite, fontSizeChange 2s ease-in-out infinite;
+      transition: transform 0.3s ease-in-out;
+      margin-top: 20px;
+      margin-bottom: -76px;
+      font-size: medium;
+    }
+  
+  }
+  
+  .card {
+    background-color: #793c889f;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    text-decoration-color: #18832f;
+    color: inherit;
+    text-decoration: center;
+    border: 12px solid #09afb479;
+    border-radius: 12px;
+    transition: color 0.15s ease, border-color 0.95s ease;
+    max-width: 450px;
+    background-image: url("");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  }
+
+  .secondaryCta2 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #000000;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+    transition: background-color 0.2s;
+    width: 50%;
+    border: 2px solid hsla(303, 100%, 51%, 0.699);
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: all 0.15s ease-in-out;
+  }
+  
+  }}
