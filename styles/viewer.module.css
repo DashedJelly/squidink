@@ -3,18 +3,18 @@
 
 
 .container {
-    margin-top: 133px;
+    margin-top: -20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: left;
     width: 100%;
     position: absolute;
-    padding: 0 48px;
-    background-image: url("/jellyball.png");
+   
+    background-image: url("/undersea.png");
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: 'DynaPuff', monospace;
+    font-family: 'Franklin_notes', monospace;
     text-rendering: optimizeLegibility;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.568);
   }
@@ -1113,7 +1113,7 @@
   }
   
   
-  @media (max-width: 350px) {
+  @media (max-width: 420px) {
     .phasesContainer {
       flex-direction: column;
       align-items: center;
@@ -1124,23 +1124,20 @@
     }
   
     .container {
-      margin-top: 105px;
-      width: 100vw;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      position: absolute;
-      padding: 0 48px;
-      background-image: url("");
-      background-size: cover;
-      background-repeat: no-repeat;
-      font-family: 'DynaPuff', monospace;
-      text-shadow: 0px 2px 2px rgba(190, 190, 190, 0.568);
-    }
+        margin-top: -20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: left;
+        width: 720px;
+        height: 1720px;
+       
+        background-image: url("/undersea.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: 'Franklin_notes', monospace;
     
+      }
     .container2 {
       margin-top: 0px;
       width: auto;

@@ -1,4 +1,4 @@
-import { Box, Container, Grid, GridItem, Heading, Select, Stack, Image, Divider, Wrap, WrapItem } from "@chakra-ui/react";
+import { Text,Box, Container, Grid, GridItem, Heading, Select, Stack, Image, Divider, Wrap, WrapItem, Tag, TagLabel } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import styles from "../styles/viewer.module.css";
 
@@ -52,11 +52,11 @@ const Builder = () => {
 
   return (
     <Container paddingTop={109}>
-      <div className={styles.container}>
+      <Box className={styles.container}>
         <Stack spacing={4}>
           <Heading color="white" fontFamily="Franklin_notes">TRAITS:Previewer</Heading>
           <Grid gridTemplateRows={'100px 3fr100px'}
-            gridTemplateColumns={'300px 2fr'}
+            gridTemplateColumns={'460px 2fr'}
             h='260px'
             gap='1'
             
@@ -67,18 +67,20 @@ const Builder = () => {
               spacing={1}>
               <Wrap spacing="10px" justify="center">
                 <WrapItem>
+        <Text></Text>
                   <Select value={selectedBackground} onChange={(e) => setSelectedBackground(e.target.value)} bg="purple.200">
                     <option value="">Select Background</option>
                     {BackgroundOptions.map((option, index) => (
-                      <option key={index} value={option}>{option}</option>
+                      <option key={index} value={option}>{option}- Background</option>
                     ))}
                   </Select>
                 </WrapItem>
+                
                 <WrapItem>
                   <Select value={selectedSkin} onChange={(e) => setSelectedSkin(e.target.value)} bg="purple.200">
                     <option value="">Select Skin</option>
                     {SkinOptions.map((option, index) => (
-                      <option key={index} value={option}>{option}</option>
+                      <option key={index} value={option}>{option}- Skin</option>
                     ))}
                   </Select>
                 </WrapItem>
@@ -86,7 +88,7 @@ const Builder = () => {
                   <Select value={selectedFace} onChange={(e) => setSelectedFace(e.target.value)} bg="purple.200">
                     <option value="">Select Face</option>
                     {FaceOptions.map((option, index) => (
-                      <option key={index} value={option}>{option}</option>
+                      <option key={index} value={option}>{option}- Face</option>
                     ))}
                   </Select>
                 </WrapItem>
@@ -94,7 +96,7 @@ const Builder = () => {
                   <Select value={selectedHeadwear} onChange={(e) => setSelectedHeadwear(e.target.value)} bg="purple.200">
                     <option value="">Select Headwear</option>
                     {HeadwearOptions.map((option, index) => (
-                      <option key={index} value={option}>{option}</option>
+                      <option key={index} value={option}>{option}- Headwear</option>
                     ))}
                   </Select>
                 </WrapItem>
@@ -102,7 +104,7 @@ const Builder = () => {
                   <Select value={selectedInk} onChange={(e) => setSelectedInk(e.target.value)} bg="purple.200">
                     <option value="">Select Ink</option>
                     {InkOptions.map((option, index) => (
-                      <option key={index} value={option}>{option}</option>
+                      <option key={index} value={option}>{option}- Ink</option>
                     ))}
                   </Select>
                 </WrapItem>
@@ -110,7 +112,7 @@ const Builder = () => {
                   <Select value={selectedPatches} onChange={(e) => setSelectedPatches(e.target.value)} bg="purple.200">
                     <option value="">Select Patches</option>
                     {PatchesOptions.map((option, index) => (
-                      <option key={index} value={option}>{option}</option>
+                      <option key={index} value={option}>{option}- Patches</option>
                     ))}
                   </Select>
                 </WrapItem>
@@ -118,7 +120,7 @@ const Builder = () => {
                   <Select value={selectedStrokes} onChange={(e) => setSelectedStrokes(e.target.value)} bg="purple.200">
                     <option value="">Select Strokes</option>
                     {StrokesOptions.map((option, index) => (
-                      <option key={index} value={option}>{option}</option>
+                      <option key={index} value={option}>{option}- Strokes</option>
                     ))}
                   </Select>
                 </WrapItem>
@@ -126,7 +128,7 @@ const Builder = () => {
                   <Select value={selectedTentacle} onChange={(e) => setSelectedTentacle(e.target.value)} bg="purple.200">
                     <option value="">Select Tentacle</option>
                     {TentacleOptions.map((option, index) => (
-                      <option key={index} value={option}>{option}</option>
+                      <option key={index} value={option}>{option}- Tentacle</option>
                     ))}
                   </Select>
                 </WrapItem>
@@ -134,7 +136,7 @@ const Builder = () => {
                   <Select value={selectedAccessories} onChange={(e) => setSelectedAccessories(e.target.value)} bg="purple.200">
                     <option value="">Select Accessories</option>
                     {AccessoriesOptions.map((option, index) => (
-                      <option key={index} value={option}>{option}</option>
+                      <option key={index} value={option}>{option}- Accessories</option>
                     ))}
                   </Select>
                 </WrapItem>
@@ -142,7 +144,7 @@ const Builder = () => {
                   <Select value={selectedBubbles} onChange={(e) => setSelectedBubbles(e.target.value)} bg="purple.200">
                     <option value="">Select Bubbles</option>
                     {BubblesOptions.map((option, index) => (
-                      <option key={index} value={option}>{option}</option>
+                      <option key={index} value={option}>{option}- Bubbles</option>
                     ))}
                  </Select>
                 </WrapItem>
@@ -153,32 +155,32 @@ const Builder = () => {
         <Grid
           templateRows={['auto', 'auto', 'auto', 'auto']}
           templateColumns={['auto', 'auto', 'auto', 'auto']}
-          gap={['1', '1', '1', '1']}
+         
           color='blackAlpha.700'
           fontWeight='bold'
           margin='85px'
           >
-          <Divider/>
+          <Divider pt={56}/>
         <GridItem borderBlockEndColor={"purple.200"} bg='black' pb={10} pl={1} pr={1} pt={-1} area={'Viewer'}>
-          <Box position="relative" width="300px" height="300px" margin="9px auto 0">
-            {selectedBackground && <Image src={`/Background/${selectedBackground}.png`} alt="Background" style={{ position: 'absolute' }} width={300} height={300}/>}
-            {selectedInk && <Image src={`/Ink/${selectedInk}.png`} alt="Ink" style={{ position: 'absolute' }} width={300} height={300} />}
-            {selectedSkin && <Image src={`/Skin/${selectedSkin}.png`} alt="Skin" style={{ position: 'absolute' }} width={300} height={300} />}
-            {selectedTentacle && <Image src={`/Tentacle/${selectedTentacle}.png`} alt="Tentacle" style={{ position: 'absolute' }} width={300} height={300} />}
-            {selectedStrokes && <Image src={`/Strokes/${selectedStrokes}.png`} alt="Strokes" style={{ position: 'absolute' }} width={300} height={300} />}
-            {selectedFace && <Image src={`/Face/${selectedFace}.png`} alt="Face" style={{ position: 'absolute' }} width={300} height={300} />}
+          <Box position="relative" width="460px" height="460px" margin="9px auto 0">
+            {selectedBackground && <Image src={`/Background/${selectedBackground}.png`} alt="Background" style={{ position: 'absolute' }} width={460} height={460}/>}
+            {selectedInk && <Image src={`/Ink/${selectedInk}.png`} alt="Ink" style={{ position: 'absolute' }} width={460} height={460} />}
+            {selectedSkin && <Image src={`/Skin/${selectedSkin}.png`} alt="Skin" style={{ position: 'absolute' }} width={460} height={460} />}
+            {selectedTentacle && <Image src={`/Tentacle/${selectedTentacle}.png`} alt="Tentacle" style={{ position: 'absolute' }} width={460} height={460} />}
+            {selectedStrokes && <Image src={`/Strokes/${selectedStrokes}.png`} alt="Strokes" style={{ position: 'absolute' }} width={460} height={460} />}
+            {selectedFace && <Image src={`/Face/${selectedFace}.png`} alt="Face" style={{ position: 'absolute' }} width={460} height={460} />}
             
            
-            {selectedPatches && <Image src={`/Patches/${selectedPatches}.png`} alt="Patches" style={{ position: 'absolute' }} width={300} height={300} />}
+            {selectedPatches && <Image src={`/Patches/${selectedPatches}.png`} alt="Patches" style={{ position: 'absolute' }} width={460} height={460} />}
             
-            {selectedAccessories && <Image src={`/Accessories/${selectedAccessories}.png`} alt="Accessories" style={{ position: 'absolute' }} width={300} height={300} />}
-            {selectedBubbles && <Image src={`/Bubbles/${selectedBubbles}.png`} alt="Bubbles" style={{ position: 'absolute' }} width={300} height={300} />}
+            {selectedAccessories && <Image src={`/Accessories/${selectedAccessories}.png`} alt="Accessories" style={{ position: 'absolute' }} width={460} height={460} />}
+            {selectedBubbles && <Image src={`/Bubbles/${selectedBubbles}.png`} alt="Bubbles" style={{ position: 'absolute' }} width={460} height={460} />}
            
-            {selectedHeadwear && <Image src={`/Headwear/${selectedHeadwear}.png`} alt="Headwear" style={{ position: 'absolute' }} width={300} height={300} />}
+            {selectedHeadwear && <Image src={`/Headwear/${selectedHeadwear}.png`} alt="Headwear" style={{ position: 'absolute' }} width={460} height={460} />}
           </Box>
         </GridItem>
       </Grid>
-    </div>
+    </Box>
   </Container>
 );
 };
