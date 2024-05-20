@@ -67,8 +67,8 @@ const Builder = () => {
               spacing={1}>
               <Wrap spacing="10px" justify="center">
                 <WrapItem>
-        <Text></Text>
-                  <Select value={selectedBackground} onChange={(e) => setSelectedBackground(e.target.value)} bg="purple.200">
+       
+                  <Select value={selectedBackground} onChange={(e) => setSelectedBackground(e.target.value)} bg="blue.200">
                     <option value="">Select Background</option>
                     {BackgroundOptions.map((option, index) => (
                       <option key={index} value={option}>{option}- Background</option>
@@ -77,7 +77,7 @@ const Builder = () => {
                 </WrapItem>
                 
                 <WrapItem>
-                  <Select value={selectedSkin} onChange={(e) => setSelectedSkin(e.target.value)} bg="purple.200">
+                  <Select value={selectedSkin} onChange={(e) => setSelectedSkin(e.target.value)} bg="blue.200">
                     <option value="">Select Skin</option>
                     {SkinOptions.map((option, index) => (
                       <option key={index} value={option}>{option}- Skin</option>
@@ -85,7 +85,7 @@ const Builder = () => {
                   </Select>
                 </WrapItem>
                 <WrapItem>
-                  <Select value={selectedFace} onChange={(e) => setSelectedFace(e.target.value)} bg="purple.200">
+                  <Select value={selectedFace} onChange={(e) => setSelectedFace(e.target.value)} bg="blue.200">
                     <option value="">Select Face</option>
                     {FaceOptions.map((option, index) => (
                       <option key={index} value={option}>{option}- Face</option>
@@ -93,7 +93,7 @@ const Builder = () => {
                   </Select>
                 </WrapItem>
                 <WrapItem>
-                  <Select value={selectedHeadwear} onChange={(e) => setSelectedHeadwear(e.target.value)} bg="purple.200">
+                  <Select value={selectedHeadwear} onChange={(e) => setSelectedHeadwear(e.target.value)} bg="blue.200">
                     <option value="">Select Headwear</option>
                     {HeadwearOptions.map((option, index) => (
                       <option key={index} value={option}>{option}- Headwear</option>
@@ -101,7 +101,7 @@ const Builder = () => {
                   </Select>
                 </WrapItem>
                 <WrapItem>
-                  <Select value={selectedInk} onChange={(e) => setSelectedInk(e.target.value)} bg="purple.200">
+                  <Select value={selectedInk} onChange={(e) => setSelectedInk(e.target.value)} bg="blue.200">
                     <option value="">Select Ink</option>
                     {InkOptions.map((option, index) => (
                       <option key={index} value={option}>{option}- Ink</option>
@@ -109,7 +109,7 @@ const Builder = () => {
                   </Select>
                 </WrapItem>
                 <WrapItem>
-                  <Select value={selectedPatches} onChange={(e) => setSelectedPatches(e.target.value)} bg="purple.200">
+                  <Select value={selectedPatches} onChange={(e) => setSelectedPatches(e.target.value)} bg="blue.200">
                     <option value="">Select Patches</option>
                     {PatchesOptions.map((option, index) => (
                       <option key={index} value={option}>{option}- Patches</option>
@@ -117,7 +117,7 @@ const Builder = () => {
                   </Select>
                 </WrapItem>
                 <WrapItem>
-                  <Select value={selectedStrokes} onChange={(e) => setSelectedStrokes(e.target.value)} bg="purple.200">
+                  <Select value={selectedStrokes} onChange={(e) => setSelectedStrokes(e.target.value)} bg="blue.200">
                     <option value="">Select Strokes</option>
                     {StrokesOptions.map((option, index) => (
                       <option key={index} value={option}>{option}- Strokes</option>
@@ -125,7 +125,7 @@ const Builder = () => {
                   </Select>
                 </WrapItem>
                 <WrapItem>
-                  <Select value={selectedTentacle} onChange={(e) => setSelectedTentacle(e.target.value)} bg="purple.200">
+                  <Select value={selectedTentacle} onChange={(e) => setSelectedTentacle(e.target.value)} bg="blue.200">
                     <option value="">Select Tentacle</option>
                     {TentacleOptions.map((option, index) => (
                       <option key={index} value={option}>{option}- Tentacle</option>
@@ -133,7 +133,7 @@ const Builder = () => {
                   </Select>
                 </WrapItem>
                 <WrapItem>
-                  <Select value={selectedAccessories} onChange={(e) => setSelectedAccessories(e.target.value)} bg="purple.200">
+                  <Select value={selectedAccessories} onChange={(e) => setSelectedAccessories(e.target.value)} bg="blue.200">
                     <option value="">Select Accessories</option>
                     {AccessoriesOptions.map((option, index) => (
                       <option key={index} value={option}>{option}- Accessories</option>
@@ -141,7 +141,7 @@ const Builder = () => {
                   </Select>
                 </WrapItem>
                 <WrapItem>
-                  <Select value={selectedBubbles} onChange={(e) => setSelectedBubbles(e.target.value)} bg="purple.200">
+                  <Select value={selectedBubbles} onChange={(e) => setSelectedBubbles(e.target.value)} bg="blue.200">
                     <option value="">Select Bubbles</option>
                     {BubblesOptions.map((option, index) => (
                       <option key={index} value={option}>{option}- Bubbles</option>
@@ -161,7 +161,7 @@ const Builder = () => {
           margin='85px'
           >
           <Divider pt={56}/>
-        <GridItem borderBlockEndColor={"purple.200"} bg='black' pb={10} pl={1} pr={1} pt={-1} area={'Viewer'}>
+        <GridItem borderBlockEndColor={"blue.200"} bg='black' pb={10} pl={1} pr={1} pt={-1} area={'Viewer'}>
           <Box position="relative" width="460px" height="460px" margin="9px auto 0">
             {selectedBackground && <Image src={`/Background/${selectedBackground}.png`} alt="Background" style={{ position: 'absolute' }} width={460} height={460}/>}
             {selectedInk && <Image src={`/Ink/${selectedInk}.png`} alt="Ink" style={{ position: 'absolute' }} width={460} height={460} />}
