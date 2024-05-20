@@ -162,6 +162,7 @@ const Builder = () => {
         <GridItem borderBlockEndColor={"purple.200"} bg='black' pb={10} pl={1} pr={1} pt={-1} area={'Viewer'}>
           <Box position="relative" width="300px" height="300px" margin="9px auto 0">
             {selectedBackground && <Image src={`/Background/${selectedBackground}.png`} alt="Background" style={{ position: 'absolute' }} width={300} height={300}/>}
+            {selectedInk && <Image src={`/Ink/${selectedInk}.png`} alt="Ink" style={{ position: 'absolute' }} width={300} height={300} />}
             {selectedSkin && <Image src={`/Skin/${selectedSkin}.png`} alt="Skin" style={{ position: 'absolute' }} width={300} height={300} />}
             {selectedTentacle && <Image src={`/Tentacle/${selectedTentacle}.png`} alt="Tentacle" style={{ position: 'absolute' }} width={300} height={300} />}
             {selectedStrokes && <Image src={`/Strokes/${selectedStrokes}.png`} alt="Strokes" style={{ position: 'absolute' }} width={300} height={300} />}
@@ -172,7 +173,7 @@ const Builder = () => {
             
             {selectedAccessories && <Image src={`/Accessories/${selectedAccessories}.png`} alt="Accessories" style={{ position: 'absolute' }} width={300} height={300} />}
             {selectedBubbles && <Image src={`/Bubbles/${selectedBubbles}.png`} alt="Bubbles" style={{ position: 'absolute' }} width={300} height={300} />}
-            {selectedInk && <Image src={`/Ink/${selectedInk}.png`} alt="Ink" style={{ position: 'absolute' }} width={300} height={300} />}
+           
             {selectedHeadwear && <Image src={`/Headwear/${selectedHeadwear}.png`} alt="Headwear" style={{ position: 'absolute' }} width={300} height={300} />}
           </Box>
         </GridItem>
