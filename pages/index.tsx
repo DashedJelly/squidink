@@ -16,18 +16,17 @@ const Home: NextPage = () => {
       <Box pt={67}>
         <Image src="/logo.png" objectFit="cover" alt="SquidInk Logo" />
       </Box>
-      <Box pb={535}>
-        <Text fontFamily="Franklin_notes" className={styles.card6}>
+      <Box fontFamily="Franklin_notes" className={styles.card6} >
+       
         There were 3,000 eggs saved from the corruption and horror of humans.<br/> With the help of  the Mermaid Queen and the Jelly Collective, Squid Ink is ready to be <Text fontSize={17}>REBORN</Text>
-        </Text>
-        <Box>
+        
+      </Box>
+      <Box>
           <Image src="../minting-now.png" width={"200"} height={"188"} alt="Minting Now"></Image>
         </Box>
         <Box fontFamily={"Franklin_notes"} className={styles.mainButton} mt={4}  onClick={handleMintClick}>
          ENTER
         </Box>
-      </Box>
-
       <footer>
         <Center fontFamily="Franklin_notes">
           <div className={styles.code}>

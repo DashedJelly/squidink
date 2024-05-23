@@ -267,7 +267,7 @@ export function Navbar() {
                               width={340}
                               bg={"blue.200"}
                               className={styles.codeButton}
-                              onClick={() => router.push(`https://twitter.com/`)}
+                              onClick={() => router.push(`https://twitter.com/enothelost`)}
                             >
                                Follow on     <Text pl={2} fontSize={22}> 𝕏</Text>
                             </Button>
@@ -277,7 +277,7 @@ export function Navbar() {
                               width={340}
                               bg={"blue.200"}
                               className={styles.codeButton}
-                              onClick={() => router.push(`https://discord.gg/`)}
+                              onClick={() => router.push(`https://discord.gg/sPdWQ4Gfxj`)}
                             >
                                Join the Discord  
                             </Button>

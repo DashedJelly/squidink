@@ -19,3 +19,6 @@ export const NETWORK = Sepolia;
 
   export const JDOH_TOKEN_ADDRESS =
   "0xCAaEe9f60A3749Ed26b3385c92bBeD11d61eD854";
+
+  export const MARKETPLACE_ADDRESS =
+  "0x211Fd5CeF05590F8e390B7d2DF22Fb40eeDe9bA0";
