@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         
       </Box>
       <Box>
-          <Image src="../minting-now.png" width={"200"} height={"188"} alt="Minting Now"></Image>
+          <Image  src="../minting-now.png" width={"200"} height={"188"} alt="Minting Now"></Image>
         </Box>
         <Box fontFamily={"Franklin_notes"} className={styles.mainButton} mt={4}  onClick={handleMintClick}>
          ENTER

@@ -94,7 +94,7 @@ const YourComponent: React.FC = () => {
       
     <Box  className={styles.description}>
           {isLoading ? (
-            <Spinner />
+            <Spinner color="blue.300" />
           ) : data ? (
             <Box textColor={"black"} fontFamily={"Franklin_notes"} className={styles.heroCta2}>
               <Text fontSize={15} >Claimable Rewards: </Text> <Text textColor={"orange.200"} fontFamily={"monospace"} >{parseFloat(formatUnits(data, 18)).toFixed(2)}</Text><Text fontWeight={666} fontSize={23}>$JDOH</Text>

@@ -133,10 +133,11 @@ export function Navbar() {
                   <DrawerBody>
 <Box pb={6}>
                   <Button
+                  color={"black"}
                   colorScheme="blue" variant={"outline"}
-                      width={300}
-                      h={12}
-                      bg={"blue.200"}
+                      width={200}
+                      h={9}
+                      bg={"blue.300"}
                       className={styles.codeButton}
                       onClick={() => {router.push(`/`)
                       onClose();
@@ -151,6 +152,7 @@ export function Navbar() {
                     <Box pt={2}/>
                   
                     <Button
+                    color={"black"}
                    fontSize={24}
                     colorScheme="blue" variant={"outline"}
                     loadingText
@@ -172,17 +174,18 @@ export function Navbar() {
                   </Center>
               
                   <Button
+                  color={"black"}
                   fontSize={20}
                     colorScheme="blue" variant={"outline"}
                       width={340}
                     
                       bg={"blue.200"}
                       className={styles.codeButton}
-                      onClick={() => {router.push(`https://www.thejellycollective.club/JellyDoughMarketplace`)
+                      onClick={() => {router.push(`/SquidMarket`)
                       onClose();
                       }}
                     >
-                      JellyDough Market
+                      SquidInk Market
                     </Button>
                   
 
@@ -199,6 +202,7 @@ export function Navbar() {
 
     <Box pt={3}></Box>
                             <Button
+                            color={"black"}
                             fontSize={20}
                             colorScheme="blue" variant={"outline"}
                               width={340}
@@ -223,6 +227,7 @@ export function Navbar() {
 <Box pt={3}></Box>     
                          
                             <Button
+                            color={"black"}
                             colorScheme="blue" variant={"outline"}
                               width={340}
                               bg={"blue.200"}
@@ -236,6 +241,7 @@ export function Navbar() {
                             </Button>
                             <Box pb={2}></Box>
                             <Button
+                            color={"black"}
                             colorScheme="blue" variant={"outline"}
                               width={340}
                               bg={"blue.200"}
@@ -250,6 +256,7 @@ export function Navbar() {
         <Box pb={2}></Box> 
 
                             <Button
+                            color={"black"}
                             colorScheme="blue" variant={"outline"}
                               width={340}
                               bg={"blue.200"}
@@ -263,6 +270,7 @@ export function Navbar() {
                  
     <Box pb={6}></Box>         
                     <Button
+                    color={"black"}
                     colorScheme="blue" variant={"outline"}
                               width={340}
                               bg={"blue.200"}
@@ -273,6 +281,7 @@ export function Navbar() {
                             </Button>
                             <Box pb={3}></Box> 
                             <Button
+                            color={"black"}
                             colorScheme="blue" variant={"outline"}
                               width={340}
                               bg={"blue.200"}
