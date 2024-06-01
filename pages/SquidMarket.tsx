@@ -62,7 +62,7 @@ export default function Marketplace() {
                 <span style={{ fontSize: "2rem" }}>Marketplace</span>
               </Box>
             <Box fontFamily={"franklin_notes"}>
-               Collective Approved 
+               by Jelly Tech Industries 
             </Box>
           </Box>
           <div className={styles.heroCta}>
