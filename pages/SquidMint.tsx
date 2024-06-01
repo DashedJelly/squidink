@@ -104,7 +104,7 @@ const Home: NextPage = () => {
 
   return (
     <Box fontFamily="Franklin_notes">
-      <Box className={styles.container12}>
+      <Box className={styles.container}>
         <Box>
           <Box pt={184}>
             <Image src="/logo.png" objectFit="cover" alt="" />
