@@ -55,7 +55,7 @@ const Home: NextPage = () => {
 
   const handleMintToken = async (contract: any, numberOfTokens: number) => {
     try {
-      let totalEtherAmount = 0.0001 * numberOfTokens;
+      let totalEtherAmount = 3.33 * numberOfTokens;
       totalEtherAmount = parseFloat(totalEtherAmount.toFixed(18));
       await contract.call("mintToken", [numberOfTokens], {
         value: ethers.utils.parseEther(totalEtherAmount.toString()),
@@ -83,7 +83,7 @@ const Home: NextPage = () => {
 
   const handleJDOHApproval = async (contract: any, amount: number) => {
     try {
-      await contract.call("approve", ["0x6D1aeA4C20bE70B2d4B5500802628CaD2Dc6d221", amount]);
+      await contract.call("approve", ["0x13eE13d70cdBd336156b9aeBBbC89432C154110e", amount]);
       setAlertMessage("Approval successful!");
       setAlertStatus("success");
     } catch (error) {
@@ -104,7 +104,7 @@ const Home: NextPage = () => {
 
   return (
     <Box fontFamily="Franklin_notes">
-      <Box className={styles.container1}>
+      <Box className={styles.container12}>
         <Box>
           <Box pt={184}>
             <Image src="/logo.png" objectFit="cover" alt="" />
@@ -185,7 +185,7 @@ const Home: NextPage = () => {
                                           <Box fontFamily="Franklin_notes">
                                             <Web3Button
                                               className={styles.mainButton}
-                                              contractAddress="0x6D1aeA4C20bE70B2d4B5500802628CaD2Dc6d221"
+                                              contractAddress="0x8F3375a9e7607182f4651049248037fB6a7E9a97"
                                               action={(contract: any) => handleMintToken(contract, numberOfTokensSlider1)}
                                             >
                                               MINT:INKubator
@@ -205,7 +205,7 @@ const Home: NextPage = () => {
                                 <Box fontFamily="Franklin_notes">
                                   <Web3Button
                                     className={styles.mainButton}
-                                    contractAddress="0x6D1aeA4C20bE70B2d4B5500802628CaD2Dc6d221"
+                                    contractAddress="0x8F3375a9e7607182f4651049248037fB6a7E9a97"
                                     action={(contract: any) => handleMintToken(contract, numberOfTokensSlider1)}
                                   >
                                     MINT:INKubator
@@ -275,7 +275,7 @@ const Home: NextPage = () => {
                                   <Web3Button
                                     className={styles.mainButton}
                                     theme="light"
-                                    contractAddress="0xCAaEe9f60A3749Ed26b3385c92bBeD11d61eD854"
+                                    contractAddress="0x13eE13d70cdBd336156b9aeBBbC89432C154110e"
                                     action={(contract1) => {
                                       handleJDOHApproval(contract1, amount);
                                     }}
@@ -286,7 +286,7 @@ const Home: NextPage = () => {
                                   <Web3Button
                                     className={styles.mainButton}
                                     theme="light"
-                                    contractAddress="0x6D1aeA4C20bE70B2d4B5500802628CaD2Dc6d221"
+                                    contractAddress="0x8F3375a9e7607182f4651049248037fB6a7E9a97"
                                     action={(contract: any) => handleMintWithJDOH(contract, numberOfTokensSlider2)}
                                   >
                                     Mint with $JDOH
@@ -335,7 +335,7 @@ const Home: NextPage = () => {
                 className={styles.codeButton}
                 role="button"
                 onClick={() => {
-                  router.push(`https://opensea.io/`);
+                  router.push(`https://opensea.io/collection/squidink-reborn`);
                 }}
               >
                 <Image src="OpenSea.png" alt="OS" height={50} />

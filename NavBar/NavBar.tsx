@@ -242,7 +242,7 @@ export function Navbar() {
                               bg={"blue.200"}
                               className={styles.codeButton}
                               role="button"
-                              onClick={() => {router.push(`/collections`)
+                              onClick={() => {router.push(`https://opensea.io/collection/squidink-reborn`)
                               onClose();
                             }}
                             >
@@ -304,8 +304,8 @@ export function Navbar() {
 
 
                   </DrawerBody>
-                  
-                  <footer>© SquidInk-Reborn 2024</footer>
+                  <Box fontFamily={"franklin_notes"} textColor={"white"}> <footer>© SquidInk-Reborn 2024</footer></Box>
+                 
                 </DrawerContent>
               </Drawer>
             </div>
