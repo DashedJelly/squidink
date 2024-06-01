@@ -50,7 +50,7 @@ export default function Marketplace() {
     <ChakraProvider theme={theme}>
       <Box
       >
-        <div className={styles.container}>
+        <Box className={styles.container}>
        
           <Box pt={33}
           
@@ -62,10 +62,10 @@ export default function Marketplace() {
                 <span style={{ fontSize: "2rem" }}>Marketplace</span>
               </Box>
             <Box fontFamily={"franklin_notes"}>
-               by Jelly Tech Industries 
+               by Jelly Tech  
             </Box>
           </Box>
-          <div className={styles.heroCta}>
+          <Box className={styles.heroCta}>
           <HStack spacing={24} mt={6} justify="center">
             <IconButton
               isRound={true}
@@ -86,13 +86,13 @@ export default function Marketplace() {
               onClick={goToNextPage}
             />
           </HStack>
-          </div>
+          </Box>
           
-          <div className={styles.grid}>
+          <Box className={styles.grid}>
             {!loadingDirectListings ? (
               getCurrentPageNFTs().map((listing, index) => (
-                <div key={index}>
-                  <div className={styles.card}>
+                <Box key={index}>
+                  <Box className={styles.card}>
                     <NFTCard
                       tokenID={listing.asset.id}
                       listingID={listing.id}
@@ -102,14 +102,14 @@ export default function Marketplace() {
                     >
 
       </Box>
-                  </div>
-                </div>
+                  </Box>
+                </Box>
               ))
             ) : (
               <Box>
-                <div className={styles.heroCta}>
+                <Box className={styles.heroCta}>
                   Loading.....
-                </div>
+                </Box>
                 <Spinner
                   rounded={"200"}
                   thickness="6.5px"
@@ -121,8 +121,8 @@ export default function Marketplace() {
                 />
               </Box>
             )}
-          </div>
-          <div className={styles.heroCta}>
+          </Box>
+          <Box className={styles.heroCta}>
           <HStack spacing={24} mt={6} justify="center">
             <IconButton
               isRound={true}
@@ -143,11 +143,15 @@ export default function Marketplace() {
               onClick={goToNextPage}
             />
           </HStack>
-          </div>
-        </div>
-        
+     
+          </Box>
+          <Box fontFamily={"franklin_notes"} textColor={"white"}>
+JELLY TECH STUDIOS 2024©
+          </Box>
+        </Box>
+       
       </Box>
-      
+ 
     </ChakraProvider>
     
   );

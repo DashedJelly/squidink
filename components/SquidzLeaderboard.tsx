@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useContract, useContractRead } from "@thirdweb-dev/react";
-import { Divider, Table, Th, Thead, Tr } from '@chakra-ui/react';
+import { Box, Divider, Stack, StackItem, Table, Th, Thead, Tr } from '@chakra-ui/react';
 
 
 function Leaderboard() {
@@ -57,7 +57,7 @@ function Leaderboard() {
   };
 
   return (
-    <div>
+    <Box>
       
       <Table size={"sm"}>
         <Thead>
@@ -70,20 +70,20 @@ function Leaderboard() {
           </Tr>
         </Thead>
         
-        <tbody>
+        <Stack>
             
           {/* Render each address with its corresponding reward and amount staked */}
           {top5Leaderboard.owners.map((address, index) => (
-            <tr key={index}>
+            <Box key={index}>
                 
-              <td>{address}</td>
-              <td>{top5Leaderboard.totalStaked[index]}</td>
-              <td>{top5Leaderboard.totalClaimed[index]}</td>
-            </tr>
+              <StackItem>{address}</StackItem>
+              <StackItem>{top5Leaderboard.totalStaked[index]}</StackItem>
+              <StackItem>{top5Leaderboard.totalClaimed[index]}</StackItem>
+            </Box>
           ))}
-        </tbody>
+        </Stack>
       </Table>
-    </div>
+    </Box>
   );
 }
 

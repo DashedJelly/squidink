@@ -30,6 +30,16 @@ Image,
   Wrap,
   WrapItem,
   Tag,
+  PopoverTrigger,
+  Popover,
+  PopoverContent,
+  Heading,
+  PopoverFooter,
+  PopoverBody,
+  PopoverHeader,
+  PopoverArrow,
+  PopoverCloseButton,
+  Divider,
 } from "@chakra-ui/react";
 import { formatUnits } from "ethers/lib/utils";
 import { Squidz } from "../const/contractAddresses";
@@ -37,6 +47,7 @@ import styles from "../styles/Home.module.css";
 
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import theme from "../theme";
+import Leaderboard from "../components/SquidzLeaderboard";
 
 
 const itemsPerPage = 4;
@@ -45,7 +56,7 @@ const itemsPerPage = 4;
 const YourComponent: React.FC = () => {
   const address = useAddress();
   const { contract: nftDropContract } = useContract(Squidz, "nft-drop");
-  const { contract } = useContract("0x931E82341BDE35E3e3AAa1f2E025801BF360c190");
+  const { contract } = useContract("0x3F8A8Ca06028E73603E6cbb5129eb85b57d18785");
   const { data: rawOwnedNfts } = useOwnedNFTs(nftDropContract, address);
 
   const ownedNfts = rawOwnedNfts ?? [];
@@ -69,7 +80,7 @@ const YourComponent: React.FC = () => {
   const paginatedNFTs = ownedNfts.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [dialogContent, setDialogContent] = useState({ title: "", message: "" });
+  const [dialogContent, setDialogContent] = useState({ title: "SQUIDINK", message: "Congrats" });
 
   const cancelRef = useRef<HTMLButtonElement | null>(null);
   const initialFocusRef = useRef<HTMLElement | null>(null);
@@ -106,12 +117,13 @@ const YourComponent: React.FC = () => {
    
   </WrapItem>
   </Center>
+  <Divider/>
   <WrapItem >
     <Center  >
     <Web3Button 
             theme={"light"}
             
-              contractAddress="0x931E82341BDE35E3e3AAa1f2E025801BF360c190"
+              contractAddress="0x3F8A8Ca06028E73603E6cbb5129eb85b57d18785"
               action={async (contract) => {
                 try {
                   await contract.call("stake");
@@ -121,6 +133,7 @@ const YourComponent: React.FC = () => {
                 }
               }}
             >
+              
               <Box >Stake All</Box>
             </Web3Button>
     </Center>
@@ -131,7 +144,7 @@ const YourComponent: React.FC = () => {
     <Web3Button
             theme={"light"}
             
-              contractAddress="0x931E82341BDE35E3e3AAa1f2E025801BF360c190"
+              contractAddress="0x3F8A8Ca06028E73603E6cbb5129eb85b57d18785"
               action={async (contract) => {
                 try {
                   await contract.call("claimRewards");
@@ -145,7 +158,50 @@ const YourComponent: React.FC = () => {
             </Web3Button>
     </Center>
   </WrapItem>
-
+  <Divider/>
+<WrapItem>
+  <Center>
+  <Box className={styles.heroCta6}>
+            
+            <Popover
+              initialFocusRef={initialFocusRef}
+              placement="bottom"
+              closeOnBlur={false}
+            >
+              <PopoverTrigger>
+                <Center>
+                <Button 
+                fontSize={22}
+                fontFamily={"franklin_notes"}
+                className={styles.heroCta6}
+                bg={"blue.200"} color={"purple"}>
+                  Top 5 Leaderboard
+                </Button>
+                </Center>
+              </PopoverTrigger>
+              <PopoverContent 
+              color="white" bg="blue.600" borderColor="blue.800">
+                <PopoverHeader  pb={5} fontWeight="bold" border="0">
+                <Heading
+                fontFamily={"franklin_notes"}>⭐Top 5⭐ Leaderboard</Heading>
+                </PopoverHeader>
+                <PopoverArrow bg="purple.200" />
+                <PopoverCloseButton bg={"blue.200"}/>
+                <PopoverBody>
+                <div>
+  <Leaderboard /> 
+  </div>
+                </PopoverBody>
+                <PopoverFooter border="1" display="flex" alignItems="center" justifyContent="over" pb={6}>
+                <Center>
+                  
+                  </Center>
+                </PopoverFooter>
+              </PopoverContent>
+            </Popover>
+          </Box>
+  </Center>
+</WrapItem>
 </Wrap>
 </Box>
 <Wrap>

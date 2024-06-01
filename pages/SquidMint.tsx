@@ -323,7 +323,7 @@ const Home: NextPage = () => {
           </Alert>
         )}
 <Box pt={12}>
-        <footer>
+        <Box>
           <Tabs>
             <Tab>
               <Button
@@ -363,7 +363,7 @@ const Home: NextPage = () => {
               Jelly-Tech StudioZ®
             </Text>
           </Center>
-        </footer>
+        </Box>
         </Box>
       </Box>
     </Box>

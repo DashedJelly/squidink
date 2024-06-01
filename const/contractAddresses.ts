@@ -7,7 +7,7 @@ export const NETWORK = Polygon;
 
   //SquidStake
   export const SquidStake =
-  "0x931E82341BDE35E3e3AAa1f2E025801BF360c190";
+  "0x3F8A8Ca06028E73603E6cbb5129eb85b57d18785";
 
   export const SquidSupply =
   "0x8F3375a9e7607182f4651049248037fB6a7E9a97";

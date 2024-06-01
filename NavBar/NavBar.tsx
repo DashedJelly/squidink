@@ -72,7 +72,7 @@ export function Navbar() {
        btnTitle={"Connect"}
        modalTitle={"Connect"}
        
-       auth={{ loginOptional: false }}
+     
        switchToActiveChain={true}
        modalSize={"wide"}
        welcomeScreen={{
@@ -123,10 +123,10 @@ export function Navbar() {
                    
                       
                         <Box pr={1}>
-                         <div className={styles.secondaryCta}>
+                         <Box className={styles.secondaryCta}>
                          <Image src="evotoken.png" alt="OS" height={70} width={70}/>    
                   <TokenBalanceComponent />
-                </div>
+                </Box>
                 </Box>
                     </Center>
                   </DrawerHeader>

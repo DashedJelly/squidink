@@ -4,8 +4,8 @@ const theme = extendTheme({
   styles: {
     global: {
       body: {
-        bg: "blue.900", // Set background color to black
-        color: "white", // Set text color to white for better visibility on black background
+        bg: "grey.800", // Set background color to black
+        color: "black", // Set text color to white for better visibility on black background
       },
     },
   },
