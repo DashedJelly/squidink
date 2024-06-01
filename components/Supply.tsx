@@ -33,7 +33,7 @@ function NFTTotalSupply() {
        />
      </Box>
       ) : (
-        <Box fontFamily={"Franklin_notes"}>Total Minted: {totalSupply}/9999</Box>
+        <Box fontFamily={"Franklin_notes"}>Total Minted: {totalSupply}/2999</Box>
       )}
     </Box>
   );

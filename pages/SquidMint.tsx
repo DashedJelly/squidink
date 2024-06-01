@@ -145,7 +145,7 @@ const Home: NextPage = () => {
                     <br />
 
                     <Box fontFamily="Franklin_notes" className={styles.heroCta6}>
-                      <Box className={styles.heroCta6}>Mint Price = 0.0001 Matic</Box>
+                      <Box className={styles.heroCta6}>Mint Price = 3.33 Matic</Box>
                       <Popover initialFocusRef={initialFocusRef} placement="top" closeOnBlur={false}>
                         <PopoverTrigger>
                           <Button className={styles.heroCta6} fontFamily="Franklin_notes" bg="blue.500" color="white" _hover="purple">
@@ -252,7 +252,7 @@ const Home: NextPage = () => {
 
                     <br />
                     <Box fontFamily={"Franklin_notes"} className={styles.heroCta6}>
-                    <Box className={styles.heroCta6}>Mint Price = 0.0001 Matic</Box>
+                    <Box className={styles.heroCta6}>Mint Price = 2400 $JDOH</Box>
                       <Popover initialFocusRef={initialFocusRef} placement="top" closeOnBlur={false}>
                         <PopoverTrigger>
                           <Button className={styles.heroCta6} fontFamily="Franklin_notes" bg="blue.500" color="yellow.200" _hover="purple">
@@ -359,7 +359,7 @@ const Home: NextPage = () => {
             </Tab>
           </Tabs>
           <Center>
-            <Text fontFamily="Franklin_notes" className={styles.code}>
+            <Text pt={122} fontFamily="Franklin_notes" className={styles.code}>
               Jelly-Tech StudioZ®
             </Text>
           </Center>

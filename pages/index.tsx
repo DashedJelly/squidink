@@ -22,16 +22,16 @@ const Home: NextPage = () => {
         
       </Box>
       <Box>
-          <Image  src="../minting-now.png" width={"200"} height={"188"} alt="Minting Now"></Image>
+          <Image align={"center"} src="../minting-now.png" width={"200"} height={"198"} alt="Minting Now"></Image>
         </Box>
         <Box fontFamily={"Franklin_notes"} className={styles.mainButton} mt={4}  onClick={handleMintClick}>
          ENTER
         </Box>
       <footer>
         <Center fontFamily="Franklin_notes">
-          <div className={styles.code}>
+          <Box pt={122} className={styles.code}>
             ©SQUIDINK:REBORN 2024
-          </div>
+          </Box>
         </Center>
       </footer>
     </div>

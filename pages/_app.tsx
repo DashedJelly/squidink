@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <ThirdwebProvider
-        activeChain="sepolia"
+        activeChain="polygon"
         clientId={THIRDWEB_CLIENT_ID}
         supportedWallets={[metamaskWallet(), walletConnect(), phantomWallet(), coinbaseWallet()]}
       >

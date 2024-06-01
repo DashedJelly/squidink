@@ -32,7 +32,7 @@ Image,
   Tag,
 } from "@chakra-ui/react";
 import { formatUnits } from "ethers/lib/utils";
-import { Squidz2 } from "../const/contractAddresses";
+import { Squidz } from "../const/contractAddresses";
 import styles from "../styles/Home.module.css";
 
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
@@ -44,7 +44,7 @@ const itemsPerPage = 4;
 
 const YourComponent: React.FC = () => {
   const address = useAddress();
-  const { contract: nftDropContract } = useContract(Squidz2, "nft-drop");
+  const { contract: nftDropContract } = useContract(Squidz, "nft-drop");
   const { contract } = useContract("0x931E82341BDE35E3e3AAa1f2E025801BF360c190");
   const { data: rawOwnedNfts } = useOwnedNFTs(nftDropContract, address);
 

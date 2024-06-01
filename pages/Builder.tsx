@@ -51,7 +51,7 @@ const Builder = () => {
   }, []);
 
   return (
-    <Container paddingTop={109}>
+    <Container paddingTop={128}>
       <Box className={styles.container}>
         <Stack spacing={4}>
           <Heading color="white" fontFamily="Franklin_notes">TRAITS:Previewer</Heading>
@@ -92,14 +92,7 @@ const Builder = () => {
                     ))}
                   </Select>
                 </WrapItem>
-                <WrapItem>
-                  <Select value={selectedHeadwear} onChange={(e) => setSelectedHeadwear(e.target.value)} bg="blue.200">
-                    <option value="">Select Headwear</option>
-                    {HeadwearOptions.map((option, index) => (
-                      <option key={index} value={option}>{option}- Headwear</option>
-                    ))}
-                  </Select>
-                </WrapItem>
+                
                 <WrapItem>
                   <Select value={selectedInk} onChange={(e) => setSelectedInk(e.target.value)} bg="blue.200">
                     <option value="">Select Ink</option>
@@ -140,6 +133,16 @@ const Builder = () => {
                     ))}
                   </Select>
                 </WrapItem>
+
+                <WrapItem>
+                  <Select value={selectedHeadwear} onChange={(e) => setSelectedHeadwear(e.target.value)} bg="blue.200">
+                    <option value="">Select Headwear</option>
+                    {HeadwearOptions.map((option, index) => (
+                      <option key={index} value={option}>{option}- Headwear</option>
+                    ))}
+                  </Select>
+                </WrapItem>
+
                 <WrapItem>
                   <Select value={selectedBubbles} onChange={(e) => setSelectedBubbles(e.target.value)} bg="blue.200">
                     <option value="">Select Bubbles</option>
@@ -167,12 +170,12 @@ const Builder = () => {
             {selectedInk && <Image src={`/Ink/${selectedInk}.png`} alt="Ink" style={{ position: 'absolute' }} width={460} height={460} />}
             {selectedSkin && <Image src={`/Skin/${selectedSkin}.png`} alt="Skin" style={{ position: 'absolute' }} width={460} height={460} />}
             {selectedTentacle && <Image src={`/Tentacle/${selectedTentacle}.png`} alt="Tentacle" style={{ position: 'absolute' }} width={460} height={460} />}
-            {selectedStrokes && <Image src={`/Strokes/${selectedStrokes}.png`} alt="Strokes" style={{ position: 'absolute' }} width={460} height={460} />}
+            
             {selectedFace && <Image src={`/Face/${selectedFace}.png`} alt="Face" style={{ position: 'absolute' }} width={460} height={460} />}
             
            
             {selectedPatches && <Image src={`/Patches/${selectedPatches}.png`} alt="Patches" style={{ position: 'absolute' }} width={460} height={460} />}
-            
+            {selectedStrokes && <Image src={`/Strokes/${selectedStrokes}.png`} alt="Strokes" style={{ position: 'absolute' }} width={460} height={460} />} 
             {selectedAccessories && <Image src={`/Accessories/${selectedAccessories}.png`} alt="Accessories" style={{ position: 'absolute' }} width={460} height={460} />}
             {selectedBubbles && <Image src={`/Bubbles/${selectedBubbles}.png`} alt="Bubbles" style={{ position: 'absolute' }} width={460} height={460} />}
            

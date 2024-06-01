@@ -30,7 +30,7 @@ export function Navbar() {
 
   return (
     <ThirdwebProvider 
-      activeChain="sepolia"
+      activeChain="polygon"
       clientId={THIRDWEB_CLIENT_ID}
       supportedWallets={[
         metamaskWallet(),
@@ -98,7 +98,7 @@ export function Navbar() {
               <div>
                 {sizes.map((size) => (
                   <Button
-                  backgroundColor={"teal.200"}
+                  backgroundColor={"red.200"}
                     key={size}
                     m={0}
                     onClick={() => handleClick(size)}
@@ -187,9 +187,18 @@ export function Navbar() {
                     >
                       SquidInk Market
                     </Button>
-                  
-
-
+                    <Center pl={0} pb={3}  pt={3}>
+                    <Button
+                            color={"black"}
+                            colorScheme="blue" variant={"outline"}
+                              width={340}
+                              bg={"blue.200"}
+                              className={styles.codeButton}
+                              onClick={() => router.push(`/Builder`)}
+                            >
+                               Trait Preview/Builder  
+                            </Button>
+</Center>
 <Center pl={0} pb={3}  pt={3}>
 
            </Center>
@@ -247,7 +256,7 @@ export function Navbar() {
                               bg={"blue.200"}
                               className={styles.codeButton}
                               role="button"
-                              onClick={() => {router.push(`/collections`)
+                              onClick={() => {router.push(`https://discord.com/channels/889254138054049792/1233821931741122632`)
                               onClose();
                             }}
                             >
@@ -291,6 +300,8 @@ export function Navbar() {
                                Join the Discord  
                             </Button>
   
+                           
+
 
                   </DrawerBody>
                   

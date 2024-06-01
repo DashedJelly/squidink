@@ -36,7 +36,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   font-family: 'Franklin_notes, monospace';
-  height: 2200px;
+  height: 1600px;
 }
 
 .container2 {
@@ -1516,14 +1516,14 @@ perspective-origin: 5%;
   }
   
   .container1 {
-    margin-top: 82px;
+    margin-top: -72px;
     width: auto;
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 1600px;
+    height: 1900px;
     position: center;
     padding: 0 0px;
     
