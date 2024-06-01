@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container1}>
       <Box pt={67}>
         <Image src="/logo.png" objectFit="cover" alt="SquidInk Logo" />
       </Box>
@@ -29,7 +29,7 @@ const Home: NextPage = () => {
         </Box>
       <footer>
         <Center fontFamily="Franklin_notes">
-          <Box pt={122} className={styles.code}>
+          <Box pt={622} className={styles.code}>
             ©SQUIDINK:REBORN 2024
           </Box>
         </Center>
