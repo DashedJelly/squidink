@@ -188,7 +188,7 @@ const Home: NextPage = () => {
                                               contractAddress="0x8F3375a9e7607182f4651049248037fB6a7E9a97"
                                               action={(contract: any) => handleMintToken(contract, numberOfTokensSlider1)}
                                             >
-                                              MINT:INKubator
+                                              MINT:INKcubator
                                             </Web3Button>
                                           </Box>
                                         </ButtonGroup>
@@ -208,7 +208,7 @@ const Home: NextPage = () => {
                                     contractAddress="0x8F3375a9e7607182f4651049248037fB6a7E9a97"
                                     action={(contract: any) => handleMintToken(contract, numberOfTokensSlider1)}
                                   >
-                                    MINT:INKubator
+                                    MINT:INKcubator
                                   </Web3Button>
                                 </Box>
                               </ButtonGroup>
@@ -306,22 +306,27 @@ const Home: NextPage = () => {
         </Grid>
 
         {alertMessage && (
-          <Alert
-            status={alertStatus}
-            variant="subtle"
-            flexDirection="column"
-            alignItems="center"
-            justifyContent="center"
-            textAlign="center"
-            mb={6}
-            borderRadius="22" // Adjust the border radius as needed
-            textColor="purple.600"
-            fontSize={26}
-          >
-            <AlertIcon bgSize={20} />
-            {alertMessage}
-          </Alert>
-        )}
+  <Alert
+    status={alertStatus}
+    variant="subtle"
+    flexDirection="column"
+    alignItems="center"
+    justifyContent="center"
+    textAlign="center"
+    mb={6}
+    borderRadius="22" // Adjust the border radius as needed
+    textColor="purple.600"
+    fontSize={26}
+    position="fixed"
+    top="50%"
+    left="50%"
+    transform="translate(-50%, -50%)"
+    zIndex={1000}
+  >
+    <AlertIcon boxSize={8} />
+    {alertMessage}
+  </Alert>
+)}
 <Box pt={12}>
         <Box>
           <Tabs>
