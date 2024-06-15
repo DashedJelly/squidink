@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useContract, useContractRead } from "@thirdweb-dev/react";
-import { Box, Divider, Stack, StackItem, Table, Th, Thead, Tr } from '@chakra-ui/react';
+import { Divider, Table, Th, Thead, Tr } from '@chakra-ui/react';
 
 
 function Leaderboard() {
-  const { contract } = useContract("0x931E82341BDE35E3e3AAa1f2E025801BF360c190");
+  const { contract } = useContract("0x3F8A8Ca06028E73603E6cbb5129eb85b57d18785");
   const { data, isLoading } = useContractRead(contract, "viewLeaderboards");
 
   // State to store leaderboard data
@@ -57,7 +57,7 @@ function Leaderboard() {
   };
 
   return (
-    <Box>
+    <div>
       
       <Table size={"sm"}>
         <Thead>
@@ -70,20 +70,20 @@ function Leaderboard() {
           </Tr>
         </Thead>
         
-        <Stack>
+        <tbody>
             
           {/* Render each address with its corresponding reward and amount staked */}
           {top5Leaderboard.owners.map((address, index) => (
-            <Box key={index}>
+            <tr key={index}>
                 
-              <StackItem>{address}</StackItem>
-              <StackItem>{top5Leaderboard.totalStaked[index]}</StackItem>
-              <StackItem>{top5Leaderboard.totalClaimed[index]}</StackItem>
-            </Box>
+              <td>{address}</td>
+              <td>{top5Leaderboard.totalStaked[index]}</td>
+              <td>{top5Leaderboard.totalClaimed[index]}</td>
+            </tr>
           ))}
-        </Stack>
+        </tbody>
       </Table>
-    </Box>
+    </div>
   );
 }
 

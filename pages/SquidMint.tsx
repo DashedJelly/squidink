@@ -83,7 +83,7 @@ const Home: NextPage = () => {
 
   const handleJDOHApproval = async (contract: any, amount: number) => {
     try {
-      await contract.call("approve", ["0x13eE13d70cdBd336156b9aeBBbC89432C154110e", amount]);
+      await contract.call("approve", ["0x8F3375a9e7607182f4651049248037fB6a7E9a97", amount]);
       setAlertMessage("Approval successful!");
       setAlertStatus("success");
     } catch (error) {
