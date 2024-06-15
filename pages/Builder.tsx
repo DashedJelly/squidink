@@ -171,11 +171,12 @@ const Builder = () => {
             {selectedSkin && <Image src={`/Skin/${selectedSkin}.png`} alt="Skin" style={{ position: 'absolute' }} width={460} height={460} />}
             {selectedTentacle && <Image src={`/Tentacle/${selectedTentacle}.png`} alt="Tentacle" style={{ position: 'absolute' }} width={460} height={460} />}
             
-            {selectedFace && <Image src={`/Face/${selectedFace}.png`} alt="Face" style={{ position: 'absolute' }} width={460} height={460} />}
+            
             
            
             {selectedPatches && <Image src={`/Patches/${selectedPatches}.png`} alt="Patches" style={{ position: 'absolute' }} width={460} height={460} />}
             {selectedStrokes && <Image src={`/Strokes/${selectedStrokes}.png`} alt="Strokes" style={{ position: 'absolute' }} width={460} height={460} />} 
+            {selectedFace && <Image src={`/Face/${selectedFace}.png`} alt="Face" style={{ position: 'absolute' }} width={460} height={460} />}
             {selectedAccessories && <Image src={`/Accessories/${selectedAccessories}.png`} alt="Accessories" style={{ position: 'absolute' }} width={460} height={460} />}
             {selectedBubbles && <Image src={`/Bubbles/${selectedBubbles}.png`} alt="Bubbles" style={{ position: 'absolute' }} width={460} height={460} />}
            
