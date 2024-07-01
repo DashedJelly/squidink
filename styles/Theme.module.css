@@ -55,7 +55,7 @@
     border: 3px solid hsla(167, 46%, 56%, 0.486);
     margin: 8px 0;
     background-clip: padding-box;
-    background-color: hsla(226, 47%, 48%, 0.404);
+    background-color: #b9f1ff7a;
     border-radius: 40px;
     color: #fffffff3;
     font-size: 24px;
@@ -69,16 +69,16 @@
   }
 
   .card3 {
-    background-color: #404fce8e;
+    background-color: #b9f1ff7a;
     margin: 0rem;
     
     text-align: center;
     color: white;
-    border: 3px solid #1af4fcbd;
+    border: 3px solid #1a31fcbd;
     border-radius: 20px;
     max-height: 400px;
     max-width: 400px;
-    text-shadow: #09aeb4;
+    text-shadow: #7856f3;
   }
   
   .card4 {
@@ -88,7 +88,7 @@
     width: 500px;
     text-align: center;
     color: white;
-    border: 3px solid #1af4fcbd;
+    border: 3px solid #1a29fcbd;
     border-radius: 20px;
     max-height: 400px;
     max-width: auto;
@@ -294,7 +294,7 @@
       align-items: center;
       justify-content: center;
       width: 550px;
-      background-image: url("/underOcean2.png");
+      background-image: url("/undersea2.png");
       background-size: cover;
       background-repeat: no-repeat;
       font-family: 'Franklin_notes', monospace;
@@ -311,12 +311,12 @@
       align-items: center;
       justify-content: center;
       padding: 24px 30px;
-      border: 3px solid hsla(167, 46%, 56%, 0.486);
+      
       
       background-clip: padding-box;
-      background-color: hsla(258, 50%, 40%, 0.404);
+      
       border-radius: 30px;
-      color: #fffffff3;
+      
       font-size: 20px;
       font-weight: 18;
       letter-spacing: 1px;
@@ -354,29 +354,29 @@
     }
 
     .card3 {
-      background-color: #404fce8e;
+     
       margin: 0rem;
       padding: 0.5rem;
       text-align: center;
-      color: white;
-      border: 3px solid #1af4fcbd;
+      
+      
       border-radius: 20px;
       max-height: 400px;
       max-width: 400px;
-      text-shadow: #09aeb4;
+      
     }
 
     .card4 {
-      background-color: #404fce8e;
+      
       margin: 0rem;
       padding: 0.5rem;
       text-align: center;
-      color: white;
-      border: 3px solid #1af4fcbd;
+      
+      
       border-radius: 20px;
       max-height: 400px;
       max-width: 400px;
-      text-shadow: #09aeb4;
+      
     }
     
 

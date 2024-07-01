@@ -385,7 +385,7 @@ import {
        
       >
 
-        <Button background={"blue.200"}><Link href="https://opensea.io/collection/jelly-collectibles">
+        <Button background={"blue.200"}><Link href="https://opensea.io/collection/enoji-collectibles">
         <Box > View Collection on Opensea</Box>
         </Link></Button>
       
