@@ -18,3 +18,10 @@ export const NETWORK = Polygon;
 
   export const MARKETPLACE_ADDRESS =
   "0x211Fd5CeF05590F8e390B7d2DF22Fb40eeDe9bA0";
+
+  export const SQUID_BOOSTERS_ADDRESS =
+  "0xd520B1221435Ea31A0e27CcB09A7e5e7Ae89241c";
+
+  export const tokenId: string = "0";
+  export const BOOSTER = '/Cute Squid.png';
+  

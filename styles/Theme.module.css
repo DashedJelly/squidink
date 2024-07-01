@@ -1,0 +1,383 @@
+.container {
+    margin-top: -120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 110vw;
+    background-image: url("/undersea2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Franklin_notes', monospace;
+  text-rendering: optimizeLegibility;
+  height: 1440px;
+  padding-right: 200px;
+  }
+
+  @keyframes rainbow {
+    15% {
+      color: violet;
+    }
+    85% {
+      color: rgb(129, 33, 105);
+    }
+    15% {
+      color: rgb(75, 142, 196);
+    }
+    85% {
+      color: rgb(96, 48, 129);
+    }
+    15% {
+      color: rgb(128, 31, 128);
+    }
+    85% {
+      color: rgb(78, 212, 123);
+    }
+  }
+  .Title {
+    animation: rainbow 5s linear infinite, fontSizeChange 5s ease-in-out infinite;
+    transition: transform 0.3s ease-in-out;
+    margin-top: -25px;
+    margin-bottom: -76px;
+  }
+  
+  .Title:hover {
+    transform: scale(6.1); /* Increase the size on hover */
+  }
+
+  .heroCta {
+    position: relative;
+    display: row;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 22px;
+    border: 3px solid hsla(167, 46%, 56%, 0.486);
+    margin: 8px 0;
+    background-clip: padding-box;
+    background-color: hsla(226, 47%, 48%, 0.404);
+    border-radius: 40px;
+    color: #fffffff3;
+    font-size: 24px;
+    font-weight: 20;
+    letter-spacing: 1px;
+    line-height: 29px;
+    transition: opacity 100s;
+    width: auto;
+    text-shadow: 2px 2px 3px rgba(50, 2, 180, 0.548);
+    opacity: var(--color-primary);
+  }
+
+  .card3 {
+    background-color: #404fce8e;
+    margin: 0rem;
+    
+    text-align: center;
+    color: white;
+    border: 3px solid #1af4fcbd;
+    border-radius: 20px;
+    max-height: 400px;
+    max-width: 400px;
+    text-shadow: #09aeb4;
+  }
+  
+  .card4 {
+    background-color: #404fce8e;
+    margin: 0rem;
+    padding: 0.5rem;
+    width: 500px;
+    text-align: center;
+    color: white;
+    border: 3px solid #1af4fcbd;
+    border-radius: 20px;
+    max-height: 400px;
+    max-width: auto;
+    text-shadow: #09aeb4;
+  }
+
+  .previewImage {
+    height: 500px;
+    width: 500px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    padding: 8px;
+  }
+  
+  .mintInfoContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 24px;
+    min-height: 720px;
+    max-width: 95vw;
+    gap: 2%;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+  }
+  
+  .infoSide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    height: 100%;
+  }
+  
+  .description {
+    opacity: 0.7;
+    font-size: 1rem;
+  }
+  
+  .imageSide {
+    width: 25%;
+    height: 100%;
+  }
+  
+  .image {
+    width: 85%;
+    border-radius: 16px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 12px 0;
+  }
+  
+  .mainButton {
+    cursor: pointer;
+    display: inline-flex;
+    appearance: none;
+    align-items: center;
+    -webkit-box-align: center;
+    justify-content: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    line-height: 1.2;
+    font-weight: 600;
+    transition-property: background-color, border-color, color, fill, stroke,
+      opacity, box-shadow, transform;
+    transition-duration: 200ms;
+    height: 3rem;
+    min-width: 3rem;
+    font-size: 1rem;
+    background: #e5e5ea;
+    background-image: linear-gradient(
+      to left,
+      var(--color-primary) 0%,
+      var(--color-secondary) 101.52%
+    );
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 9999px;
+    border-style: none;
+  }
+  
+  .mainButton:hover {
+    opacity: 0.8;
+  }
+  
+  .mintCompletionArea {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .mintAreaLeft {
+    margin-left: 5%;
+    opacity: 0.75;
+  }
+  
+  .mintAreaRight {
+    margin-right: 5%;
+    opacity: 0.75;
+  }
+  
+  .spacerTop {
+    margin-top: 16px;
+  }
+  
+  .spacerBottom {
+    margin-bottom: 16px;
+  }
+  
+  .buttonGapTop {
+    cursor: pointer;
+    margin-top: 32px;
+  }
+  
+  .quantityContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+  }
+  
+  .mintContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    margin-top: 24px;
+  }
+  
+  .textInput {
+    width: 48px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 8px;
+    color: #fff;
+    height: 48px;
+    padding: 0 16px;
+    font-size: 1rem;
+  }
+  
+  .quantityControlButton {
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-size: 2rem;
+    background-color: transparent;
+    border: 1px solid grey;
+    color: #fff;
+  }
+  
+  .quantityControlButton:disabled {
+    opacity: 3;
+  }
+  
+
+  .Title {
+    animation: rainbow 5s linear infinite, fontSizeChange 5s ease-in-out infinite;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .Title:hover {
+    transform: scale(1.1); /* Increase the size on hover */
+  }
+  
+  /* On mobile, make the .mintInfoContainer stack vertically */
+  @media screen and (max-width: 850px) {
+    .mintInfoContainer {
+      flex-direction: column;
+      padding-bottom: 5%;
+    }
+  
+    .infoSide {
+      width: 100%;
+    }
+  
+    .mintButton {
+      max-width: 100% !important;
+    }
+  
+    .imageSide {
+      width: 100%;
+    }
+
+    .container {
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 550px;
+      background-image: url("/underOcean2.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      font-family: 'Franklin_notes', monospace;
+    text-rendering: optimizeLegibility;
+    height: justify;
+    padding-right: 0px;
+
+    }
+
+    .heroCta {
+      position: relative;
+      display: column;
+      width: justify;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 30px;
+      border: 3px solid hsla(167, 46%, 56%, 0.486);
+      
+      background-clip: padding-box;
+      background-color: hsla(258, 50%, 40%, 0.404);
+      border-radius: 30px;
+      color: #fffffff3;
+      font-size: 20px;
+      font-weight: 18;
+      letter-spacing: 1px;
+      line-height: 24px;
+      transition: opacity 100s;
+  
+      padding-top: -2;
+      
+    }
+
+    .Title {
+      animation: rainbow 5s linear infinite, fontSizeChange 5s ease-in-out infinite;
+      transition: transform 0.3s ease-in-out;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    
+    .Title:hover {
+      transform: scale(1.1); /* Increase the size on hover */
+    }
+
+    .mintInfoContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding-top: -4px;
+      padding: 0 -2px;
+      min-height: 500px;
+      max-width: 95vw;
+      gap: 2%;
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+    }
+
+    .card3 {
+      background-color: #404fce8e;
+      margin: 0rem;
+      padding: 0.5rem;
+      text-align: center;
+      color: white;
+      border: 3px solid #1af4fcbd;
+      border-radius: 20px;
+      max-height: 400px;
+      max-width: 400px;
+      text-shadow: #09aeb4;
+    }
+
+    .card4 {
+      background-color: #404fce8e;
+      margin: 0rem;
+      padding: 0.5rem;
+      text-align: center;
+      color: white;
+      border: 3px solid #1af4fcbd;
+      border-radius: 20px;
+      max-height: 400px;
+      max-width: 400px;
+      text-shadow: #09aeb4;
+    }
+    
+
+  }

@@ -230,7 +230,7 @@ const YourComponent: React.FC = () => {
                           <Box bgColor={"Black"} borderRadius={23}
                           
                           >
-                            <Center>
+                            <Center p={1}>
                               <ThirdwebNftMedia
                               className={styles.card4}
                                 metadata={nft.metadata}

@@ -46,7 +46,7 @@
   align-items: center;
   justify-content: fill; 
   width: 99lvw;
- height: 1290px;
+ height: 1590px;
   position: absolute;
   background-repeat: no-repeat;
   padding: 10px;
@@ -1412,7 +1412,7 @@ perspective-origin: 5%;
 
 /* beneath 800
 */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
   .nftBoxGrid {
     justify-content: center;
   }
@@ -1471,7 +1471,7 @@ perspective-origin: 5%;
 
 
 /* On Mobile, make tokenGrid 100% width */
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 600px) {
   .tokenItem {
     width: 90%;
     margin-top: 12px;
@@ -1479,7 +1479,7 @@ perspective-origin: 5%;
 
 
 /* Screen less than 630, then hide .center */
-@media only screen and (max-width:420px) {
+@media only screen and (max-width:600px) {
   .center {
     display: none;
   }
@@ -1509,7 +1509,7 @@ perspective-origin: 5%;
 }
 
 
-@media (max-width: 420px) {
+@media (max-width: 600px) {
   .phasesContainer {
     flex-direction: column;
     align-items: center;
