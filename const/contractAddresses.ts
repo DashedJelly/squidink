@@ -22,6 +22,6 @@ export const NETWORK = Polygon;
   export const SQUID_BOOSTERS_ADDRESS =
   "0xd520B1221435Ea31A0e27CcB09A7e5e7Ae89241c";
 
-  export const tokenId: string = "0";
-  export const BOOSTER = '/Cute Squid.png';
+  export const tokenId: string = "1";
+  export const BOOSTER = '/CuteSquid1.png';
   

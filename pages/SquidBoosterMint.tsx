@@ -231,16 +231,16 @@ import {
         fontFamily={"franklin_notes"}
         
         >
-          Cute Squid
+          Cute Squid 
           <br/>
-          ENOji Collectibles #0
+          ENOji #1
         
         </Heading>
         </Box>
         <div>
           <Text dropShadow={"32px"} color={"blue.100"}>1% BOOST</Text>
           
-          <br/><Text color={"orange.300"}>Max Mint = 1X</Text>
+          <br/><Text color={"orange.300"}>Max Mint = 2X</Text>
           
           <Text fontSize={13} color={"orange.300"}>
            </Text>
@@ -302,8 +302,8 @@ import {
                   
                 ) : (
                   
-                  <Center>
-                    <div className={styles.heroCta}>
+                  <Center >
+                    <div  className={styles.heroCta}>
                     <div className={styles.quantityContainer}>
                       <button
                         className={`${styles.quantityControlButton}`}
@@ -313,7 +313,7 @@ import {
                         -
                       </button>
                       
-                      <Box className={styles.card3}><Box>{quantity}</Box></Box> 
+                      <Box color={"black"}><Box>{quantity}</Box></Box> 
                      
                       <button
                         className={`${styles.quantityControlButton}`}
@@ -360,7 +360,7 @@ import {
                           action={(cntr) => cntr.erc1155.claim(tokenId, quantity)}
                           isDisabled={!canClaim || buttonLoading}
 
-                          onSuccess={() => alert("💜🍞 Congrats You Claimed an Exclusive Jelly Collectible !🍞💜")}
+                          onSuccess={() => alert("🦑 Congrats You Claimed an ENOji Booster !🦑")}
             onError={(err) => alert(err)}
             className={styles.mainButton}
                         >

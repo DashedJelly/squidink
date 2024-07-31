@@ -187,6 +187,23 @@ export function Navbar() {
                     >
                       SquidInk Market
                     </Button>
+
+                    <Center pl={0} pb={3}  pt={3}>
+                    <Button
+                           color={"black"}
+                           fontSize={20}
+                           colorScheme="blue" variant={"outline"}
+                             width={340}
+                             bg={"blue.200"}
+                             className={styles.codeButton}
+                             onClick={() => {router.push(`/SquidBoosterMint`)
+                             onClose();
+                           }}
+                            >
+                               Booster Mint  
+                            </Button>
+</Center>
+
                     <Center pl={0} pb={3}  pt={3}>
                     <Button
                            color={"black"}
