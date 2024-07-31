@@ -373,7 +373,7 @@ import {
               </div>
               <Box className={styles.heroCta}>
 
-                Total Supply: {totalSupply}
+                Total Claimed: {totalSupply}
 
                 </Box>
               </div>
