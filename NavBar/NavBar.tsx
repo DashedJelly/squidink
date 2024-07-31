@@ -200,7 +200,7 @@ export function Navbar() {
                              onClose();
                            }}
                             >
-                               Booster Mint  
+                               ENOji Mint  
                             </Button>
 </Center>
 
