@@ -45,12 +45,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: fill; 
-  width: 99lvw;
- height: 1590px;
+  width: 100%;
+ height: 2222px;
   position: absolute;
   background-repeat: no-repeat;
-  padding: 10px;
-  padding-left: 75px;
+ 
   background-image: url("/undersea.png");
  
  background-size: cover;
@@ -1558,14 +1557,11 @@ perspective-origin: 5%;
 .container2 {
   margin-top: 105px;
   
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: fill;
-  width: 550px;
+ 
+  width:900px;
   
   position: absolute;
-  padding: 0 4px;
+
  height: 1920px;
   background-size: cover;
   background-repeat: no-repeat;

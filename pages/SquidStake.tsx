@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { useRef, useState } from "react";
 import {
   useContract,
@@ -19,6 +20,17 @@ import {
   Tr,
   Td,
   Button,
+  Divider,
+  PopoverTrigger,
+  ButtonGroup,
+  Link,
+  Popover,
+  PopoverArrow,
+  PopoverBody,
+  PopoverCloseButton,
+  PopoverContent,
+  PopoverFooter,
+  PopoverHeader,
   AlertDialog,
   AlertDialogBody,
   AlertDialogContent,
@@ -26,25 +38,24 @@ import {
   AlertDialogHeader,
   AlertDialogOverlay,
   Center,
-Image,
+  Tabs,
+  Tab,
+  TabList,
+  Heading,
+  Stack,
+  StackItem,
   Wrap,
   WrapItem,
+  Image,
   Tag,
-  PopoverTrigger,
-  Popover,
-  PopoverContent,
-  Heading,
-  PopoverFooter,
-  PopoverBody,
-  PopoverHeader,
-  PopoverArrow,
-  PopoverCloseButton,
-  Divider,
 } from "@chakra-ui/react";
 import { formatUnits } from "ethers/lib/utils";
 import { Squidz } from "../const/contractAddresses";
 import styles from "../styles/Home.module.css";
-
+import {
+  CircularProgress,
+  CircularProgressLabel,
+} from "@chakra-ui/progress";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import theme from "../theme";
 import Leaderboard from "../components/SquidzLeaderboard";
@@ -52,7 +63,10 @@ import Leaderboard from "../components/SquidzLeaderboard";
 
 const itemsPerPage = 4;
 
-
+const ProgressBar: React.FC<{ multiplier: number }> = ({ multiplier }) => {
+  const progressPercentage = Math.min(multiplier, 110); // Limit to 110%
+  return <div className={styles.progressBar} style={{ width: `${(progressPercentage / 300) * 300}%` }}></div>;
+};
 const YourComponent: React.FC = () => {
   const address = useAddress();
   const { contract: nftDropContract } = useContract(Squidz, "nft-drop");
@@ -68,7 +82,13 @@ const YourComponent: React.FC = () => {
     [address]
   );
 
+  const { data: multiplierData, isLoading: multiplierLoading } = useContractRead(
+    contract,
+    "getMultiplier",
+    [address]
+  );
 
+  const multiplier: number = multiplierData ? multiplierData.toNumber() : 0;
  
 
   const isNFTStaked = (nftId: string): boolean => {
@@ -97,13 +117,13 @@ const YourComponent: React.FC = () => {
       <Center>
         
 <Box>
-  <Box fontFamily={"Franklin_notes"} className={styles.description}>
-<Wrap spacing='12px' justify='center'>
-<Center>
+  <Box pt={160}pb={180}  fontFamily={"Franklin_notes"} className={styles.mainButton}>
+<Wrap spacing='18px' justify='center'>
+<Box margin={23}>
   <WrapItem>
     
       
-    <Box  className={styles.description}>
+    <Box >
           {isLoading ? (
             <Spinner color="blue.300" />
           ) : data ? (
@@ -116,13 +136,13 @@ const YourComponent: React.FC = () => {
           </Box>
    
   </WrapItem>
-  </Center>
-  <Divider/>
+  </Box>
+<Center >
   <WrapItem >
-    <Center  >
+    <Center >
     <Web3Button 
             theme={"light"}
-            
+            className={styles.codeButton}
               contractAddress="0x3F8A8Ca06028E73603E6cbb5129eb85b57d18785"
               action={async (contract) => {
                 try {
@@ -141,9 +161,10 @@ const YourComponent: React.FC = () => {
  
   <WrapItem>
     <Center>
+      
     <Web3Button
             theme={"light"}
-            
+            className={styles.codeButton}
               contractAddress="0x3F8A8Ca06028E73603E6cbb5129eb85b57d18785"
               action={async (contract) => {
                 try {
@@ -158,12 +179,39 @@ const YourComponent: React.FC = () => {
             </Web3Button>
     </Center>
   </WrapItem>
-  <Divider/>
+  </Center>
+  <Divider width={"auto"}/>
 <WrapItem>
   <Center>
   <Box className={styles.heroCta6}>
-            
-            <Popover
+  
+  
+  <Stack>
+    
+          
+            <StackItem><Text className={styles.heroCta2} fontSize={22}>Your ENOji Boost Amount</Text></StackItem>
+  
+             
+<StackItem>
+
+            <CircularProgress fontFamily={"franklin_notes"} color="blue.500" size={135} value={multiplier}>
+              <CircularProgressLabel>+{multiplier}%</CircularProgressLabel>
+            </CircularProgress>
+
+           
+
+            </StackItem>
+        
+
+          </Stack>
+           
+          </Box>
+  </Center>
+</WrapItem>
+</Wrap>
+</Box>
+<Box>
+<Popover
               initialFocusRef={initialFocusRef}
               placement="bottom"
               closeOnBlur={false}
@@ -173,7 +221,7 @@ const YourComponent: React.FC = () => {
                 <Button 
                 fontSize={22}
                 fontFamily={"franklin_notes"}
-                className={styles.heroCta6}
+                className={styles.secondaryCta}
                 bg={"blue.200"} color={"purple"}>
                   Top 5 Leaderboard
                 </Button>
@@ -183,14 +231,16 @@ const YourComponent: React.FC = () => {
               color="white" bg="blue.600" borderColor="blue.800">
                 <PopoverHeader  pb={5} fontWeight="bold" border="0">
                 <Heading
-                fontFamily={"franklin_notes"}>⭐Top 5⭐ Leaderboard</Heading>
+                fontFamily={"franklin_notes"}>🦑Top 5🦑</Heading>
                 </PopoverHeader>
                 <PopoverArrow bg="purple.200" />
                 <PopoverCloseButton bg={"blue.200"}/>
                 <PopoverBody>
-                <div>
+                  
+                <Box>
   <Leaderboard /> 
-  </div>
+  </Box>
+  
                 </PopoverBody>
                 <PopoverFooter border="1" display="flex" alignItems="center" justifyContent="over" pb={6}>
                 <Center>
@@ -199,10 +249,6 @@ const YourComponent: React.FC = () => {
                 </PopoverFooter>
               </PopoverContent>
             </Popover>
-          </Box>
-  </Center>
-</WrapItem>
-</Wrap>
 </Box>
 <Wrap>
 <WrapItem>
@@ -211,12 +257,12 @@ const YourComponent: React.FC = () => {
         direction={{ base: "row", md: "column" }}
         
      pt={0}
-        w="40vw"
-        h="40vh"
+        w="140vw"
+        h="140vh"
         
       >
 
-        <Box flex={{ base: "10px", md: "10px" }} pr={6} pl={6}>
+        <Box flex={{ base: "20px", md: "10px" }} pr={6} pl={6}>
           <Table>
             <Center>
             <Tbody>
@@ -226,11 +272,11 @@ const YourComponent: React.FC = () => {
                     .slice(rowIndex * 2, (rowIndex + 1) * 2)
                     .map((nft) => (
                       <Td key={nft.metadata.id.toString()}>
-                        <Box bgColor={"white"} borderRadius={17} p={2} style={{  display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-                          <Box bgColor={"Black"} borderRadius={23}
+                        <Box bgColor={"black"} borderRadius={17} p={2} style={{  display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+                          <Box bgImage={"bgbubbles.png"} border={32} borderColor={"teal"} borderRadius={30}
                           
                           >
-                            <Center p={1}>
+                            <Center p={10}>
                               <ThirdwebNftMedia
                               className={styles.card4}
                                 metadata={nft.metadata}
@@ -244,7 +290,7 @@ const YourComponent: React.FC = () => {
                           </Box>
                           
                             <Box fontFamily={"Franklin_notes"} className={styles.heroCta6}>{nft.metadata.name}</Box>
-                            <Center className={styles.code}>
+                            <Center className={styles.secondaryCta4}>
                             
                             
                                 {isNFTStaked(nft.metadata.id.toString()) ? <Tag backgroundColor={"green.200"} color={"purple"}>STAKED</Tag> : <Tag backgroundColor={"orange.200"} color={"orangered"}>UNSTAKED</Tag>}
@@ -274,8 +320,10 @@ const YourComponent: React.FC = () => {
                 <FaChevronLeft />
               </Button>
             )}
+            
             {currentPage < totalPages && (
               <Button
+
                 variant="outline"
                 colorScheme="teal"
                 backgroundColor={"blue.200"}

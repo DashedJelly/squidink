@@ -5,7 +5,7 @@ import '../styles/globals.css'; // Import global styles
 import '../styles/fonts.css'; // Import font styles
 import THIRDWEB_CLIENT_ID from '../import';
 import React from 'react';
-import { ChakraProvider } from '@chakra-ui/react';
+import { Box, ChakraProvider } from '@chakra-ui/react';
 import theme from '../theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -17,10 +17,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         supportedWallets={[metamaskWallet(), walletConnect(), phantomWallet(), coinbaseWallet()]}
       >
       
-        <div style={{ fontFamily: 'Franklin_notes, monospace' }}>
+        <Box style={{ fontFamily: 'Franklin_notes, monospace' }}>
           <Navbar />
           <Component {...pageProps} />
-        </div>
+        </Box>
       </ThirdwebProvider>
     </ChakraProvider>
   );
