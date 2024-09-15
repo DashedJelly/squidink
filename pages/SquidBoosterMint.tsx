@@ -231,9 +231,9 @@ import {
         fontFamily={"franklin_notes"}
         
         >
-          Cute Squid 
+          Awe Squid 
           <br/>
-          ENOji #1
+          ENOji #2
         
         </Heading>
         </Box>
