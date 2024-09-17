@@ -1,7 +1,13 @@
 [
   { "name": "Airy" },
   { "name": "Bitcoin" },
+  { "name": "Confetti" },
   { "name": "Ethereum" },
+  { "name": "Garbage" },
+  { "name": "Hazardous" },
+  { "name": "Jellies" },
+  { "name": "Puffers" },
+  { "name": "Seaweed" },
   { "name": "Starburst" },
   { "name": "Suds" },
   { "name": "Tropical" }
