@@ -65,7 +65,7 @@ const itemsPerPage = 4;
 
 const ProgressBar: React.FC<{ multiplier: number }> = ({ multiplier }) => {
   const progressPercentage = Math.min(multiplier, 110); // Limit to 110%
-  return <div className={styles.progressBar} style={{ width: `${(progressPercentage / 300) * 300}%` }}></div>;
+  return <Box className={styles.progressBar} style={{ width: `${(progressPercentage / 300) * 300}%` }}></Box>;
 };
 const YourComponent: React.FC = () => {
   const address = useAddress();

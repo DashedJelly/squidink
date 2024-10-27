@@ -22,6 +22,13 @@ export const NETWORK = Polygon;
   export const SQUID_BOOSTERS_ADDRESS =
   "0xd520B1221435Ea31A0e27CcB09A7e5e7Ae89241c";
 
-  export const tokenId: string = "2";
-  export const BOOSTER = '/AweSquidEnoji.png';
-  
+
+  //New Enoji Setup
+  export const tokenId1: number = 3; 
+  export const tokenId2: number = 4; 
+  export const BOOSTER1 = '/NoU.png';
+  export const BOOSTER2 = '/Wave.png';
+
+//Original Enoji set up
+  export const tokenId: number = 4; 
+  export const BOOSTER = '/Wave.png';

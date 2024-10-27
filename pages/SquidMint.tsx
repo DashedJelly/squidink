@@ -145,11 +145,11 @@ const Home: NextPage = () => {
                     <br />
 
                     <Box fontFamily="Franklin_notes" className={styles.heroCta6}>
-                      <Box className={styles.heroCta6}>Mint Price = 3.33 Matic</Box>
+                      <Box className={styles.heroCta6}>Mint Price = 3.33 POL</Box>
                       <Popover initialFocusRef={initialFocusRef} placement="top" closeOnBlur={false}>
                         <PopoverTrigger>
                           <Button className={styles.heroCta6} fontFamily="Franklin_notes" bg="blue.500" color="white" _hover="purple">
-                            Mint with MATIC
+                            Mint with POL
                           </Button>
                         </PopoverTrigger>
                         <PopoverContent color="white" bg="blue.800" borderColor="blue.800">

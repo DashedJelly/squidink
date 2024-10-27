@@ -231,16 +231,16 @@ import {
         fontFamily={"franklin_notes"}
         
         >
-          Awe Squid 
+          Wave Squid 
           <br/>
-          ENOji #2
+          ENOji #5
         
         </Heading>
         </Box>
         <div>
           <Text dropShadow={"32px"} color={"blue.100"}>1% BOOST</Text>
           
-          <br/><Text color={"orange.300"}>Max Mint = 2X</Text>
+          <br/><Text color={"orange.300"}>Max Mint = 1X</Text>
           
           <Text fontSize={13} color={"orange.300"}>
            </Text>

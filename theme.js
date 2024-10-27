@@ -4,7 +4,7 @@ const theme = extendTheme({
   styles: {
     global: {
       body: {
-        bg: "grey.800", // Set background color to black
+        bg: "blue.200", // Set background color to black
         color: "black", // Set text color to white for better visibility on black background
       },
     },
@@ -13,8 +13,8 @@ const theme = extendTheme({
     Popover: {
       baseStyle: {
         content: {
-          bg: "gray.800", // Set the background color of the pop-up card to gray.800
-          color: "white", // Set text color to white inside the pop-up card
+          bg: "blue.200", // Set the background color of the pop-up card to gray.800
+          color: "black", // Set text color to white inside the pop-up card
         },
       },
     },
