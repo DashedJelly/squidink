@@ -248,7 +248,7 @@ const MintComponent: React.FC<MintComponentProps> = ({ mints }) => {
                 size="xl"
                 textShadow={12}
               />
-              <Text>Loading Enoji...</Text>
+              <Text color={"whitesmoke"}>Loading Enoji...</Text>
             </VStack>
           </Center>
         ) : (
