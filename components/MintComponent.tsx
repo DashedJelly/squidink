@@ -240,13 +240,14 @@ const MintComponent: React.FC<MintComponentProps> = ({ mints }) => {
           <Center>
             <VStack>
               <Spinner
-                rounded={"300"}
+                rounded={"200"}
                 thickness="3.5px"
                 speed="0.75s"
-                emptyColor="gray.200"
+                emptyColor="blue.200"
                 color="purple.500"
                 size="xl"
-                textShadow={12}
+                bgBlendMode={"multiply"}
+                fontSize={60}
               />
               <Text color={"whitesmoke"}>Loading Enoji...</Text>
             </VStack>
@@ -335,7 +336,7 @@ const MintComponent: React.FC<MintComponentProps> = ({ mints }) => {
                           onError={(err) => alert(err)}
                           className={styles.mainButton}
                         >
-                          <Text fontFamily={""}>
+                          <Text>
                             {ButtonLoading ? "Loading..." : ButtonText}
                           </Text>
                         </Web3Button>
@@ -352,7 +353,7 @@ const MintComponent: React.FC<MintComponentProps> = ({ mints }) => {
       <Box>
         <Center mb={4}>
           <Button size={"lg"} bgColor={"orange.200"} onClick={handleNextMint}>
-            NEXT MINT
+            NEXT ENOJI
           </Button>
         </Center>
       </Box>
