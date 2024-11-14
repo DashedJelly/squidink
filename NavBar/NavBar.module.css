@@ -18,6 +18,7 @@
   left: 0px;
   z-index: 3;;
   background-color: transparent !important;
+  -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   border-radius: 9px;
   overflow: hidden;
@@ -186,6 +187,7 @@
   left: 0px;
   z-index: 4;;
   background-color: transparent !important;
+  -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   border-radius: 9px;
   overflow: hidden;
