@@ -196,7 +196,7 @@ export function Navbar() {
                              width={340}
                              bg={"blue.200"}
                              className={styles.codeButton}
-                             onClick={() => {router.push(`/SquidBoosterMint`)
+                             onClick={() => {router.push(`/Special`)
                              onClose();
                            }}
                             >
