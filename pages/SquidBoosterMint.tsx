@@ -18,7 +18,7 @@ const Special: NextPage = () => {
       tokenId: tokenId2,
       boosterImage: BOOSTER2,
       heading: "Killer Squid",
-      subHeading: "ENOji #5",
+      subHeading: "ENOji #7",
       maxMintText: "Max Mint = 1X",
     },
   ];
