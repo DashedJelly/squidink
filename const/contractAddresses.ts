@@ -24,10 +24,10 @@ export const NETWORK = Polygon;
 
 
   //New Enoji Setup
-  export const tokenId1: number = 3; 
-  export const tokenId2: number = 4; 
-  export const BOOSTER1 = '/NoU.png';
-  export const BOOSTER2 = '/Wave.png';
+  export const tokenId1: number = 6; 
+  export const tokenId2: number = 7; 
+  export const BOOSTER1 = '/Dead ENOji wBG.png';
+  export const BOOSTER2 = '/Killer ENOji wBG.png';
 
 //Original Enoji set up
   export const tokenId: number = 4; 
