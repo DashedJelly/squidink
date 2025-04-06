@@ -9,17 +9,17 @@ const Special: NextPage = () => {
       contractAddress: SQUID_BOOSTERS_ADDRESS,
       tokenId: tokenId1,
       boosterImage: BOOSTER1,
-      heading: "NoU Squid",
-      subHeading: "ENOji #4",
-      maxMintText: "Max Mint = 1X",
+      heading: "Dead Squid",
+      subHeading: "ENOji #6",
+      maxMintText: "Max Mint = 2X",
     },
     {
       contractAddress: SQUID_BOOSTERS_ADDRESS,
       tokenId: tokenId2,
       boosterImage: BOOSTER2,
-      heading: "Wave Squid",
-      subHeading: "ENOji #5",
-      maxMintText: "Max Mint = 1X",
+      heading: "Killer Squid",
+      subHeading: "ENOji #7",
+      maxMintText: "Max Mint = 2X",
     },
   ];
 
