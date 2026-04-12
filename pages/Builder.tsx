@@ -1,4 +1,4 @@
-import { Text,Box, Container, Grid, GridItem, Heading, Select, Stack, Image, Divider, Wrap, WrapItem, Tag, TagLabel } from "@chakra-ui/react";
+import { Box, Container, Grid, GridItem, Heading, Select, Stack, Image, Divider, Wrap, WrapItem } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import styles from "../styles/viewer.module.css";
 
@@ -68,7 +68,7 @@ const Builder = () => {
               <Wrap spacing="10px" justify="center">
                 <WrapItem>
        
-                  <Select value={selectedBackground} onChange={(e) => setSelectedBackground(e.target.value)} bg="blue.200">
+                  <Select value={selectedBackground} onChange={(e) => setSelectedBackground(e.target.value)} bg="blue.200" aria-label="Select Background" title="Select Background">
                     <option value="">Select Background</option>
                     {BackgroundOptions.map((option, index) => (
                       <option key={index} value={option}>{option}- Background</option>
@@ -77,7 +77,7 @@ const Builder = () => {
                 </WrapItem>
                 
                 <WrapItem>
-                  <Select value={selectedSkin} onChange={(e) => setSelectedSkin(e.target.value)} bg="blue.200">
+                  <Select value={selectedSkin} onChange={(e) => setSelectedSkin(e.target.value)} bg="blue.200" aria-label="Select Skin" title="Select Skin">
                     <option value="">Select Skin</option>
                     {SkinOptions.map((option, index) => (
                       <option key={index} value={option}>{option}- Skin</option>
@@ -85,7 +85,7 @@ const Builder = () => {
                   </Select>
                 </WrapItem>
                 <WrapItem>
-                  <Select value={selectedFace} onChange={(e) => setSelectedFace(e.target.value)} bg="blue.200">
+                  <Select value={selectedFace} onChange={(e) => setSelectedFace(e.target.value)} bg="blue.200" aria-label="Select Face" title="Select Face">
                     <option value="">Select Face</option>
                     {FaceOptions.map((option, index) => (
                       <option key={index} value={option}>{option}- Face</option>
@@ -94,7 +94,7 @@ const Builder = () => {
                 </WrapItem>
                 
                 <WrapItem>
-                  <Select value={selectedInk} onChange={(e) => setSelectedInk(e.target.value)} bg="blue.200">
+                  <Select value={selectedInk} onChange={(e) => setSelectedInk(e.target.value)} bg="blue.200" aria-label="Select Ink" title="Select Ink">
                     <option value="">Select Ink</option>
                     {InkOptions.map((option, index) => (
                       <option key={index} value={option}>{option}- Ink</option>
@@ -102,7 +102,7 @@ const Builder = () => {
                   </Select>
                 </WrapItem>
                 <WrapItem>
-                  <Select value={selectedPatches} onChange={(e) => setSelectedPatches(e.target.value)} bg="blue.200">
+                  <Select value={selectedPatches} onChange={(e) => setSelectedPatches(e.target.value)} bg="blue.200" aria-label="Select Patches" title="Select Patches">
                     <option value="">Select Patches</option>
                     {PatchesOptions.map((option, index) => (
                       <option key={index} value={option}>{option}- Patches</option>
@@ -110,7 +110,7 @@ const Builder = () => {
                   </Select>
                 </WrapItem>
                 <WrapItem>
-                  <Select value={selectedStrokes} onChange={(e) => setSelectedStrokes(e.target.value)} bg="blue.200">
+                  <Select value={selectedStrokes} onChange={(e) => setSelectedStrokes(e.target.value)} bg="blue.200" aria-label="Select Strokes" title="Select Strokes">
                     <option value="">Select Strokes</option>
                     {StrokesOptions.map((option, index) => (
                       <option key={index} value={option}>{option}- Strokes</option>
@@ -118,7 +118,7 @@ const Builder = () => {
                   </Select>
                 </WrapItem>
                 <WrapItem>
-                  <Select value={selectedTentacle} onChange={(e) => setSelectedTentacle(e.target.value)} bg="blue.200">
+                  <Select value={selectedTentacle} onChange={(e) => setSelectedTentacle(e.target.value)} bg="blue.200" aria-label="Select Tentacle" title="Select Tentacle">
                     <option value="">Select Tentacle</option>
                     {TentacleOptions.map((option, index) => (
                       <option key={index} value={option}>{option}- Tentacle</option>
@@ -126,7 +126,7 @@ const Builder = () => {
                   </Select>
                 </WrapItem>
                 <WrapItem>
-                  <Select value={selectedAccessories} onChange={(e) => setSelectedAccessories(e.target.value)} bg="blue.200">
+                  <Select value={selectedAccessories} onChange={(e) => setSelectedAccessories(e.target.value)} bg="blue.200" aria-label="Select Accessories" title="Select Accessories">
                     <option value="">Select Accessories</option>
                     {AccessoriesOptions.map((option, index) => (
                       <option key={index} value={option}>{option}- Accessories</option>
@@ -135,7 +135,7 @@ const Builder = () => {
                 </WrapItem>
 
                 <WrapItem>
-                  <Select value={selectedHeadwear} onChange={(e) => setSelectedHeadwear(e.target.value)} bg="blue.200">
+                  <Select value={selectedHeadwear} onChange={(e) => setSelectedHeadwear(e.target.value)} bg="blue.200" aria-label="Select Headwear" title="Select Headwear">
                     <option value="">Select Headwear</option>
                     {HeadwearOptions.map((option, index) => (
                       <option key={index} value={option}>{option}- Headwear</option>
@@ -144,7 +144,7 @@ const Builder = () => {
                 </WrapItem>
 
                 <WrapItem>
-                  <Select value={selectedBubbles} onChange={(e) => setSelectedBubbles(e.target.value)} bg="blue.200">
+                  <Select value={selectedBubbles} onChange={(e) => setSelectedBubbles(e.target.value)} bg="blue.200" aria-label="Select Bubbles" title="Select Bubbles">
                     <option value="">Select Bubbles</option>
                     {BubblesOptions.map((option, index) => (
                       <option key={index} value={option}>{option}- Bubbles</option>
