@@ -11,24 +11,25 @@
     "deploy": "next build && next export && npx thirdweb@latest upload out"
   },
   "dependencies": {
-    "@chakra-ui/icons": "^2.1.1",
-    "@chakra-ui/react": "^2.8.2",
-    "@thirdweb-dev/react": "^4",
+    "@tanstack/react-query": "^4.44.0",
+    "@chakra-ui/icons": "^2.2.4",
+    "@chakra-ui/progress": "^2.2.0",
+    "@chakra-ui/react": "^2.10.9",
+    "@thirdweb-dev/react": "^4.9.4",
     "@thirdweb-dev/sdk": "^4",
-    "axios": "^1.8.4",
-    "ethers": "^5",
+    "axios": "^1.15.0",
+    "ethers": "^5.8.0",
     "from": "^0.1.7",
-    "next": "^14.2.4",
-    "react": "^18.2",
-    "react-dom": "^18.2",
-    "react-icons": "^5.1.0",
-    "thirdweb": "^5.93.14"
+    "next": "^14.2.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.6.0"
   },
   "devDependencies": {
-    "@types/node": "^18.11.11",
-    "@types/react": "^18",
-    "eslint": "^8.29.0",
-    "eslint-config-next": "^13",
+    "@types/node": "^18.19.130",
+    "@types/react": "^18.3.28",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^13.5.11",
     "typescript": "^5.4.5"
   }
 }

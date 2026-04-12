@@ -1,10 +1,8 @@
-import { ConnectWallet, ThirdwebProvider, coinbaseWallet, darkTheme, metamaskWallet, phantomWallet, trustWallet, useAddress, useContract, useContractRead, useDisconnect, walletConnect } from "@thirdweb-dev/react";
+import { ConnectWallet, darkTheme } from "@thirdweb-dev/react";
 
 import styles from "../NavBar/NavBar.module.css";
-import { Box, Button, Center, ChakraProvider, Image, Text, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Grid, Icon, TabList, Tabs, useDisclosure, Heading, ModalContextProvider, Tag, TagLabel, TagCloseButton } from "@chakra-ui/react";
-import theme from "../theme";
+import { Box, Button, Center, Image, Text, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, useDisclosure, Heading } from "@chakra-ui/react";
 import TokenBalanceComponent from "../components/Tokenbal";
-import THIRDWEB_CLIENT_ID from "../import";
 import { SetStateAction, useState } from "react";
 import router from "next/router";
 import { HamburgerIcon } from "@chakra-ui/icons";
@@ -29,18 +27,6 @@ export function Navbar() {
   const sizes = ['md'];
 
   return (
-    <ThirdwebProvider 
-      activeChain="polygon"
-      clientId={THIRDWEB_CLIENT_ID}
-      supportedWallets={[
-        metamaskWallet(),
-        walletConnect(),
-        phantomWallet(),
-        coinbaseWallet(),
-        trustWallet(),
-      ]}
-    >
-      <ChakraProvider theme={theme}>
         <div className={styles.navContainer}>
           <nav className={styles.nav}>
             <div className={styles.navLeft}>
@@ -331,8 +317,7 @@ export function Navbar() {
             </div>
           </nav>
         </div>
-      </ChakraProvider>
-    </ThirdwebProvider>
+      
   );
 }
 

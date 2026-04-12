@@ -1,5 +1,12 @@
 import { Polygon } from "@thirdweb-dev/chains";
-export const NETWORK = Polygon;
+export const NETWORK = {
+  ...Polygon,
+  nativeCurrency: {
+    ...Polygon.nativeCurrency,
+    name: "POL",
+    symbol: "POL",
+  },
+};
   
   //Squid Reborn
   export const Squidz =

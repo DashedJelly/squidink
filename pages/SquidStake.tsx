@@ -189,10 +189,10 @@ const YourComponent: React.FC = () => {
   <Stack>
     
           
-            <StackItem><Text className={styles.heroCta2} fontSize={22}>Your ENOji Boost Amount</Text></StackItem>
+            <Box><Text className={styles.heroCta2} fontSize={22}>Your ENOji Boost Amount</Text></Box>
   
              
-<StackItem>
+<Box>
 
             <CircularProgress fontFamily={"franklin_notes"} color="blue.500" size={135} value={multiplier}>
               <CircularProgressLabel>+{multiplier}%</CircularProgressLabel>
@@ -200,7 +200,8 @@ const YourComponent: React.FC = () => {
 
            
 
-            </StackItem>
+
+            </Box>
         
 
           </Stack>

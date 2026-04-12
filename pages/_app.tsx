@@ -7,12 +7,13 @@ import THIRDWEB_CLIENT_ID from '../import';
 import React from 'react';
 import { Box, ChakraProvider } from '@chakra-ui/react';
 import theme from '../theme';
+import { NETWORK } from '../const/contractAddresses';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <ThirdwebProvider
-        activeChain="polygon"
+        activeChain={NETWORK}
         clientId={THIRDWEB_CLIENT_ID}
         supportedWallets={[metamaskWallet(), walletConnect(), phantomWallet(), coinbaseWallet()]}
       >
